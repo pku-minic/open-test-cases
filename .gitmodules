@@ -1,0 +1,3 @@
+[submodule "sysy"]
+	path = sysy
+	url = https://gitlab.eduxiji.net/windcome/sysyruntimelibrary.git
