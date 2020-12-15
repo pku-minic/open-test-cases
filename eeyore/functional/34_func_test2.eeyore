@@ -1,0 +1,56 @@
+f_func1 [0]
+  var T0
+  T0 = 1
+  return T0
+end f_func1
+f_func2 [0]
+  var T1
+  T1 = 2
+  return T1
+end f_func2
+f_func3 [0]
+  var T2
+  T2 = 4
+  return T2
+end f_func3
+f_func4 [0]
+  var T3
+  var T4
+  var T5
+  var t0
+  T4 = 8
+  T3 = T4
+  T5 = 16
+  t0 = T3 + T5
+  T3 = t0
+  return T3
+end f_func4
+f_main [0]
+  var T6
+  var T7
+  var T8
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  T6 = 32
+  T7 = 32
+  T8 = 32
+  t1 = call f_func1
+  t2 = call f_func2
+  t3 = t1 + t2
+  t4 = call f_func3
+  t5 = t3 + t4
+  t6 = call f_func4
+  t7 = t5 + t6
+  t8 = t7 + T6
+  t9 = t8 + T7
+  t10 = t9 + T8
+  return t10
+end f_main

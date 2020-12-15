@@ -1,0 +1,114 @@
+var T0
+f_bubblesort [1]
+  var T1
+  var T2
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var T3
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  T1 = 0
+l0:
+  t0 = T0 - 1
+  t1 = T1 < t0
+  if t1 == 0 goto l4
+  T2 = 0
+l1:
+  t2 = T0 - T1
+  t3 = t2 - 1
+  t4 = T2 < t3
+  if t4 == 0 goto l3
+  t5 = T2 * 4
+  t6 = p0 [ t5 ]
+  t7 = T2 + 1
+  t8 = t7 * 4
+  t9 = p0 [ t8 ]
+  t10 = t6 > t9
+  if t10 == 0 goto l2
+  t11 = T2 + 1
+  t12 = t11 * 4
+  t13 = p0 [ t12 ]
+  T3 = t13
+  t14 = T2 + 1
+  t15 = t14 * 4
+  t16 = T2 * 4
+  t17 = p0 [ t16 ]
+  p0 [ t15 ] = t17
+  t18 = T2 * 4
+  p0 [ t18 ] = T3
+l2:
+  t19 = T2 + 1
+  T2 = t19
+  goto l1
+l3:
+  t20 = T1 + 1
+  T1 = t20
+  goto l0
+l4:
+  return 0
+end f_bubblesort
+f_main [0]
+  var 40 T4
+  var T5
+  var t21
+  var t22
+  var t23
+  var t24
+  var T6
+  var t25
+  var t26
+  var t27
+  var t28
+  var t29
+  T0 = 10
+  T4 [ 0 ] = 4
+  T4 [ 4 ] = 3
+  T4 [ 8 ] = 9
+  T4 [ 12 ] = 2
+  T4 [ 16 ] = 0
+  T4 [ 20 ] = 1
+  T4 [ 24 ] = 6
+  T4 [ 28 ] = 5
+  T4 [ 32 ] = 7
+  T4 [ 36 ] = 8
+  t21 = T4 + 0
+  t22 = t21
+  param t22
+  t23 = call f_bubblesort
+  T5 = t23
+l5:
+  t24 = T5 < T0
+  if t24 == 0 goto l6
+  t25 = T5 * 4
+  t26 = T4 [ t25 ]
+  T6 = t26
+  t27 = T6
+  param t27
+  call f_putint
+  T6 = 10
+  t28 = T6
+  param t28
+  call f_putch
+  t29 = T5 + 1
+  T5 = t29
+  goto l5
+l6:
+  return 0
+end f_main

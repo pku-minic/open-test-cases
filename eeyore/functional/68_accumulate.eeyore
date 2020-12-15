@@ -1,0 +1,23 @@
+f_main [0]
+  var T0
+  var T1
+  var t0
+  var t1
+  var t2
+  var t3
+  T1 = 0
+  T0 = 0
+l0:
+  t0 = T0 < 21
+  if t0 == 0 goto l1
+  t1 = T1 + T0
+  T1 = t1
+  t2 = T0 + 1
+  T0 = t2
+  goto l0
+l1:
+  t3 = T1
+  param t3
+  call f_putint
+  return 0
+end f_main

@@ -1,0 +1,129 @@
+f_uniquePaths [2]
+  var t0
+  var t1
+  var t2
+  var 36 T0
+  var T1
+  var T2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  var t21
+  var t22
+  var t23
+  var t24
+  var t25
+  var t26
+  var t27
+  var t28
+  var t29
+  var t30
+  var t31
+  var t32
+  var t33
+  var t34
+  var t35
+  t0 = p0 == 1
+  if t0 != 0 goto l0
+  t2 = p1 == 1
+  if t2 != 0 goto l0
+  t1 = 0
+  goto l1
+l0:
+  t1 = 1
+l1:
+  if t1 == 0 goto l2
+  return 1
+l2:
+  T1 = 0
+l3:
+  t3 = T1 < p0
+  if t3 == 0 goto l4
+  t4 = T1 * 3
+  t5 = t4 + p1
+  t6 = t5 - 1
+  t7 = t6 * 4
+  T0 [ t7 ] = 1
+  t8 = T1 + 1
+  T1 = t8
+  goto l3
+l4:
+  T1 = 0
+l5:
+  t9 = T1 < p1
+  if t9 == 0 goto l6
+  t10 = p0 - 1
+  t11 = t10 * 3
+  t12 = t11 + T1
+  t13 = t12 * 4
+  T0 [ t13 ] = 1
+  t14 = T1 + 1
+  T1 = t14
+  goto l5
+l6:
+  t15 = p0 - 2
+  T1 = t15
+l7:
+  t16 = T1 > -1
+  if t16 == 0 goto l10
+  t17 = p1 - 2
+  T2 = t17
+l8:
+  t18 = T2 > -1
+  if t18 == 0 goto l9
+  t19 = T1 * 3
+  t20 = t19 + T2
+  t21 = t20 * 4
+  t22 = T1 + 1
+  t23 = t22 * 3
+  t24 = t23 + T2
+  t25 = t24 * 4
+  t26 = T0 [ t25 ]
+  t27 = T1 * 3
+  t28 = t27 + T2
+  t29 = t28 + 1
+  t30 = t29 * 4
+  t31 = T0 [ t30 ]
+  t32 = t26 + t31
+  T0 [ t21 ] = t32
+  t33 = T2 - 1
+  T2 = t33
+  goto l8
+l9:
+  t34 = T1 - 1
+  T1 = t34
+  goto l7
+l10:
+  t35 = T0 [ 0 ]
+  return t35
+end f_uniquePaths
+f_main [0]
+  var T3
+  var T4
+  var t36
+  var t37
+  var t38
+  T4 = 3
+  t36 = T4
+  t37 = T4
+  param t36
+  param t37
+  t38 = call f_uniquePaths
+  T3 = t38
+  return T3
+end f_main

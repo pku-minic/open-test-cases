@@ -1,0 +1,33 @@
+var 8 T0
+f_func [1]
+  var t0
+  var t1
+  var t2
+  var t3
+  T0 [ 0 ] = 1
+  t0 = T0 [ 0 ]
+  t1 = 3 - t0
+  t2 = t1 * 4
+  t3 = p0 [ t2 ]
+  return t3
+end f_func
+f_main [0]
+  var T1
+  var 12 T2
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  T2 [ 0 ] = -1
+  T2 [ 4 ] = 4
+  T2 [ 8 ] = 8
+  t4 = T2 + 0
+  t5 = t4
+  param t5
+  t6 = call f_func
+  T1 = t6
+  t7 = T2 [ 4 ]
+  t8 = T1 + t7
+  return t8
+end f_main

@@ -1,0 +1,406 @@
+var T0
+var 120000040 T12
+var T13
+f_getMaxNum [2]
+  var T1
+  var T2
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  T1 = 0
+  T2 = 0
+l0:
+  t0 = T2 < p0
+  if t0 == 0 goto l2
+  t1 = T2 * 4
+  t2 = p1 [ t1 ]
+  t3 = t2 > T1
+  if t3 == 0 goto l1
+  t4 = T2 * 4
+  t5 = p1 [ t4 ]
+  T1 = t5
+l1:
+  t6 = T2 + 1
+  T2 = t6
+  goto l0
+l2:
+  return T1
+end f_getMaxNum
+f_getNumPos [2]
+  var T3
+  var T4
+  var t7
+  var t8
+  var t9
+  var t10
+  T3 = 1
+  T4 = 0
+l3:
+  t7 = T4 < p1
+  if t7 == 0 goto l4
+  t8 = p0 / 16
+  p0 = t8
+  t9 = T4 + 1
+  T4 = t9
+  goto l3
+l4:
+  t10 = p0 % 16
+  return t10
+end f_getNumPos
+f_radixSort [4]
+  var 64 T5
+  var 64 T6
+  var 64 T7
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var T8
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  var t21
+  var t22
+  var t23
+  var t24
+  var t25
+  var t26
+  var t27
+  var t28
+  var t29
+  var t30
+  var t31
+  var t32
+  var t33
+  var t34
+  var t35
+  var t36
+  var t37
+  var t38
+  var t39
+  var t40
+  var t41
+  var t42
+  var t43
+  var t44
+  var t45
+  var t46
+  var t47
+  var t48
+  var t49
+  var T9
+  var t50
+  var t51
+  var t52
+  var t53
+  var t54
+  var t55
+  var t56
+  var T10
+  var t57
+  var t58
+  var t59
+  var t60
+  var t61
+  var t62
+  var t63
+  var t64
+  var t65
+  var t66
+  var t67
+  var t68
+  var t69
+  var t70
+  var t71
+  var t72
+  var t73
+  var t74
+  var t75
+  var t76
+  var t77
+  var t78
+  var t79
+  var t80
+  var t81
+  var t82
+  var t83
+  var t84
+  var t85
+  var t86
+  var t87
+  var T11
+  var t88
+  var t89
+  var t90
+  var t91
+  var t92
+  var t93
+  var t94
+  var t95
+  var t96
+  var t97
+  var t98
+  var t99
+  var t100
+  var t101
+  var t102
+  var t103
+  var t104
+  var t105
+  var t106
+  var t107
+  var t108
+  var t109
+  var t110
+  t11 = p0 == -1
+  if t11 != 0 goto l5
+  t13 = p2 + 1
+  t15 = t13 < p3
+  t14 = t15 == 0
+  if t14 != 0 goto l5
+  t12 = 0
+  goto l6
+l5:
+  t12 = 1
+l6:
+  if t12 == 0 goto l7
+  return
+l7:
+  T8 = p2
+l8:
+  t16 = T8 < p3
+  if t16 == 0 goto l9
+  t17 = T8 * 4
+  t18 = p1 [ t17 ]
+  t19 = p0
+  param t18
+  param t19
+  t20 = call f_getNumPos
+  t21 = t20 * 4
+  t22 = T8 * 4
+  t23 = p1 [ t22 ]
+  t24 = p0
+  param t23
+  param t24
+  t25 = call f_getNumPos
+  t26 = t25 * 4
+  t27 = T7 [ t26 ]
+  t28 = t27 + 1
+  T7 [ t21 ] = t28
+  t29 = T8 + 1
+  T8 = t29
+  goto l8
+l9:
+  T5 [ 0 ] = p2
+  t30 = T7 [ 0 ]
+  t31 = p2 + t30
+  T6 [ 0 ] = t31
+  T8 = 1
+l10:
+  t32 = T8 < 16
+  if t32 == 0 goto l11
+  t33 = T8 * 4
+  t34 = T8 - 1
+  t35 = t34 * 4
+  t36 = T6 [ t35 ]
+  T5 [ t33 ] = t36
+  t37 = T8 * 4
+  t38 = T8 * 4
+  t39 = T5 [ t38 ]
+  t40 = T8 * 4
+  t41 = T7 [ t40 ]
+  t42 = t39 + t41
+  T6 [ t37 ] = t42
+  t43 = T8 + 1
+  T8 = t43
+  goto l10
+l11:
+  T8 = 0
+l12:
+  t44 = T8 < 16
+  if t44 == 0 goto l17
+l13:
+  t45 = T8 * 4
+  t46 = T5 [ t45 ]
+  t47 = T8 * 4
+  t48 = T6 [ t47 ]
+  t49 = t46 < t48
+  if t49 == 0 goto l16
+  t50 = T8 * 4
+  t51 = T5 [ t50 ]
+  t52 = t51 * 4
+  T9 = p1 [ t52 ]
+l14:
+  t53 = T9
+  t54 = p0
+  param t53
+  param t54
+  t55 = call f_getNumPos
+  t56 = t55 != T8
+  if t56 == 0 goto l15
+  T10 = T9
+  t57 = T10
+  t58 = p0
+  param t57
+  param t58
+  t59 = call f_getNumPos
+  t60 = t59 * 4
+  t61 = T5 [ t60 ]
+  t62 = t61 * 4
+  t63 = p1 [ t62 ]
+  T9 = t63
+  t64 = T10
+  t65 = p0
+  param t64
+  param t65
+  t66 = call f_getNumPos
+  t67 = t66 * 4
+  t68 = T5 [ t67 ]
+  t69 = t68 * 4
+  p1 [ t69 ] = T10
+  t70 = T10
+  t71 = p0
+  param t70
+  param t71
+  t72 = call f_getNumPos
+  t73 = t72 * 4
+  t74 = T10
+  t75 = p0
+  param t74
+  param t75
+  t76 = call f_getNumPos
+  t77 = t76 * 4
+  t78 = T5 [ t77 ]
+  t79 = t78 + 1
+  T5 [ t73 ] = t79
+  goto l14
+l15:
+  t80 = T8 * 4
+  t81 = T5 [ t80 ]
+  t82 = t81 * 4
+  p1 [ t82 ] = T9
+  t83 = T8 * 4
+  t84 = T8 * 4
+  t85 = T5 [ t84 ]
+  t86 = t85 + 1
+  T5 [ t83 ] = t86
+  goto l13
+l16:
+  t87 = T8 + 1
+  T8 = t87
+  goto l12
+l17:
+  T11 = p2
+  T5 [ 0 ] = p2
+  t88 = T7 [ 0 ]
+  t89 = p2 + t88
+  T6 [ 0 ] = t89
+  T11 = 0
+l18:
+  t90 = T11 < 16
+  if t90 == 0 goto l20
+  t91 = T11 > 0
+  if t91 == 0 goto l19
+  t92 = T11 * 4
+  t93 = T11 - 1
+  t94 = t93 * 4
+  t95 = T6 [ t94 ]
+  T5 [ t92 ] = t95
+  t96 = T11 * 4
+  t97 = T11 * 4
+  t98 = T5 [ t97 ]
+  t99 = T11 * 4
+  t100 = T7 [ t99 ]
+  t101 = t98 + t100
+  T6 [ t96 ] = t101
+l19:
+  t102 = p0 - 1
+  t103 = t102
+  t104 = p1 + 0
+  t105 = t104
+  t106 = T11 * 4
+  t107 = T5 [ t106 ]
+  t108 = T11 * 4
+  t109 = T6 [ t108 ]
+  param t103
+  param t105
+  param t107
+  param t109
+  call f_radixSort
+  t110 = T11 + 1
+  T11 = t110
+  goto l18
+l20:
+  return
+  return
+end f_radixSort
+f_main [0]
+  T0 = 16
+  var T14
+  var t111
+  var t112
+  var t113
+  var t114
+  var t115
+  var t116
+  var T15
+  var t117
+  var t118
+  var t119
+  var t120
+  var t121
+  var t122
+  var t123
+  var t124
+  var t125
+  var t126
+  var t127
+  t111 = T12 + 0
+  t112 = t111
+  param t112
+  t113 = call f_getarray
+  T14 = t113
+  call f_starttime
+  t114 = T12 + 0
+  t115 = t114
+  t116 = T14
+  param 8
+  param t115
+  param 0
+  param t116
+  call f_radixSort
+  T15 = 0
+l21:
+  t117 = T15 < T14
+  if t117 == 0 goto l22
+  t118 = T15 * 4
+  t119 = T12 [ t118 ]
+  t120 = 2 + T15
+  t121 = t119 % t120
+  t122 = T15 * t121
+  t123 = T13 + t122
+  T13 = t123
+  t124 = T15 + 1
+  T15 = t124
+  goto l21
+l22:
+  t125 = T13 < 0
+  if t125 == 0 goto l23
+  t126 = - T13
+  T13 = t126
+l23:
+  call f_stoptime
+  t127 = T13
+  param t127
+  call f_putint
+  param 10
+  call f_putch
+  return 0
+end f_main

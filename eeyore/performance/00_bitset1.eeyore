@@ -1,0 +1,273 @@
+var 12 T4
+var T5
+var 40000 T6
+f_set [3]
+  var T0
+  var 124 T1
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  var T2
+  var t20
+  var t21
+  var t22
+  var t23
+  var t24
+  var t25
+  var t26
+  var T3
+  var t27
+  var t28
+  var t29
+  var t30
+  var t31
+  var t32
+  var t33
+  var t34
+  var t35
+  var t36
+  var t37
+  var t38
+  var t39
+  var t40
+  var t41
+  var t42
+  var t43
+  var t44
+  var t45
+  var t46
+  var t47
+  var t48
+  var t49
+  var t50
+  var t51
+  var t52
+  var t53
+  var t54
+  var t55
+  var t56
+  var t57
+  var t58
+  var t59
+  var t60
+  var t61
+  var t62
+  var t63
+  var t64
+  var t65
+  var t66
+  var t67
+  var t68
+  var t69
+  var t70
+  var t71
+  T0 = 30
+  T1 [ 0 ] = 1
+  t0 = T1 [ 0 ]
+  t1 = t0 * 2
+  T1 [ 4 ] = t1
+  t2 = T1 [ 4 ]
+  t3 = t2 * 2
+  T1 [ 8 ] = t3
+  t4 = T1 [ 8 ]
+  t5 = t4 * 2
+  T1 [ 12 ] = t5
+  t6 = T1 [ 12 ]
+  t7 = t6 * 2
+  T1 [ 16 ] = t7
+  t8 = T1 [ 16 ]
+  t9 = t8 * 2
+  T1 [ 20 ] = t9
+  t10 = T1 [ 20 ]
+  t11 = t10 * 2
+  T1 [ 24 ] = t11
+  t12 = T1 [ 24 ]
+  t13 = t12 * 2
+  T1 [ 28 ] = t13
+  t14 = T1 [ 28 ]
+  t15 = t14 * 2
+  T1 [ 32 ] = t15
+  t16 = T1 [ 32 ]
+  t17 = t16 * 2
+  T1 [ 36 ] = t17
+  t18 = T1 [ 36 ]
+  t19 = t18 * 2
+  T1 [ 40 ] = t19
+  T2 = 10
+l0:
+  t20 = T2 < 30
+  if t20 == 0 goto l1
+  t21 = T2 + 1
+  T2 = t21
+  t22 = T2 * 4
+  t23 = T2 - 1
+  t24 = t23 * 4
+  t25 = T1 [ t24 ]
+  t26 = t25 * 2
+  T1 [ t22 ] = t26
+  goto l0
+l1:
+  T3 = 0
+  t27 = p1 / 30
+  t29 = t27 < 10000
+  t28 = t29 == 0
+  if t28 == 0 goto l2
+  return 0
+l2:
+  t30 = p1 / 30
+  t31 = t30 * 4
+  t32 = p0 [ t31 ]
+  t33 = p1 % 30
+  t34 = t33 * 4
+  t35 = T1 [ t34 ]
+  t36 = t32 / t35
+  t37 = t36 % 2
+  t38 = t37 != p2
+  if t38 == 0 goto l7
+  t39 = p1 / 30
+  t40 = t39 * 4
+  t41 = p0 [ t40 ]
+  t42 = p1 % 30
+  t43 = t42 * 4
+  t44 = T1 [ t43 ]
+  t45 = t41 / t44
+  t46 = t45 % 2
+  t47 = t46 == 0
+  if t47 == 0 goto l4
+  t48 = p2 == 1
+  if t48 == 0 goto l3
+  t49 = p1 % 30
+  t50 = t49 * 4
+  t51 = T1 [ t50 ]
+  T3 = t51
+l3:
+l4:
+  t52 = p1 / 30
+  t53 = t52 * 4
+  t54 = p0 [ t53 ]
+  t55 = p1 % 30
+  t56 = t55 * 4
+  t57 = T1 [ t56 ]
+  t58 = t54 / t57
+  t59 = t58 % 2
+  t60 = t59 == 1
+  if t60 == 0 goto l6
+  t61 = p2 == 0
+  if t61 == 0 goto l5
+  t62 = p1 % 30
+  t63 = t62 * 4
+  t64 = T1 [ t63 ]
+  t65 = T3 - t64
+  T3 = t65
+l5:
+l6:
+l7:
+  t66 = p1 / 30
+  t67 = t66 * 4
+  t68 = p1 / 30
+  t69 = t68 * 4
+  t70 = p0 [ t69 ]
+  t71 = t70 + T3
+  p0 [ t67 ] = t71
+  return 0
+end f_set
+f_rand [0]
+  var t72
+  var t73
+  var t74
+  var t75
+  var t76
+  var t77
+  var t78
+  var t79
+  var t80
+  t72 = T4 [ 0 ]
+  t73 = T5 * t72
+  t74 = T4 [ 4 ]
+  t75 = t73 + t74
+  T5 = t75
+  t76 = T4 [ 8 ]
+  t77 = T5 % t76
+  T5 = t77
+  t78 = T5 < 0
+  if t78 == 0 goto l8
+  t79 = T4 [ 8 ]
+  t80 = t79 + T5
+  T5 = t80
+l8:
+  return T5
+end f_rand
+f_main [0]
+  T4 [ 0 ] = 19971231
+  T4 [ 4 ] = 19981013
+  T4 [ 8 ] = 1000000007
+  T5 = 0
+  var T7
+  var t81
+  var t82
+  var T8
+  var T9
+  var t83
+  var t84
+  var t85
+  var t86
+  var t87
+  var t88
+  var t89
+  var t90
+  var t91
+  var t92
+  var t93
+  var t94
+  var t95
+  t81 = call f_getint
+  T7 = t81
+  t82 = call f_getint
+  T5 = t82
+  call f_starttime
+l9:
+  t83 = T7 > 0
+  if t83 == 0 goto l10
+  t84 = T7 - 1
+  T7 = t84
+  t85 = call f_rand
+  t86 = t85 % 300000
+  T8 = t86
+  t87 = call f_rand
+  t88 = t87 % 2
+  T9 = t88
+  t89 = T6 + 0
+  t90 = t89
+  t91 = T8
+  t92 = T9
+  param t90
+  param t91
+  param t92
+  t93 = call f_set
+  goto l9
+l10:
+  call f_stoptime
+  t94 = T6 + 0
+  t95 = t94
+  param 10000
+  param t95
+  call f_putarray
+  return 0
+end f_main

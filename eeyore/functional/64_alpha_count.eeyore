@@ -1,0 +1,63 @@
+f_main [0]
+  var 2000 T0
+  var T1
+  var T2
+  var T3
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  T3 = 0
+  T2 = 0
+  T1 = 0
+l0:
+  t0 = T1 != 10
+  if t0 == 0 goto l8
+  t1 = call f_getch
+  T1 = t1
+  t2 = T1 > 40
+  if t2 == 0 goto l1
+  t4 = T1 < 91
+  if t4 == 0 goto l1
+  t3 = 1
+  goto l2
+l1:
+  t3 = 0
+l2:
+  if t3 != 0 goto l5
+  t6 = T1 > 96
+  if t6 == 0 goto l3
+  t8 = T1 < 123
+  if t8 == 0 goto l3
+  t7 = 1
+  goto l4
+l3:
+  t7 = 0
+l4:
+  if t7 != 0 goto l5
+  t5 = 0
+  goto l6
+l5:
+  t5 = 1
+l6:
+  if t5 == 0 goto l7
+  t9 = T3 + 1
+  T3 = t9
+l7:
+  t10 = T2 + 1
+  T2 = t10
+  goto l0
+l8:
+  t11 = T3
+  param t11
+  call f_putint
+  return 0
+end f_main

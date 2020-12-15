@@ -1,0 +1,8 @@
+var T0
+var T1
+f_main [0]
+  var T2
+  T0 = 10
+  T2 = 10
+  return 0
+end f_main

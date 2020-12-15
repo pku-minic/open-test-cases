@@ -1,0 +1,174 @@
+f_atoi_ [1]
+  var T0
+  var T1
+  var T2
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  var t21
+  var t22
+  var t23
+  var t24
+  var t25
+  var t26
+  var t27
+  var t28
+  var t29
+  var t30
+  var t31
+  var t32
+  var t33
+  var t34
+  var t35
+  var t36
+  var t37
+  var t38
+  var t39
+  T0 = 0
+  T1 = 1
+  T2 = 0
+l0:
+  t0 = T2 * 4
+  t1 = p0 [ t0 ]
+  t2 = t1 == 32
+  if t2 == 0 goto l1
+  t3 = T2 + 1
+  T2 = t3
+  goto l0
+l1:
+  t4 = T2 * 4
+  t5 = p0 [ t4 ]
+  t6 = t5 == 43
+  if t6 != 0 goto l2
+  t8 = T2 * 4
+  t9 = p0 [ t8 ]
+  t10 = t9 == 45
+  if t10 != 0 goto l2
+  t7 = 0
+  goto l3
+l2:
+  t7 = 1
+l3:
+  if t7 == 0 goto l5
+  t11 = T2 * 4
+  t12 = p0 [ t11 ]
+  t13 = t12 == 45
+  if t13 == 0 goto l4
+  T1 = -1
+l4:
+  t14 = T2 + 1
+  T2 = t14
+  goto l9
+l5:
+  t15 = T2 * 4
+  t16 = p0 [ t15 ]
+  t17 = t16 < 48
+  if t17 != 0 goto l6
+  t19 = T2 * 4
+  t20 = p0 [ t19 ]
+  t21 = t20 > 57
+  if t21 != 0 goto l6
+  t18 = 0
+  goto l7
+l6:
+  t18 = 1
+l7:
+  if t18 == 0 goto l8
+  T0 = 2147483647
+  return T0
+l8:
+l9:
+l10:
+  t22 = T2 * 4
+  t23 = p0 [ t22 ]
+  t24 = t23 != 0
+  if t24 == 0 goto l11
+  t26 = T2 * 4
+  t27 = p0 [ t26 ]
+  t28 = t27 > 47
+  if t28 == 0 goto l11
+  t25 = 1
+  goto l12
+l11:
+  t25 = 0
+l12:
+  if t25 == 0 goto l13
+  t30 = T2 * 4
+  t31 = p0 [ t30 ]
+  t32 = t31 < 58
+  if t32 == 0 goto l13
+  t29 = 1
+  goto l14
+l13:
+  t29 = 0
+l14:
+  if t29 == 0 goto l15
+  t33 = T0 * 10
+  t34 = T2 * 4
+  t35 = p0 [ t34 ]
+  t36 = t33 + t35
+  t37 = t36 - 48
+  T0 = t37
+  t38 = T2 + 1
+  T2 = t38
+  goto l10
+l15:
+  t39 = T0 * T1
+  return t39
+end f_atoi_
+f_main [0]
+  var 2000 T3
+  var T4
+  var T5
+  var t40
+  var t41
+  var t42
+  var t43
+  var t44
+  var t45
+  var t46
+  var t47
+  var t48
+  T4 = 0
+  T5 = 0
+l16:
+  t40 = T4 != 10
+  if t40 == 0 goto l17
+  t41 = call f_getch
+  T4 = t41
+  t42 = T5 * 4
+  T3 [ t42 ] = T4
+  t43 = T5 + 1
+  T5 = t43
+  goto l16
+l17:
+  t44 = T5 * 4
+  T3 [ t44 ] = 0
+  t45 = T3 + 0
+  t46 = t45
+  param t46
+  t47 = call f_atoi_
+  T5 = t47
+  t48 = T5
+  param t48
+  call f_putint
+  return 0
+end f_main

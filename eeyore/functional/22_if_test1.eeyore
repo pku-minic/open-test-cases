@@ -1,0 +1,20 @@
+f_ifElse [0]
+  var T0
+  var t0
+  var t1
+  T0 = 5
+  t0 = T0 == 5
+  if t0 == 0 goto l0
+  T0 = 25
+  goto l1
+l0:
+  t1 = T0 * 2
+  T0 = t1
+l1:
+  return T0
+end f_ifElse
+f_main [0]
+  var t2
+  t2 = call f_ifElse
+  return t2
+end f_main

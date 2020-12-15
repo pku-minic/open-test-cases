@@ -1,0 +1,58 @@
+f_climbStairs [1]
+  var t0
+  var 40 T0
+  var T1
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  t0 = p0 < 4
+  if t0 == 0 goto l0
+  return p0
+l0:
+  T0 [ 0 ] = 0
+  T0 [ 4 ] = 1
+  T0 [ 8 ] = 2
+  T1 = 3
+l1:
+  t1 = p0 + 1
+  t2 = T1 < t1
+  if t2 == 0 goto l2
+  t3 = T1 * 4
+  t4 = T1 - 1
+  t5 = t4 * 4
+  t6 = T0 [ t5 ]
+  t7 = T1 - 2
+  t8 = t7 * 4
+  t9 = T0 [ t8 ]
+  t10 = t6 + t9
+  T0 [ t3 ] = t10
+  t11 = T1 + 1
+  T1 = t11
+  goto l1
+l2:
+  t12 = p0 * 4
+  t13 = T0 [ t12 ]
+  return t13
+end f_climbStairs
+f_main [0]
+  var T2
+  var T3
+  var t14
+  var t15
+  T3 = 5
+  t14 = T3
+  param t14
+  t15 = call f_climbStairs
+  T2 = t15
+  return T2
+end f_main

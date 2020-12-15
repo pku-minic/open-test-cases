@@ -1,0 +1,888 @@
+var T0
+f_bubblesort [1]
+  var T1
+  var T2
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var T3
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  T1 = 0
+l0:
+  t0 = T0 - 1
+  t1 = T1 < t0
+  if t1 == 0 goto l4
+  T2 = 0
+l1:
+  t2 = T0 - T1
+  t3 = t2 - 1
+  t4 = T2 < t3
+  if t4 == 0 goto l3
+  t5 = T2 * 4
+  t6 = p0 [ t5 ]
+  t7 = T2 + 1
+  t8 = t7 * 4
+  t9 = p0 [ t8 ]
+  t10 = t6 > t9
+  if t10 == 0 goto l2
+  t11 = T2 + 1
+  t12 = t11 * 4
+  t13 = p0 [ t12 ]
+  T3 = t13
+  t14 = T2 + 1
+  t15 = t14 * 4
+  t16 = T2 * 4
+  t17 = p0 [ t16 ]
+  p0 [ t15 ] = t17
+  t18 = T2 * 4
+  p0 [ t18 ] = T3
+l2:
+  t19 = T2 + 1
+  T2 = t19
+  goto l1
+l3:
+  t20 = T1 + 1
+  T1 = t20
+  goto l0
+l4:
+  return 0
+end f_bubblesort
+f_insertsort [1]
+  var T4
+  var t21
+  var T5
+  var t22
+  var t23
+  var T6
+  var t24
+  var t25
+  var t26
+  var t27
+  var t28
+  var t29
+  var t30
+  var t31
+  var t32
+  var t33
+  var t34
+  var t35
+  var t36
+  var t37
+  T4 = 1
+l5:
+  t21 = T4 < T0
+  if t21 == 0 goto l10
+  t22 = T4 * 4
+  t23 = p0 [ t22 ]
+  T5 = t23
+  t24 = T4 - 1
+  T6 = t24
+l6:
+  t25 = T6 > -1
+  if t25 == 0 goto l7
+  t27 = T6 * 4
+  t28 = p0 [ t27 ]
+  t29 = T5 < t28
+  if t29 == 0 goto l7
+  t26 = 1
+  goto l8
+l7:
+  t26 = 0
+l8:
+  if t26 == 0 goto l9
+  t30 = T6 + 1
+  t31 = t30 * 4
+  t32 = T6 * 4
+  t33 = p0 [ t32 ]
+  p0 [ t31 ] = t33
+  t34 = T6 - 1
+  T6 = t34
+  goto l6
+l9:
+  t35 = T6 + 1
+  t36 = t35 * 4
+  p0 [ t36 ] = T5
+  t37 = T4 + 1
+  T4 = t37
+  goto l5
+l10:
+  return 0
+end f_insertsort
+f_QuickSort [3]
+  var t38
+  var T7
+  var T8
+  var T9
+  var t39
+  var t40
+  var t41
+  var t42
+  var t43
+  var t44
+  var t45
+  var t46
+  var t47
+  var t48
+  var t49
+  var t50
+  var t51
+  var t52
+  var t53
+  var t54
+  var t55
+  var t56
+  var t57
+  var t58
+  var t59
+  var t60
+  var t61
+  var t62
+  var t63
+  var t64
+  var t65
+  var T10
+  var t66
+  var t67
+  var t68
+  var t69
+  var t70
+  var t71
+  var t72
+  var t73
+  var t74
+  var t75
+  var t76
+  var t77
+  t38 = p1 < p2
+  if t38 == 0 goto l23
+  T7 = p1
+  T8 = p2
+  t39 = p1 * 4
+  t40 = p0 [ t39 ]
+  T9 = t40
+l11:
+  t41 = T7 < T8
+  if t41 == 0 goto l22
+l12:
+  t42 = T7 < T8
+  if t42 == 0 goto l13
+  t44 = T8 * 4
+  t45 = p0 [ t44 ]
+  t46 = T9 - 1
+  t47 = t45 > t46
+  if t47 == 0 goto l13
+  t43 = 1
+  goto l14
+l13:
+  t43 = 0
+l14:
+  if t43 == 0 goto l15
+  t48 = T8 - 1
+  T8 = t48
+  goto l12
+l15:
+  t49 = T7 < T8
+  if t49 == 0 goto l16
+  t50 = T7 * 4
+  t51 = T8 * 4
+  t52 = p0 [ t51 ]
+  p0 [ t50 ] = t52
+  t53 = T7 + 1
+  T7 = t53
+l16:
+l17:
+  t54 = T7 < T8
+  if t54 == 0 goto l18
+  t56 = T7 * 4
+  t57 = p0 [ t56 ]
+  t58 = t57 < T9
+  if t58 == 0 goto l18
+  t55 = 1
+  goto l19
+l18:
+  t55 = 0
+l19:
+  if t55 == 0 goto l20
+  t59 = T7 + 1
+  T7 = t59
+  goto l17
+l20:
+  t60 = T7 < T8
+  if t60 == 0 goto l21
+  t61 = T8 * 4
+  t62 = T7 * 4
+  t63 = p0 [ t62 ]
+  p0 [ t61 ] = t63
+  t64 = T8 - 1
+  T8 = t64
+l21:
+  goto l11
+l22:
+  t65 = T7 * 4
+  p0 [ t65 ] = T9
+  t66 = T7 - 1
+  T10 = t66
+  t67 = p0 + 0
+  t68 = t67
+  t69 = p1
+  t70 = T10
+  param t68
+  param t69
+  param t70
+  t71 = call f_QuickSort
+  T10 = t71
+  t72 = T7 + 1
+  T10 = t72
+  t73 = p0 + 0
+  t74 = t73
+  t75 = T10
+  t76 = p2
+  param t74
+  param t75
+  param t76
+  t77 = call f_QuickSort
+  T10 = t77
+l23:
+  return 0
+end f_QuickSort
+f_getMid [1]
+  var T11
+  var t78
+  var t79
+  var t80
+  var t81
+  var t82
+  var t83
+  var t84
+  var t85
+  var t86
+  var t87
+  var t88
+  var t89
+  var t90
+  t78 = T0 % 2
+  t79 = t78 == 0
+  if t79 == 0 goto l24
+  t80 = T0 / 2
+  T11 = t80
+  t81 = T11 * 4
+  t82 = p0 [ t81 ]
+  t83 = T11 - 1
+  t84 = t83 * 4
+  t85 = p0 [ t84 ]
+  t86 = t82 + t85
+  t87 = t86 / 2
+  return t87
+  goto l25
+l24:
+  t88 = T0 / 2
+  T11 = t88
+  t89 = T11 * 4
+  t90 = p0 [ t89 ]
+  return t90
+l25:
+  return 0
+end f_getMid
+f_getMost [1]
+  var 4000 T12
+  var T13
+  var t91
+  var t92
+  var t93
+  var T14
+  var T15
+  var t94
+  var T16
+  var t95
+  var t96
+  var t97
+  var t98
+  var t99
+  var t100
+  var t101
+  var t102
+  var t103
+  var t104
+  var t105
+  var t106
+  T13 = 0
+l26:
+  t91 = T13 < 1000
+  if t91 == 0 goto l27
+  t92 = T13 * 4
+  T12 [ t92 ] = 0
+  t93 = T13 + 1
+  T13 = t93
+  goto l26
+l27:
+  T13 = 0
+  T14 = 0
+l28:
+  t94 = T13 < T0
+  if t94 == 0 goto l30
+  t95 = T13 * 4
+  t96 = p0 [ t95 ]
+  T16 = t96
+  t97 = T16 * 4
+  t98 = T16 * 4
+  t99 = T12 [ t98 ]
+  t100 = t99 + 1
+  T12 [ t97 ] = t100
+  t101 = T16 * 4
+  t102 = T12 [ t101 ]
+  t103 = t102 > T14
+  if t103 == 0 goto l29
+  t104 = T16 * 4
+  t105 = T12 [ t104 ]
+  T14 = t105
+  T15 = T16
+l29:
+  t106 = T13 + 1
+  T13 = t106
+  goto l28
+l30:
+  return T15
+end f_getMost
+f_revert [1]
+  var T17
+  var T18
+  var T19
+  var t107
+  var t108
+  var t109
+  var t110
+  var t111
+  var t112
+  var t113
+  var t114
+  var t115
+  T18 = 0
+  T19 = 0
+l31:
+  t107 = T18 < T19
+  if t107 == 0 goto l32
+  t108 = T18 * 4
+  t109 = p0 [ t108 ]
+  T17 = t109
+  t110 = T18 * 4
+  t111 = T19 * 4
+  t112 = p0 [ t111 ]
+  p0 [ t110 ] = t112
+  t113 = T19 * 4
+  p0 [ t113 ] = T17
+  t114 = T18 + 1
+  T18 = t114
+  t115 = T19 - 1
+  T19 = t115
+  goto l31
+l32:
+  return 0
+end f_revert
+f_arrCopy [2]
+  var T20
+  var t116
+  var t117
+  var t118
+  var t119
+  var t120
+  T20 = 0
+l33:
+  t116 = T20 < T0
+  if t116 == 0 goto l34
+  t117 = T20 * 4
+  t118 = T20 * 4
+  t119 = p0 [ t118 ]
+  p1 [ t117 ] = t119
+  t120 = T20 + 1
+  T20 = t120
+  goto l33
+l34:
+  return 0
+end f_arrCopy
+f_calSum [2]
+  var T21
+  var T22
+  var t121
+  var t122
+  var t123
+  var t124
+  var t125
+  var t126
+  var t127
+  var t128
+  var t129
+  var t130
+  T21 = 0
+  T22 = 0
+l35:
+  t121 = T22 < T0
+  if t121 == 0 goto l38
+  t122 = T22 * 4
+  t123 = p0 [ t122 ]
+  t124 = T21 + t123
+  T21 = t124
+  t125 = T22 % p1
+  t126 = p1 - 1
+  t127 = t125 != t126
+  if t127 == 0 goto l36
+  t128 = T22 * 4
+  p0 [ t128 ] = 0
+  goto l37
+l36:
+  t129 = T22 * 4
+  p0 [ t129 ] = T21
+  T21 = 0
+l37:
+  t130 = T22 + 1
+  T22 = t130
+  goto l35
+l38:
+  return 0
+end f_calSum
+f_avgPooling [2]
+  var T23
+  var T24
+  var T25
+  var t131
+  var t132
+  var t133
+  var t134
+  var t135
+  var t136
+  var t137
+  var t138
+  var t139
+  var t140
+  var t141
+  var t142
+  var t143
+  var t144
+  var t145
+  var t146
+  var t147
+  var t148
+  var t149
+  var t150
+  var t151
+  var t152
+  var t153
+  var t154
+  var t155
+  var t156
+  var t157
+  var t158
+  T24 = 0
+  T23 = 0
+l39:
+  t131 = T24 < T0
+  if t131 == 0 goto l44
+  t132 = p1 - 1
+  t133 = T24 < t132
+  if t133 == 0 goto l40
+  t134 = T24 * 4
+  t135 = p0 [ t134 ]
+  t136 = T23 + t135
+  T23 = t136
+  goto l43
+l40:
+  t137 = p1 - 1
+  t138 = T24 == t137
+  if t138 == 0 goto l41
+  t139 = p0 [ 0 ]
+  T25 = t139
+  t140 = T23 / p1
+  p0 [ 0 ] = t140
+  goto l42
+l41:
+  t141 = T24 * 4
+  t142 = p0 [ t141 ]
+  t143 = T23 + t142
+  t144 = t143 - T25
+  T23 = t144
+  t145 = T24 - p1
+  t146 = t145 + 1
+  t147 = t146 * 4
+  t148 = p0 [ t147 ]
+  T25 = t148
+  t149 = T24 - p1
+  t150 = t149 + 1
+  t151 = t150 * 4
+  t152 = T23 / p1
+  p0 [ t151 ] = t152
+l42:
+l43:
+  t153 = T24 + 1
+  T24 = t153
+  goto l39
+l44:
+  t154 = T0 - p1
+  t155 = t154 + 1
+  T24 = t155
+l45:
+  t156 = T24 < T0
+  if t156 == 0 goto l46
+  t157 = T24 * 4
+  p0 [ t157 ] = 0
+  t158 = T24 + 1
+  T24 = t158
+  goto l45
+l46:
+  return 0
+end f_avgPooling
+f_main [0]
+  var 128 T26
+  var 128 T27
+  var T28
+  var t159
+  var t160
+  var t161
+  var t162
+  var t163
+  var t164
+  var t165
+  var t166
+  var T29
+  var t167
+  var t168
+  var t169
+  var t170
+  var t171
+  var t172
+  var t173
+  var t174
+  var t175
+  var t176
+  var t177
+  var t178
+  var t179
+  var t180
+  var t181
+  var t182
+  var t183
+  var t184
+  var t185
+  var t186
+  var t187
+  var t188
+  var t189
+  var t190
+  var t191
+  var t192
+  var t193
+  var t194
+  var t195
+  var t196
+  var t197
+  var t198
+  var t199
+  var t200
+  var t201
+  var t202
+  var t203
+  var t204
+  var t205
+  var t206
+  var t207
+  var t208
+  var t209
+  var t210
+  var t211
+  var t212
+  var t213
+  var t214
+  var t215
+  var t216
+  var t217
+  var t218
+  var t219
+  var t220
+  var t221
+  var t222
+  var t223
+  var t224
+  var t225
+  var t226
+  var t227
+  var t228
+  var t229
+  var t230
+  var t231
+  var t232
+  var t233
+  var t234
+  var t235
+  var t236
+  var t237
+  var t238
+  var t239
+  var t240
+  var t241
+  var t242
+  var t243
+  var t244
+  var t245
+  var t246
+  var t247
+  var t248
+  var t249
+  var t250
+  var t251
+  var t252
+  var t253
+  var t254
+  T0 = 32
+  T26 [ 0 ] = 7
+  T26 [ 4 ] = 23
+  T26 [ 8 ] = 89
+  T26 [ 12 ] = 26
+  T26 [ 16 ] = 282
+  T26 [ 20 ] = 254
+  T26 [ 24 ] = 27
+  T26 [ 28 ] = 5
+  T26 [ 32 ] = 83
+  T26 [ 36 ] = 273
+  T26 [ 40 ] = 574
+  T26 [ 44 ] = 905
+  T26 [ 48 ] = 354
+  T26 [ 52 ] = 657
+  T26 [ 56 ] = 935
+  T26 [ 60 ] = 264
+  T26 [ 64 ] = 639
+  T26 [ 68 ] = 459
+  T26 [ 72 ] = 29
+  T26 [ 76 ] = 68
+  T26 [ 80 ] = 929
+  T26 [ 84 ] = 756
+  T26 [ 88 ] = 452
+  T26 [ 92 ] = 279
+  T26 [ 96 ] = 58
+  T26 [ 100 ] = 87
+  T26 [ 104 ] = 96
+  T26 [ 108 ] = 36
+  T26 [ 112 ] = 39
+  T26 [ 116 ] = 28
+  T26 [ 120 ] = 1
+  T26 [ 124 ] = 290
+  t159 = T26 + 0
+  t160 = t159
+  t161 = T27 + 0
+  t162 = t161
+  param t160
+  param t162
+  t163 = call f_arrCopy
+  T28 = t163
+  t164 = T27 + 0
+  t165 = t164
+  param t165
+  t166 = call f_revert
+  T28 = t166
+  T29 = 0
+l47:
+  t167 = T29 < 32
+  if t167 == 0 goto l48
+  t168 = T29 * 4
+  t169 = T27 [ t168 ]
+  T28 = t169
+  t170 = T28
+  param t170
+  call f_putint
+  t171 = T29 + 1
+  T29 = t171
+  goto l47
+l48:
+  t172 = T27 + 0
+  t173 = t172
+  param t173
+  t174 = call f_bubblesort
+  T28 = t174
+  T29 = 0
+l49:
+  t175 = T29 < 32
+  if t175 == 0 goto l50
+  t176 = T29 * 4
+  t177 = T27 [ t176 ]
+  T28 = t177
+  t178 = T28
+  param t178
+  call f_putint
+  t179 = T29 + 1
+  T29 = t179
+  goto l49
+l50:
+  t180 = T27 + 0
+  t181 = t180
+  param t181
+  t182 = call f_getMid
+  T28 = t182
+  t183 = T28
+  param t183
+  call f_putint
+  t184 = T27 + 0
+  t185 = t184
+  param t185
+  t186 = call f_getMost
+  T28 = t186
+  t187 = T28
+  param t187
+  call f_putint
+  t188 = T26 + 0
+  t189 = t188
+  t190 = T27 + 0
+  t191 = t190
+  param t189
+  param t191
+  t192 = call f_arrCopy
+  T28 = t192
+  t193 = T27 + 0
+  t194 = t193
+  param t194
+  t195 = call f_bubblesort
+  T28 = t195
+  T29 = 0
+l51:
+  t196 = T29 < 32
+  if t196 == 0 goto l52
+  t197 = T29 * 4
+  t198 = T27 [ t197 ]
+  T28 = t198
+  t199 = T28
+  param t199
+  call f_putint
+  t200 = T29 + 1
+  T29 = t200
+  goto l51
+l52:
+  t201 = T26 + 0
+  t202 = t201
+  t203 = T27 + 0
+  t204 = t203
+  param t202
+  param t204
+  t205 = call f_arrCopy
+  T28 = t205
+  t206 = T27 + 0
+  t207 = t206
+  param t207
+  t208 = call f_insertsort
+  T28 = t208
+  T29 = 0
+l53:
+  t209 = T29 < 32
+  if t209 == 0 goto l54
+  t210 = T29 * 4
+  t211 = T27 [ t210 ]
+  T28 = t211
+  t212 = T28
+  param t212
+  call f_putint
+  t213 = T29 + 1
+  T29 = t213
+  goto l53
+l54:
+  t214 = T26 + 0
+  t215 = t214
+  t216 = T27 + 0
+  t217 = t216
+  param t215
+  param t217
+  t218 = call f_arrCopy
+  T28 = t218
+  T29 = 0
+  T28 = 31
+  t219 = T27 + 0
+  t220 = t219
+  t221 = T29
+  t222 = T28
+  param t220
+  param t221
+  param t222
+  t223 = call f_QuickSort
+  T28 = t223
+l55:
+  t224 = T29 < 32
+  if t224 == 0 goto l56
+  t225 = T29 * 4
+  t226 = T27 [ t225 ]
+  T28 = t226
+  t227 = T28
+  param t227
+  call f_putint
+  t228 = T29 + 1
+  T29 = t228
+  goto l55
+l56:
+  t229 = T26 + 0
+  t230 = t229
+  t231 = T27 + 0
+  t232 = t231
+  param t230
+  param t232
+  t233 = call f_arrCopy
+  T28 = t233
+  t234 = T27 + 0
+  t235 = t234
+  param t235
+  param 4
+  t236 = call f_calSum
+  T28 = t236
+  T29 = 0
+l57:
+  t237 = T29 < 32
+  if t237 == 0 goto l58
+  t238 = T29 * 4
+  t239 = T27 [ t238 ]
+  T28 = t239
+  t240 = T28
+  param t240
+  call f_putint
+  t241 = T29 + 1
+  T29 = t241
+  goto l57
+l58:
+  t242 = T26 + 0
+  t243 = t242
+  t244 = T27 + 0
+  t245 = t244
+  param t243
+  param t245
+  t246 = call f_arrCopy
+  T28 = t246
+  t247 = T27 + 0
+  t248 = t247
+  param t248
+  param 3
+  t249 = call f_avgPooling
+  T28 = t249
+  T29 = 0
+l59:
+  t250 = T29 < 32
+  if t250 == 0 goto l60
+  t251 = T29 * 4
+  t252 = T27 [ t251 ]
+  T28 = t252
+  t253 = T28
+  param t253
+  call f_putint
+  t254 = T29 + 1
+  T29 = t254
+  goto l59
+l60:
+  return 0
+end f_main

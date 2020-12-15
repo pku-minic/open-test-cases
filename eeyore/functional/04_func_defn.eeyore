@@ -1,0 +1,18 @@
+var T0
+f_func [1]
+  var t0
+  t0 = p0 - 1
+  p0 = t0
+  return p0
+end f_func
+f_main [0]
+  var T1
+  var t1
+  var t2
+  T0 = 10
+  t1 = T0
+  param t1
+  t2 = call f_func
+  T1 = t2
+  return T1
+end f_main

@@ -1,0 +1,33 @@
+var T0
+var 40 T1
+f_main [0]
+  T0 = 5
+  T1 [ 0 ] = 0
+  T1 [ 4 ] = 1
+  T1 [ 8 ] = 2
+  T1 [ 12 ] = 3
+  T1 [ 16 ] = 4
+  T1 [ 20 ] = 5
+  T1 [ 24 ] = 6
+  T1 [ 28 ] = 7
+  T1 [ 32 ] = 8
+  T1 [ 36 ] = 9
+  var T2
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  T2 = 0
+l0:
+  t0 = T2 * 4
+  t1 = T1 [ t0 ]
+  t3 = t1 > T0
+  t2 = t3 == 0
+  if t2 == 0 goto l1
+  t4 = T2 + 1
+  T2 = t4
+  goto l0
+l1:
+  return T2
+end f_main

@@ -1,0 +1,75 @@
+f_wc [2]
+  var T0
+  var T1
+  var T2
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  T1 = 0
+  T0 = 0
+  T2 = 0
+l0:
+  t0 = T1 < p1
+  if t0 == 0 goto l4
+  t1 = T1 * 4
+  t2 = p0 [ t1 ]
+  t3 = t2 != 32
+  if t3 == 0 goto l2
+  t4 = T0 == 0
+  if t4 == 0 goto l1
+  t5 = T2 + 1
+  T2 = t5
+  T0 = 1
+l1:
+  goto l3
+l2:
+  T0 = 0
+l3:
+  t6 = T1 + 1
+  T1 = t6
+  goto l0
+l4:
+  return T2
+end f_wc
+f_main [0]
+  var 2000 T3
+  var T4
+  var T5
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  T5 = 0
+  T4 = 0
+l5:
+  t7 = T4 != 10
+  if t7 == 0 goto l6
+  t8 = call f_getch
+  T4 = t8
+  t9 = T5 * 4
+  T3 [ t9 ] = T4
+  t10 = T5 + 1
+  T5 = t10
+  goto l5
+l6:
+  t11 = T3 + 0
+  t12 = t11
+  t13 = T5
+  param t12
+  param t13
+  t14 = call f_wc
+  T4 = t14
+  t15 = T4
+  param t15
+  call f_putint
+  return 0
+end f_main

@@ -1,0 +1,68 @@
+f_removeElement [3]
+  var T0
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  T0 = 0
+l0:
+  t0 = T0 < p1
+  if t0 == 0 goto l3
+  t1 = T0 * 4
+  t2 = p0 [ t1 ]
+  t3 = t2 == p2
+  if t3 == 0 goto l1
+  t4 = T0 * 4
+  t5 = p1 - 1
+  t6 = t5 * 4
+  t7 = p0 [ t6 ]
+  p0 [ t4 ] = t7
+  t8 = p1 - 1
+  p1 = t8
+  goto l2
+l1:
+  t9 = T0 + 1
+  T0 = t9
+l2:
+  goto l0
+l3:
+  return p1
+end f_removeElement
+f_main [0]
+  var T1
+  var 40 T2
+  var T3
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  T2 [ 0 ] = 3
+  T2 [ 4 ] = 3
+  T2 [ 8 ] = 9
+  T2 [ 12 ] = 0
+  T2 [ 16 ] = 0
+  T2 [ 20 ] = 1
+  T2 [ 24 ] = 1
+  T2 [ 28 ] = 5
+  T2 [ 32 ] = 7
+  T2 [ 36 ] = 8
+  T1 = 10
+  T3 = 3
+  t10 = T2 + 0
+  t11 = t10
+  t12 = T1
+  t13 = T3
+  param t11
+  param t12
+  param t13
+  t14 = call f_removeElement
+  T1 = t14
+  return T1
+end f_main

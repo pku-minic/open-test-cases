@@ -1,0 +1,21 @@
+var T0
+var T1
+var T2
+f_main [0]
+  var t0
+  var t1
+  var t2
+  var T3
+  var t3
+  var t4
+  t0 = call f_getint
+  T0 = t0
+  t1 = call f_getint
+  T1 = t1
+  t2 = call f_getint
+  T2 = t2
+  t3 = T1 * T2
+  t4 = T0 + t3
+  T3 = t4
+  return T3
+end f_main

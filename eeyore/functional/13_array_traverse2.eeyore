@@ -1,0 +1,51 @@
+var 108 T0
+f_main [0]
+  var T1
+  var T2
+  var T3
+  var T4
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  T1 = 0
+  T2 = 0
+  T3 = 0
+  T4 = 0
+l0:
+  t0 = T1 < 3
+  if t0 == 0 goto l5
+l1:
+  t1 = T2 < 3
+  if t1 == 0 goto l4
+l2:
+  t2 = T3 < 3
+  if t2 == 0 goto l3
+  t3 = T1 * 3
+  t3 = t3 + T2
+  t4 = t3 * 3
+  t4 = t4 + T3
+  t5 = t4 * 4
+  T0 [ t5 ] = T4
+  t6 = T4 + 1
+  T4 = t6
+  t7 = T3 + 1
+  T3 = t7
+  goto l2
+l3:
+  t8 = T2 + 1
+  T2 = t8
+  goto l1
+l4:
+  t9 = T1 + 1
+  T1 = t9
+  goto l0
+l5:
+  return 0
+end f_main

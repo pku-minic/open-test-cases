@@ -1,0 +1,20 @@
+f_main [0]
+  var T0
+  var t0
+  var t1
+  var t2
+  T0 = 10
+l0:
+  t0 = T0 > 0
+  if t0 == 0 goto l2
+  t1 = T0 > 5
+  if t1 == 0 goto l1
+  t2 = T0 - 1
+  T0 = t2
+  goto l0
+l1:
+  return T0
+  goto l0
+l2:
+  return T0
+end f_main

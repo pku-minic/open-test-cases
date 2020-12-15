@@ -1,0 +1,270 @@
+var T0
+f_main [0]
+  var T1
+  var T2
+  var T3
+  var T4
+  var T5
+  var T6
+  var T7
+  var T8
+  var T9
+  var T10
+  var T11
+  var T12
+  var T13
+  var T14
+  var T15
+  var T16
+  var T17
+  var T18
+  var T19
+  var T20
+  var T21
+  var T22
+  var T23
+  var T24
+  var T25
+  var T26
+  var T27
+  var T28
+  var T29
+  var T30
+  var T31
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  var t21
+  var t22
+  var t23
+  var t24
+  var t25
+  var t26
+  var t27
+  var t28
+  var t29
+  var t30
+  var t31
+  var T32
+  var t32
+  var t33
+  var t34
+  var t35
+  var t36
+  var t37
+  var t38
+  var t39
+  var t40
+  var t41
+  var t42
+  var t43
+  var t44
+  var t45
+  var t46
+  var t47
+  var t48
+  var t49
+  var t50
+  var t51
+  var t52
+  var t53
+  var t54
+  var t55
+  var t56
+  var t57
+  var t58
+  var t59
+  var t60
+  var t61
+  var T33
+  var t62
+  var t63
+  var t64
+  t0 = call f_getint
+  T31 = t0
+l0:
+  t1 = T31 == 5
+  if t1 == 0 goto l1
+  t2 = T31 + 1
+  T31 = t2
+  goto l0
+l1:
+  T1 = 0
+  t3 = T1 + 1
+  T2 = t3
+  t4 = T2 + 1
+  T3 = t4
+  t5 = T3 + 1
+  T4 = t5
+  t6 = T4 + 1
+  T5 = t6
+  t7 = T5 + 1
+  T6 = t7
+  t8 = T6 + 1
+  T7 = t8
+  t9 = T7 + 1
+  T8 = t9
+  t10 = T8 + 1
+  T9 = t10
+  t11 = T9 + 1
+  T10 = t11
+  t12 = T10 + 1
+  T11 = t12
+  t13 = T11 + 1
+  T12 = t13
+  t14 = T12 + 1
+  T13 = t14
+  t15 = T13 + 1
+  T14 = t15
+  t16 = T14 + 1
+  T15 = t16
+  t17 = T15 + 1
+  T16 = t17
+  t18 = T16 + 1
+  T17 = t18
+  t19 = T17 + 1
+  T18 = t19
+  t20 = T18 + 1
+  T19 = t20
+  t21 = T19 + 1
+  T20 = t21
+  t22 = T20 + 1
+  T21 = t22
+  t23 = T21 + 1
+  T22 = t23
+  t24 = T22 + 1
+  T23 = t24
+  t25 = T23 + 1
+  T24 = t25
+  t26 = T24 + 1
+  T25 = t26
+  t27 = T25 + 1
+  T26 = t27
+  t28 = T26 + 1
+  T27 = t28
+  t29 = T27 + 1
+  T28 = t29
+  t30 = T28 + 1
+  T29 = t30
+  t31 = T29 + 1
+  T30 = t31
+  t32 = T1
+  param t32
+  call f_putint
+  t33 = T2
+  param t33
+  call f_putint
+  t34 = T3
+  param t34
+  call f_putint
+  t35 = T4
+  param t35
+  call f_putint
+  t36 = T5
+  param t36
+  call f_putint
+  t37 = T6
+  param t37
+  call f_putint
+  t38 = T7
+  param t38
+  call f_putint
+  t39 = T8
+  param t39
+  call f_putint
+  t40 = T9
+  param t40
+  call f_putint
+  t41 = T10
+  param t41
+  call f_putint
+  t42 = T11
+  param t42
+  call f_putint
+  t43 = T12
+  param t43
+  call f_putint
+  t44 = T13
+  param t44
+  call f_putint
+  t45 = T14
+  param t45
+  call f_putint
+  t46 = T15
+  param t46
+  call f_putint
+  t47 = T16
+  param t47
+  call f_putint
+  t48 = T17
+  param t48
+  call f_putint
+  t49 = T18
+  param t49
+  call f_putint
+  t50 = T19
+  param t50
+  call f_putint
+  t51 = T20
+  param t51
+  call f_putint
+  t52 = T21
+  param t52
+  call f_putint
+  t53 = T22
+  param t53
+  call f_putint
+  t54 = T23
+  param t54
+  call f_putint
+  t55 = T24
+  param t55
+  call f_putint
+  t56 = T25
+  param t56
+  call f_putint
+  t57 = T26
+  param t57
+  call f_putint
+  t58 = T27
+  param t58
+  call f_putint
+  t59 = T28
+  param t59
+  call f_putint
+  t60 = T29
+  param t60
+  call f_putint
+  t61 = T30
+  param t61
+  call f_putint
+  T33 = 10
+  t62 = T33
+  param t62
+  call f_putch
+  t63 = T31
+  param t63
+  call f_putint
+  t64 = T33
+  param t64
+  call f_putch
+  return T26
+end f_main

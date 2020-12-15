@@ -1,0 +1,29 @@
+f_ifElseElseIf [0]
+  var T0
+  var T1
+  var t0
+  var t1
+  var t2
+  T0 = 66
+  T1 = 8923
+  t0 = T0 == 5
+  if t0 == 0 goto l0
+  T1 = 25
+  goto l3
+l0:
+  t1 = T0 == 10
+  if t1 == 0 goto l1
+  T1 = 42
+  goto l2
+l1:
+  t2 = T0 * 2
+  T1 = t2
+l2:
+l3:
+  return T1
+end f_ifElseElseIf
+f_main [0]
+  var t3
+  t3 = call f_ifElseElseIf
+  return t3
+end f_main

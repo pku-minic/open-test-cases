@@ -1,0 +1,211 @@
+var T0
+var T1
+var 16160400 T6
+var 8040 T7
+var 8040 T8
+f_mv [4]
+  var T2
+  var T3
+  var T4
+  var T5
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  var t21
+  var t22
+  var t23
+  var t24
+  var t25
+  var t26
+  var t27
+  T3 = 0
+  T2 = 11
+  T4 = 0
+l0:
+  t0 = T4 < p0
+  if t0 == 0 goto l1
+  t1 = T4 * 4
+  p3 [ t1 ] = 0
+  t2 = T4 + 1
+  T4 = t2
+  goto l0
+l1:
+  T4 = 0
+  T5 = 0
+l2:
+  t3 = T4 < p0
+  if t3 == 0 goto l7
+  T5 = 0
+l3:
+  t4 = T5 < p0
+  if t4 == 0 goto l6
+  t5 = T4 * 2010
+  t5 = t5 + T5
+  t6 = t5 * 4
+  t7 = p1 [ t6 ]
+  t8 = t7 == 0
+  if t8 == 0 goto l4
+  t9 = T4 * 4
+  t10 = p2 [ t9 ]
+  t11 = T2 * t10
+  t12 = T5 * 4
+  t13 = p2 [ t12 ]
+  t14 = t11 + t13
+  T2 = t14
+  t15 = T3 - T2
+  T3 = t15
+  goto l5
+l4:
+  t16 = T4 * 4
+  t17 = T4 * 4
+  t18 = p3 [ t17 ]
+  t19 = T4 * 2010
+  t19 = t19 + T5
+  t20 = t19 * 4
+  t21 = p1 [ t20 ]
+  t22 = T5 * 4
+  t23 = p2 [ t22 ]
+  t24 = t21 * t23
+  t25 = t18 + t24
+  p3 [ t16 ] = t25
+l5:
+  t26 = T5 + 1
+  T5 = t26
+  goto l3
+l6:
+  t27 = T4 + 1
+  T4 = t27
+  goto l2
+l7:
+  return
+end f_mv
+f_main [0]
+  T1 = 2010
+  var T9
+  var t28
+  var T10
+  var T11
+  var t29
+  var t30
+  var t31
+  var t32
+  var t33
+  var t34
+  var t35
+  var t36
+  var t37
+  var t38
+  var t39
+  var t40
+  var t41
+  var t42
+  var t43
+  var t44
+  var t45
+  var t46
+  var t47
+  var t48
+  var t49
+  var t50
+  var t51
+  var t52
+  var t53
+  var t54
+  var t55
+  var t56
+  var t57
+  var t58
+  t28 = call f_getint
+  T9 = t28
+  T10 = 0
+l8:
+  t29 = T10 < T9
+  if t29 == 0 goto l11
+  T11 = 0
+l9:
+  t30 = T11 < T9
+  if t30 == 0 goto l10
+  t31 = T10 * 2010
+  t31 = t31 + T11
+  t32 = t31 * 4
+  t33 = call f_getint
+  T6 [ t32 ] = t33
+  t34 = T11 + 1
+  T11 = t34
+  goto l9
+l10:
+  t35 = T10 + 1
+  T10 = t35
+  goto l8
+l11:
+  T10 = 0
+l12:
+  t36 = T10 < T9
+  if t36 == 0 goto l13
+  t37 = T10 * 4
+  t38 = call f_getint
+  T7 [ t37 ] = t38
+  t39 = T10 + 1
+  T10 = t39
+  goto l12
+l13:
+  call f_starttime
+  T10 = 0
+l14:
+  t40 = T10 < 50
+  if t40 == 0 goto l15
+  t41 = T9
+  t42 = T6 + 0
+  t43 = t42
+  t44 = T7 + 0
+  t45 = t44
+  t46 = T8 + 0
+  t47 = t46
+  param t41
+  param t43
+  param t45
+  param t47
+  call f_mv
+  t48 = T9
+  t49 = T6 + 0
+  t50 = t49
+  t51 = T8 + 0
+  t52 = t51
+  t53 = T7 + 0
+  t54 = t53
+  param t48
+  param t50
+  param t52
+  param t54
+  call f_mv
+  t55 = T10 + 1
+  T10 = t55
+  goto l14
+l15:
+  call f_stoptime
+  t56 = T9
+  t57 = T8 + 0
+  t58 = t57
+  param t56
+  param t58
+  call f_putarray
+  return 0
+end f_main

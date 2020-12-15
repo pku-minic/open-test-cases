@@ -1,0 +1,39 @@
+var 20 T0
+f_main [0]
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var T1
+  var T2
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  t0 = call f_getint
+  T0 [ 0 ] = t0
+  t1 = call f_getint
+  T0 [ 4 ] = t1
+  t2 = call f_getint
+  T0 [ 8 ] = t2
+  t3 = call f_getint
+  T0 [ 12 ] = t3
+  t4 = call f_getint
+  T0 [ 16 ] = t4
+  T1 = 4
+  T2 = 0
+l0:
+  t5 = T1 > 1
+  if t5 == 0 goto l1
+  t6 = T1 * 4
+  t7 = T0 [ t6 ]
+  t8 = T2 + t7
+  T2 = t8
+  t9 = T1 - 1
+  T1 = t9
+  goto l0
+l1:
+  return T2
+end f_main

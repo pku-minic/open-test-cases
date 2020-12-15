@@ -1,0 +1,10 @@
+var T0
+f_main [0]
+  var t0
+  T0 = 10
+  t0 = T0 > 0
+  if t0 == 0 goto l0
+  return 1
+l0:
+  return 0
+end f_main

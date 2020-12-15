@@ -1,0 +1,46 @@
+var T0
+f_gcd [2]
+  var T1
+  var T2
+  var t0
+  var t1
+  var t2
+  var t3
+  t0 = p0 < p1
+  if t0 == 0 goto l0
+  T1 = p0
+  p0 = p1
+  p1 = T1
+l0:
+  t1 = p0 % p1
+  T2 = t1
+l1:
+  t2 = T2 != 0
+  if t2 == 0 goto l2
+  p0 = p1
+  p1 = T2
+  t3 = p0 % p1
+  T2 = t3
+  goto l1
+l2:
+  return p1
+end f_gcd
+f_main [0]
+  var T3
+  var T4
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  t4 = call f_getint
+  T3 = t4
+  t5 = call f_getint
+  T4 = t5
+  t6 = T3
+  t7 = T4
+  param t6
+  param t7
+  t8 = call f_gcd
+  return t8
+end f_main

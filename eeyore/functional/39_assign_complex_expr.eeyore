@@ -1,0 +1,59 @@
+f_main [0]
+  var T0
+  var T1
+  var T2
+  var T3
+  var T4
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  T0 = 5
+  T1 = 5
+  T2 = 1
+  T3 = -2
+  t0 = T3 * 1
+  t1 = t0 / 2
+  t2 = T0 - T1
+  t3 = t1 + t2
+  t4 = T2 + 3
+  t5 = - t4
+  t6 = t5 % 2
+  t7 = t3 - t6
+  T4 = t7
+  t8 = T4
+  param t8
+  call f_putint
+  t9 = T3 % 2
+  t10 = t9 + 67
+  t11 = T0 - T1
+  t12 = - t11
+  t13 = t10 + t12
+  t14 = T2 + 2
+  t15 = t14 % 2
+  t16 = - t15
+  t17 = t13 - t16
+  T4 = t17
+  t18 = T4 + 3
+  T4 = t18
+  t19 = T4
+  param t19
+  call f_putint
+  return 0
+end f_main

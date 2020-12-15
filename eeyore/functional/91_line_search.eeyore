@@ -1,0 +1,94 @@
+f_main [0]
+  var T0
+  var T1
+  var 40 T2
+  var t0
+  var t1
+  var t2
+  var t3
+  var T3
+  var T4
+  var T5
+  var T6
+  var T7
+  var t4
+  var t5
+  var t6
+  var t7
+  var T8
+  var T9
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  T1 = 0
+  T0 = 0
+l0:
+  t0 = T0 < 10
+  if t0 == 0 goto l1
+  t1 = T0 * 4
+  t2 = T0 + 1
+  T2 [ t1 ] = t2
+  t3 = T0 + 1
+  T0 = t3
+  goto l0
+l1:
+  T7 = 10
+  t4 = call f_getint
+  T3 = t4
+  t5 = T7 - 1
+  T4 = t5
+  T5 = 0
+  t6 = T4 + T5
+  t7 = t6 / 2
+  T6 = t7
+  T8 = 0
+  T0 = 0
+  T9 = 0
+l2:
+  t8 = T0 < 10
+  if t8 == 0 goto l3
+  t10 = T8 == 0
+  if t10 == 0 goto l3
+  t9 = 1
+  goto l4
+l3:
+  t9 = 0
+l4:
+  if t9 == 0 goto l6
+  t11 = T0 * 4
+  t12 = T2 [ t11 ]
+  t13 = t12 == T3
+  if t13 == 0 goto l5
+  T8 = 1
+  T9 = T0
+l5:
+  t14 = T0 + 1
+  T0 = t14
+  goto l2
+l6:
+  t15 = T8 == 1
+  if t15 == 0 goto l7
+  t16 = T9
+  param t16
+  call f_putint
+  goto l8
+l7:
+  T3 = 0
+  t17 = T3
+  param t17
+  call f_putint
+l8:
+  T3 = 10
+  t18 = T3
+  param t18
+  call f_putch
+  return 0
+end f_main

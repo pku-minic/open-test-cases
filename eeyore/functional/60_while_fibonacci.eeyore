@@ -1,0 +1,46 @@
+var T0
+f_fib [1]
+  var T1
+  var T2
+  var T3
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  T1 = 0
+  T2 = 1
+  t0 = p0 == 0
+  if t0 == 0 goto l0
+  return 0
+l0:
+  t1 = p0 == 1
+  if t1 == 0 goto l1
+  return 1
+l1:
+l2:
+  t2 = p0 > 1
+  if t2 == 0 goto l3
+  t3 = T1 + T2
+  T3 = t3
+  T1 = T2
+  T2 = T3
+  t4 = p0 - 1
+  p0 = t4
+  goto l2
+l3:
+  return T3
+end f_fib
+f_main [0]
+  var t5
+  var T4
+  var t6
+  var t7
+  t5 = call f_getint
+  T0 = t5
+  t6 = T0
+  param t6
+  t7 = call f_fib
+  T4 = t7
+  return T4
+end f_main

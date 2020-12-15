@@ -1,0 +1,5 @@
+var T0
+f_main [0]
+  T0 = 10
+  return 0
+end f_main

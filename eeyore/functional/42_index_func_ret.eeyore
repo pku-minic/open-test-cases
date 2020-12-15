@@ -1,0 +1,55 @@
+f__getMaxOfAll [2]
+  var T0
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  T0 = -999999
+  t0 = p1 - 1
+  p1 = t0
+l0:
+  t1 = p1 > -1
+  if t1 == 0 goto l2
+  t2 = p1 * 4
+  t3 = p0 [ t2 ]
+  t4 = t3 > T0
+  if t4 == 0 goto l1
+  t5 = p1 * 4
+  t6 = p0 [ t5 ]
+  T0 = t6
+l1:
+  t7 = p1 - 1
+  p1 = t7
+  goto l0
+l2:
+  return T0
+end f__getMaxOfAll
+f_main [0]
+  var 12 T1
+  var T2
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  T1 [ 0 ] = -2
+  T1 [ 4 ] = 2
+  T1 [ 8 ] = -7
+  t8 = T1 + 0
+  t9 = t8
+  param t9
+  param 3
+  t10 = call f__getMaxOfAll
+  t11 = t10 * 4
+  t12 = T1 [ t11 ]
+  T2 = t12
+  t13 = T2
+  param t13
+  call f_putint
+  return 0
+end f_main

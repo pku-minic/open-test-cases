@@ -1,0 +1,36 @@
+var T0
+f_myFunc [3]
+  var T1
+  var t0
+  var t1
+  var t2
+  var t3
+  p0 = 2
+  T1 = 0
+  t0 = T1 != 0
+  if t0 == 0 goto l0
+  return 0
+l0:
+l1:
+  t1 = p1 > 0
+  if t1 == 0 goto l2
+  t2 = p1 - 1
+  p1 = t2
+  goto l1
+l2:
+  t3 = p0 + p1
+  return t3
+end f_myFunc
+f_main [0]
+  var T2
+  var t4
+  var t5
+  T0 = 3
+  param 1
+  param 2
+  param 1
+  t4 = call f_myFunc
+  T2 = t4
+  t5 = T0 + T2
+  return t5
+end f_main

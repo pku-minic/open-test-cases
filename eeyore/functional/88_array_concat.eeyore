@@ -1,0 +1,125 @@
+f_concat [3]
+  var T0
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var T1
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  T0 = 0
+l0:
+  t0 = T0 < 3
+  if t0 == 0 goto l1
+  t1 = T0 * 4
+  t2 = T0 * 4
+  t3 = p0 [ t2 ]
+  p2 [ t1 ] = t3
+  t4 = T0 + 1
+  T0 = t4
+  goto l0
+l1:
+  T1 = 0
+l2:
+  t5 = T1 < 3
+  if t5 == 0 goto l3
+  t6 = T0 * 4
+  t7 = T1 * 4
+  t8 = p1 [ t7 ]
+  p2 [ t6 ] = t8
+  t9 = T0 + 1
+  T0 = t9
+  t10 = T1 + 1
+  T1 = t10
+  goto l2
+l3:
+  return 0
+end f_concat
+f_main [0]
+  var 12 T2
+  var 12 T3
+  var 12 T4
+  var 12 T5
+  var 12 T6
+  var 12 T7
+  var 24 T8
+  var 12 T9
+  var 12 T10
+  var T11
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  var t21
+  var t22
+  var t23
+  var t24
+  var t25
+  var T12
+  var t26
+  var t27
+  var t28
+  var t29
+  var t30
+  var t31
+  T11 = 0
+l4:
+  t11 = T11 < 3
+  if t11 == 0 goto l5
+  t12 = T11 * 4
+  T2 [ t12 ] = T11
+  t13 = T11 * 4
+  T3 [ t13 ] = T11
+  t14 = T11 * 4
+  T4 [ t14 ] = T11
+  t15 = T11 * 4
+  T5 [ t15 ] = T11
+  t16 = T11 * 4
+  T6 [ t16 ] = T11
+  t17 = T11 * 4
+  T7 [ t17 ] = T11
+  t18 = T11 + 1
+  T11 = t18
+  goto l4
+l5:
+  t19 = T2 + 0
+  t20 = t19
+  t21 = T5 + 0
+  t22 = t21
+  t23 = T8 + 0
+  t24 = t23
+  param t20
+  param t22
+  param t24
+  t25 = call f_concat
+  T11 = t25
+l6:
+  t26 = T11 < 6
+  if t26 == 0 goto l7
+  t27 = T11 * 4
+  t28 = T8 [ t27 ]
+  T12 = t28
+  t29 = T12
+  param t29
+  call f_putint
+  t30 = T11 + 1
+  T11 = t30
+  goto l6
+l7:
+  T12 = 10
+  t31 = T12
+  param t31
+  call f_putch
+  return 0
+end f_main

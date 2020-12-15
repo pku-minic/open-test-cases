@@ -1,0 +1,29 @@
+f_main [0]
+  var T0
+  var T1
+  var 12 T2
+  var T3
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  T0 = 56
+  T1 = 12
+  T2 [ 0 ] = 1
+  T2 [ 4 ] = 2
+  T2 [ 8 ] = 3
+  t0 = T0 % T1
+  t1 = t0 + T1
+  t2 = t1 / 5
+  t3 = t2 - 2
+  t4 = t3 * 4
+  t5 = T2 [ t4 ]
+  T3 = t5
+  t6 = T3
+  param t6
+  call f_putint
+  return 0
+end f_main

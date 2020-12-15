@@ -1,0 +1,271 @@
+var T0
+var 4194304 T4
+var 4194304 T5
+var 4194304 T6
+f_mm [4]
+  var T1
+  var T2
+  var T3
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  var t21
+  var t22
+  var t23
+  var t24
+  var t25
+  var t26
+  var t27
+  var t28
+  var t29
+  T1 = 0
+  T2 = 0
+l0:
+  t0 = T1 < p0
+  if t0 == 0 goto l3
+  T2 = 0
+l1:
+  t1 = T2 < p0
+  if t1 == 0 goto l2
+  t2 = T1 * 1024
+  t2 = t2 + T2
+  t3 = t2 * 4
+  p3 [ t3 ] = 0
+  t4 = T2 + 1
+  T2 = t4
+  goto l1
+l2:
+  t5 = T1 + 1
+  T1 = t5
+  goto l0
+l3:
+  T1 = 0
+  T2 = 0
+  T3 = 0
+l4:
+  t6 = T3 < p0
+  if t6 == 0 goto l10
+  T1 = 0
+l5:
+  t7 = T1 < p0
+  if t7 == 0 goto l9
+  t8 = T1 * 1024
+  t8 = t8 + T3
+  t9 = t8 * 4
+  t10 = p1 [ t9 ]
+  t11 = t10 == 0
+  if t11 == 0 goto l6
+  t12 = T1 + 1
+  T1 = t12
+  goto l5
+l6:
+  T2 = 0
+l7:
+  t13 = T2 < p0
+  if t13 == 0 goto l8
+  t14 = T1 * 1024
+  t14 = t14 + T2
+  t15 = t14 * 4
+  t16 = T1 * 1024
+  t16 = t16 + T2
+  t17 = t16 * 4
+  t18 = p3 [ t17 ]
+  t19 = T1 * 1024
+  t19 = t19 + T3
+  t20 = t19 * 4
+  t21 = p1 [ t20 ]
+  t22 = T3 * 1024
+  t22 = t22 + T2
+  t23 = t22 * 4
+  t24 = p2 [ t23 ]
+  t25 = t21 * t24
+  t26 = t18 + t25
+  p3 [ t15 ] = t26
+  t27 = T2 + 1
+  T2 = t27
+  goto l7
+l8:
+  t28 = T1 + 1
+  T1 = t28
+  goto l5
+l9:
+  t29 = T3 + 1
+  T3 = t29
+  goto l4
+l10:
+  return
+end f_mm
+f_main [0]
+  T0 = 1024
+  var T7
+  var t30
+  var T8
+  var T9
+  var t31
+  var t32
+  var t33
+  var t34
+  var t35
+  var t36
+  var t37
+  var t38
+  var t39
+  var t40
+  var t41
+  var t42
+  var t43
+  var t44
+  var t45
+  var t46
+  var t47
+  var t48
+  var t49
+  var t50
+  var t51
+  var t52
+  var t53
+  var t54
+  var t55
+  var t56
+  var t57
+  var t58
+  var t59
+  var t60
+  var T10
+  var t61
+  var t62
+  var t63
+  var t64
+  var t65
+  var t66
+  var t67
+  var t68
+  var t69
+  t30 = call f_getint
+  T7 = t30
+  T8 = 0
+  T9 = 0
+l11:
+  t31 = T8 < T7
+  if t31 == 0 goto l14
+  T9 = 0
+l12:
+  t32 = T9 < T7
+  if t32 == 0 goto l13
+  t33 = T8 * 1024
+  t33 = t33 + T9
+  t34 = t33 * 4
+  t35 = call f_getint
+  T4 [ t34 ] = t35
+  t36 = T9 + 1
+  T9 = t36
+  goto l12
+l13:
+  t37 = T8 + 1
+  T8 = t37
+  goto l11
+l14:
+  T8 = 0
+  T9 = 0
+l15:
+  t38 = T8 < T7
+  if t38 == 0 goto l18
+  T9 = 0
+l16:
+  t39 = T9 < T7
+  if t39 == 0 goto l17
+  t40 = T8 * 1024
+  t40 = t40 + T9
+  t41 = t40 * 4
+  t42 = call f_getint
+  T5 [ t41 ] = t42
+  t43 = T9 + 1
+  T9 = t43
+  goto l16
+l17:
+  t44 = T8 + 1
+  T8 = t44
+  goto l15
+l18:
+  call f_starttime
+  T8 = 0
+l19:
+  t45 = T8 < 5
+  if t45 == 0 goto l20
+  t46 = T7
+  t47 = T4 + 0
+  t48 = t47
+  t49 = T5 + 0
+  t50 = t49
+  t51 = T6 + 0
+  t52 = t51
+  param t46
+  param t48
+  param t50
+  param t52
+  call f_mm
+  t53 = T7
+  t54 = T4 + 0
+  t55 = t54
+  t56 = T6 + 0
+  t57 = t56
+  t58 = T5 + 0
+  t59 = t58
+  param t53
+  param t55
+  param t57
+  param t59
+  call f_mm
+  t60 = T8 + 1
+  T8 = t60
+  goto l19
+l20:
+  T10 = 0
+  T8 = 0
+l21:
+  t61 = T8 < T7
+  if t61 == 0 goto l24
+  T9 = 0
+l22:
+  t62 = T9 < T7
+  if t62 == 0 goto l23
+  t63 = T8 * 1024
+  t63 = t63 + T9
+  t64 = t63 * 4
+  t65 = T5 [ t64 ]
+  t66 = T10 + t65
+  T10 = t66
+  t67 = T9 + 1
+  T9 = t67
+  goto l22
+l23:
+  t68 = T8 + 1
+  T8 = t68
+  goto l21
+l24:
+  call f_stoptime
+  t69 = T10
+  param t69
+  call f_putint
+  param 10
+  call f_putch
+  return 0
+end f_main

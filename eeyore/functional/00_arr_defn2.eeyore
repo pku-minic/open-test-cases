@@ -1,0 +1,4 @@
+var 400 T0
+f_main [0]
+  return 0
+end f_main

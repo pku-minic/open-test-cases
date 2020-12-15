@@ -1,0 +1,107 @@
+var T0
+f_insert [2]
+  var T1
+  var T2
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  T1 = 0
+l0:
+  t0 = T1 * 4
+  t1 = p0 [ t0 ]
+  t2 = p1 > t1
+  if t2 == 0 goto l1
+  t4 = T1 < T0
+  if t4 == 0 goto l1
+  t3 = 1
+  goto l2
+l1:
+  t3 = 0
+l2:
+  if t3 == 0 goto l3
+  t5 = T1 + 1
+  T1 = t5
+  goto l0
+l3:
+  T2 = T0
+l4:
+  t6 = T2 > T1
+  if t6 == 0 goto l5
+  t7 = T2 * 4
+  t8 = T2 - 1
+  t9 = t8 * 4
+  t10 = p0 [ t9 ]
+  p0 [ t7 ] = t10
+  t11 = T1 * 4
+  p0 [ t11 ] = p1
+  t12 = T2 - 1
+  T2 = t12
+  goto l4
+l5:
+  return 0
+end f_insert
+f_main [0]
+  var 44 T3
+  var T4
+  var T5
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  var t21
+  var t22
+  var t23
+  T0 = 10
+  T3 [ 0 ] = 1
+  T3 [ 4 ] = 3
+  T3 [ 8 ] = 4
+  T3 [ 12 ] = 7
+  T3 [ 16 ] = 8
+  T3 [ 20 ] = 11
+  T3 [ 24 ] = 13
+  T3 [ 28 ] = 18
+  T3 [ 32 ] = 56
+  T3 [ 36 ] = 78
+  T5 = 0
+  t13 = call f_getint
+  T4 = t13
+  t14 = T3 + 0
+  t15 = t14
+  t16 = T4
+  param t15
+  param t16
+  t17 = call f_insert
+  T4 = t17
+l6:
+  t18 = T5 < T0
+  if t18 == 0 goto l7
+  t19 = T5 * 4
+  t20 = T3 [ t19 ]
+  T4 = t20
+  t21 = T4
+  param t21
+  call f_putint
+  T4 = 10
+  t22 = T4
+  param t22
+  call f_putch
+  t23 = T5 + 1
+  T5 = t23
+  goto l6
+l7:
+  return 0
+end f_main

@@ -1,0 +1,278 @@
+var T0
+f_Merge [4]
+  var T1
+  var t0
+  var t1
+  var T2
+  var t2
+  var 40 T3
+  var 40 T4
+  var T5
+  var T6
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var T7
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  var t21
+  var t22
+  var t23
+  var t24
+  var t25
+  var t26
+  var t27
+  var t28
+  var t29
+  var t30
+  var t31
+  var t32
+  var t33
+  var t34
+  var t35
+  var t36
+  var t37
+  var t38
+  var t39
+  var t40
+  var t41
+  var t42
+  var t43
+  var t44
+  var t45
+  var t46
+  t0 = p2 - p1
+  t1 = t0 + 1
+  T1 = t1
+  t2 = p3 - p2
+  T2 = t2
+  T5 = 0
+  T6 = 0
+l0:
+  t3 = T5 < T1
+  if t3 == 0 goto l1
+  t4 = T5 * 4
+  t5 = T5 + p1
+  t6 = t5 * 4
+  t7 = p0 [ t6 ]
+  T3 [ t4 ] = t7
+  t8 = T5 + 1
+  T5 = t8
+  goto l0
+l1:
+l2:
+  t9 = T6 < T2
+  if t9 == 0 goto l3
+  t10 = T6 * 4
+  t11 = T6 + p2
+  t12 = t11 + 1
+  t13 = t12 * 4
+  t14 = p0 [ t13 ]
+  T4 [ t10 ] = t14
+  t15 = T6 + 1
+  T6 = t15
+  goto l2
+l3:
+  T5 = 0
+  T6 = 0
+  T7 = p1
+l4:
+  t16 = T5 != T1
+  if t16 == 0 goto l5
+  t18 = T6 != T2
+  if t18 == 0 goto l5
+  t17 = 1
+  goto l6
+l5:
+  t17 = 0
+l6:
+  if t17 == 0 goto l9
+  t19 = T5 * 4
+  t20 = T3 [ t19 ]
+  t21 = T6 * 4
+  t22 = T4 [ t21 ]
+  t23 = t22 + 1
+  t24 = t20 < t23
+  if t24 == 0 goto l7
+  t25 = T7 * 4
+  t26 = T5 * 4
+  t27 = T3 [ t26 ]
+  p0 [ t25 ] = t27
+  t28 = T7 + 1
+  T7 = t28
+  t29 = T5 + 1
+  T5 = t29
+  goto l8
+l7:
+  t30 = T7 * 4
+  t31 = T6 * 4
+  t32 = T4 [ t31 ]
+  p0 [ t30 ] = t32
+  t33 = T7 + 1
+  T7 = t33
+  t34 = T6 + 1
+  T6 = t34
+l8:
+  goto l4
+l9:
+l10:
+  t35 = T5 < T1
+  if t35 == 0 goto l11
+  t36 = T7 * 4
+  t37 = T5 * 4
+  t38 = T3 [ t37 ]
+  p0 [ t36 ] = t38
+  t39 = T7 + 1
+  T7 = t39
+  t40 = T5 + 1
+  T5 = t40
+  goto l10
+l11:
+l12:
+  t41 = T6 < T2
+  if t41 == 0 goto l13
+  t42 = T7 * 4
+  t43 = T6 * 4
+  t44 = T4 [ t43 ]
+  p0 [ t42 ] = t44
+  t45 = T7 + 1
+  T7 = t45
+  t46 = T6 + 1
+  T6 = t46
+  goto l12
+l13:
+  return 0
+end f_Merge
+f_MergeSort [3]
+  var t47
+  var T8
+  var t48
+  var t49
+  var T9
+  var t50
+  var t51
+  var t52
+  var t53
+  var t54
+  var t55
+  var t56
+  var t57
+  var t58
+  var t59
+  var t60
+  var t61
+  var t62
+  var t63
+  var t64
+  var t65
+  var t66
+  t47 = p1 < p2
+  if t47 == 0 goto l14
+  t48 = p1 + p2
+  t49 = t48 / 2
+  T8 = t49
+  t50 = p0 + 0
+  t51 = t50
+  t52 = p1
+  t53 = T8
+  param t51
+  param t52
+  param t53
+  t54 = call f_MergeSort
+  T9 = t54
+  t55 = T8 + 1
+  T9 = t55
+  t56 = p0 + 0
+  t57 = t56
+  t58 = T9
+  t59 = p2
+  param t57
+  param t58
+  param t59
+  t60 = call f_MergeSort
+  T9 = t60
+  t61 = p0 + 0
+  t62 = t61
+  t63 = p1
+  t64 = T8
+  t65 = p2
+  param t62
+  param t63
+  param t64
+  param t65
+  t66 = call f_Merge
+  T9 = t66
+l14:
+  return 0
+end f_MergeSort
+f_main [0]
+  var 40 T10
+  var T11
+  var T12
+  var t67
+  var t68
+  var t69
+  var t70
+  var t71
+  var t72
+  var t73
+  var t74
+  var t75
+  var t76
+  var t77
+  var t78
+  T0 = 10
+  T10 [ 0 ] = 4
+  T10 [ 4 ] = 3
+  T10 [ 8 ] = 9
+  T10 [ 12 ] = 2
+  T10 [ 16 ] = 0
+  T10 [ 20 ] = 1
+  T10 [ 24 ] = 6
+  T10 [ 28 ] = 5
+  T10 [ 32 ] = 7
+  T10 [ 36 ] = 8
+  T11 = 0
+  t67 = T0 - 1
+  T12 = t67
+  t68 = T10 + 0
+  t69 = t68
+  t70 = T11
+  t71 = T12
+  param t69
+  param t70
+  param t71
+  t72 = call f_MergeSort
+  T11 = t72
+l15:
+  t73 = T11 < T0
+  if t73 == 0 goto l16
+  t74 = T11 * 4
+  t75 = T10 [ t74 ]
+  T12 = t75
+  t76 = T12
+  param t76
+  call f_putint
+  T12 = 10
+  t77 = T12
+  param t77
+  call f_putch
+  t78 = T11 + 1
+  T11 = t78
+  goto l15
+l16:
+  return 0
+end f_main

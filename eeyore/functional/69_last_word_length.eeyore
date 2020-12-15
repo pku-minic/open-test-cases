@@ -1,0 +1,99 @@
+f_lengthOfLastWord [2]
+  var t0
+  var T0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var T1
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  t0 = p1 == 0
+  if t0 == 0 goto l0
+  return 0
+l0:
+  t1 = p1 - 1
+  T0 = t1
+l1:
+  t2 = T0 > -1
+  if t2 == 0 goto l2
+  t4 = T0 * 4
+  t5 = p0 [ t4 ]
+  t6 = t5 == 0
+  if t6 == 0 goto l2
+  t3 = 1
+  goto l3
+l2:
+  t3 = 0
+l3:
+  if t3 == 0 goto l4
+  t7 = T0 - 1
+  T0 = t7
+  goto l1
+l4:
+  t8 = T0 == -1
+  if t8 == 0 goto l5
+  return 0
+l5:
+  T1 = T0
+l6:
+  t9 = T1 > -1
+  if t9 == 0 goto l8
+  t10 = T1 * 4
+  t11 = p0 [ t10 ]
+  t12 = t11 == 0
+  if t12 == 0 goto l7
+  t13 = p1 - T1
+  t14 = t13 - 1
+  t15 = p1 - 1
+  t16 = t15 - T0
+  t17 = t14 - t16
+  return t17
+l7:
+  t18 = T1 - 1
+  T1 = t18
+  goto l6
+l8:
+  t19 = T0 - T1
+  return t19
+end f_lengthOfLastWord
+f_main [0]
+  var T2
+  var 40 T3
+  var t20
+  var t21
+  var t22
+  var t23
+  T3 [ 0 ] = -4
+  T3 [ 4 ] = 3
+  T3 [ 8 ] = 9
+  T3 [ 12 ] = -2
+  T3 [ 16 ] = 0
+  T3 [ 20 ] = 1
+  T3 [ 24 ] = -6
+  T3 [ 28 ] = 5
+  T3 [ 32 ] = 7
+  T3 [ 36 ] = 8
+  T2 = 10
+  t20 = T3 + 0
+  t21 = t20
+  t22 = T2
+  param t21
+  param t22
+  t23 = call f_lengthOfLastWord
+  T2 = t23
+  return T2
+end f_main

@@ -1,0 +1,379 @@
+var T0
+var T1
+var T2
+f_mul [9]
+  var T3
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  var t21
+  var t22
+  var t23
+  var t24
+  var t25
+  var t26
+  var t27
+  var t28
+  var t29
+  var t30
+  var t31
+  var t32
+  var t33
+  var t34
+  var t35
+  var t36
+  var t37
+  var t38
+  var t39
+  var t40
+  var t41
+  var t42
+  var t43
+  var t44
+  var t45
+  var t46
+  var t47
+  var t48
+  var t49
+  var t50
+  var t51
+  var t52
+  var t53
+  var t54
+  var t55
+  var t56
+  var t57
+  var t58
+  var t59
+  var t60
+  var t61
+  var t62
+  var t63
+  var t64
+  var t65
+  var t66
+  var t67
+  var t68
+  var t69
+  var t70
+  var t71
+  var t72
+  var t73
+  var t74
+  var t75
+  var t76
+  var t77
+  var t78
+  var t79
+  var t80
+  var t81
+  var t82
+  var t83
+  var t84
+  var t85
+  var t86
+  var t87
+  var t88
+  var t89
+  var t90
+  var t91
+  var t92
+  var t93
+  var t94
+  var t95
+  var t96
+  var t97
+  var t98
+  T3 = 0
+  t0 = p0 [ 0 ]
+  t1 = p3 [ 0 ]
+  t2 = t0 * t1
+  t3 = p0 [ 4 ]
+  t4 = p4 [ 0 ]
+  t5 = t3 * t4
+  t6 = t2 + t5
+  t7 = p0 [ 8 ]
+  t8 = p5 [ 0 ]
+  t9 = t7 * t8
+  t10 = t6 + t9
+  p6 [ 0 ] = t10
+  t11 = p0 [ 0 ]
+  t12 = p3 [ 4 ]
+  t13 = t11 * t12
+  t14 = p0 [ 4 ]
+  t15 = p4 [ 4 ]
+  t16 = t14 * t15
+  t17 = t13 + t16
+  t18 = p0 [ 8 ]
+  t19 = p5 [ 4 ]
+  t20 = t18 * t19
+  t21 = t17 + t20
+  p6 [ 4 ] = t21
+  t22 = p0 [ 0 ]
+  t23 = p3 [ 8 ]
+  t24 = t22 * t23
+  t25 = p0 [ 4 ]
+  t26 = p4 [ 8 ]
+  t27 = t25 * t26
+  t28 = t24 + t27
+  t29 = p0 [ 8 ]
+  t30 = p5 [ 8 ]
+  t31 = t29 * t30
+  t32 = t28 + t31
+  p6 [ 8 ] = t32
+  t33 = p1 [ 0 ]
+  t34 = p3 [ 0 ]
+  t35 = t33 * t34
+  t36 = p1 [ 4 ]
+  t37 = p4 [ 0 ]
+  t38 = t36 * t37
+  t39 = t35 + t38
+  t40 = p1 [ 8 ]
+  t41 = p5 [ 0 ]
+  t42 = t40 * t41
+  t43 = t39 + t42
+  p7 [ 0 ] = t43
+  t44 = p1 [ 0 ]
+  t45 = p3 [ 4 ]
+  t46 = t44 * t45
+  t47 = p1 [ 4 ]
+  t48 = p4 [ 4 ]
+  t49 = t47 * t48
+  t50 = t46 + t49
+  t51 = p1 [ 8 ]
+  t52 = p5 [ 4 ]
+  t53 = t51 * t52
+  t54 = t50 + t53
+  p7 [ 4 ] = t54
+  t55 = p1 [ 0 ]
+  t56 = p3 [ 8 ]
+  t57 = t55 * t56
+  t58 = p1 [ 4 ]
+  t59 = p4 [ 8 ]
+  t60 = t58 * t59
+  t61 = t57 + t60
+  t62 = p1 [ 8 ]
+  t63 = p5 [ 8 ]
+  t64 = t62 * t63
+  t65 = t61 + t64
+  p7 [ 8 ] = t65
+  t66 = p2 [ 0 ]
+  t67 = p3 [ 0 ]
+  t68 = t66 * t67
+  t69 = p2 [ 4 ]
+  t70 = p4 [ 0 ]
+  t71 = t69 * t70
+  t72 = t68 + t71
+  t73 = p2 [ 8 ]
+  t74 = p5 [ 0 ]
+  t75 = t73 * t74
+  t76 = t72 + t75
+  p8 [ 0 ] = t76
+  t77 = p2 [ 0 ]
+  t78 = p3 [ 4 ]
+  t79 = t77 * t78
+  t80 = p2 [ 4 ]
+  t81 = p4 [ 4 ]
+  t82 = t80 * t81
+  t83 = t79 + t82
+  t84 = p2 [ 8 ]
+  t85 = p5 [ 4 ]
+  t86 = t84 * t85
+  t87 = t83 + t86
+  p8 [ 4 ] = t87
+  t88 = p2 [ 0 ]
+  t89 = p3 [ 8 ]
+  t90 = t88 * t89
+  t91 = p2 [ 4 ]
+  t92 = p4 [ 8 ]
+  t93 = t91 * t92
+  t94 = t90 + t93
+  t95 = p2 [ 8 ]
+  t96 = p5 [ 8 ]
+  t97 = t95 * t96
+  t98 = t94 + t97
+  p8 [ 8 ] = t98
+  return 0
+end f_mul
+f_main [0]
+  var 12 T4
+  var 12 T5
+  var 12 T6
+  var 12 T7
+  var 12 T8
+  var 12 T9
+  var 24 T10
+  var 12 T11
+  var 12 T12
+  var T13
+  var t99
+  var t100
+  var t101
+  var t102
+  var t103
+  var t104
+  var t105
+  var t106
+  var t107
+  var t108
+  var t109
+  var t110
+  var t111
+  var t112
+  var t113
+  var t114
+  var t115
+  var t116
+  var t117
+  var t118
+  var t119
+  var t120
+  var t121
+  var t122
+  var t123
+  var t124
+  var t125
+  var T14
+  var t126
+  var t127
+  var t128
+  var t129
+  var t130
+  var t131
+  var t132
+  var t133
+  var t134
+  var t135
+  var t136
+  var t137
+  var t138
+  var t139
+  var t140
+  var t141
+  var t142
+  var t143
+  T2 = 3
+  T0 = 3
+  T1 = 3
+  T13 = 0
+l0:
+  t99 = T13 < T0
+  if t99 == 0 goto l1
+  t100 = T13 * 4
+  T4 [ t100 ] = T13
+  t101 = T13 * 4
+  T5 [ t101 ] = T13
+  t102 = T13 * 4
+  T6 [ t102 ] = T13
+  t103 = T13 * 4
+  T7 [ t103 ] = T13
+  t104 = T13 * 4
+  T8 [ t104 ] = T13
+  t105 = T13 * 4
+  T9 [ t105 ] = T13
+  t106 = T13 + 1
+  T13 = t106
+  goto l0
+l1:
+  t107 = T4 + 0
+  t108 = t107
+  t109 = T5 + 0
+  t110 = t109
+  t111 = T6 + 0
+  t112 = t111
+  t113 = T7 + 0
+  t114 = t113
+  t115 = T8 + 0
+  t116 = t115
+  t117 = T9 + 0
+  t118 = t117
+  t119 = T10 + 0
+  t120 = t119
+  t121 = T11 + 0
+  t122 = t121
+  t123 = T12 + 0
+  t124 = t123
+  param t108
+  param t110
+  param t112
+  param t114
+  param t116
+  param t118
+  param t120
+  param t122
+  param t124
+  t125 = call f_mul
+  T13 = t125
+l2:
+  t126 = T13 < T2
+  if t126 == 0 goto l3
+  t127 = T13 * 4
+  t128 = T10 [ t127 ]
+  T14 = t128
+  t129 = T14
+  param t129
+  call f_putint
+  t130 = T13 + 1
+  T13 = t130
+  goto l2
+l3:
+  T14 = 10
+  T13 = 0
+  t131 = T14
+  param t131
+  call f_putch
+l4:
+  t132 = T13 < T2
+  if t132 == 0 goto l5
+  t133 = T13 * 4
+  t134 = T11 [ t133 ]
+  T14 = t134
+  t135 = T14
+  param t135
+  call f_putint
+  t136 = T13 + 1
+  T13 = t136
+  goto l4
+l5:
+  T14 = 10
+  T13 = 0
+  t137 = T14
+  param t137
+  call f_putch
+l6:
+  t138 = T13 < T2
+  if t138 == 0 goto l7
+  t139 = T13 * 4
+  t140 = T12 [ t139 ]
+  T14 = t140
+  t141 = T14
+  param t141
+  call f_putint
+  t142 = T13 + 1
+  T13 = t142
+  goto l6
+l7:
+  T14 = 10
+  t143 = T14
+  param t143
+  call f_putch
+  return 0
+end f_main

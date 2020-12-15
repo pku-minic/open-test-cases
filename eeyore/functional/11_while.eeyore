@@ -1,0 +1,19 @@
+var T0
+var T1
+f_main [0]
+  var t0
+  var t1
+  var t2
+  T1 = 0
+  T0 = 3
+l0:
+  t0 = T0 > 0
+  if t0 == 0 goto l1
+  t1 = T1 + T0
+  T1 = t1
+  t2 = T0 - 1
+  T0 = t2
+  goto l0
+l1:
+  return T1
+end f_main

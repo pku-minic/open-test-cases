@@ -1,0 +1,76 @@
+f_maxSubArray [2]
+  var t0
+  var t1
+  var t2
+  var T0
+  var t3
+  var T1
+  var T2
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  t0 = p1 == 0
+  if t0 == 0 goto l0
+  return 0
+l0:
+  t1 = p1 == 1
+  if t1 == 0 goto l1
+  t2 = p0 [ 0 ]
+  return t2
+l1:
+  t3 = p0 [ 0 ]
+  T0 = t3
+  T1 = T0
+  T2 = 1
+l2:
+  t4 = T2 < p1
+  if t4 == 0 goto l5
+  t5 = T0 < 0
+  if t5 == 0 goto l3
+  T0 = 0
+l3:
+  t6 = T2 * 4
+  t7 = p0 [ t6 ]
+  t8 = T0 + t7
+  T0 = t8
+  t9 = T1 < T0
+  if t9 == 0 goto l4
+  T1 = T0
+l4:
+  t10 = T2 + 1
+  T2 = t10
+  goto l2
+l5:
+  return T1
+end f_maxSubArray
+f_main [0]
+  var T3
+  var 40 T4
+  var t11
+  var t12
+  var t13
+  var t14
+  T4 [ 0 ] = -4
+  T4 [ 4 ] = 3
+  T4 [ 8 ] = 9
+  T4 [ 12 ] = -2
+  T4 [ 16 ] = 0
+  T4 [ 20 ] = 1
+  T4 [ 24 ] = -6
+  T4 [ 28 ] = 5
+  T4 [ 32 ] = 7
+  T4 [ 36 ] = 8
+  T3 = 10
+  t11 = T4 + 0
+  t12 = t11
+  t13 = T3
+  param t12
+  param t13
+  t14 = call f_maxSubArray
+  T3 = t14
+  return T3
+end f_main

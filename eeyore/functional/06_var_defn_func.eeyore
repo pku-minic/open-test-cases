@@ -1,0 +1,10 @@
+f_defn [0]
+  return 4
+end f_defn
+f_main [0]
+  var T0
+  var t0
+  t0 = call f_defn
+  T0 = t0
+  return T0
+end f_main

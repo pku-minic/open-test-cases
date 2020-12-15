@@ -1,0 +1,182 @@
+var T0
+f_counting_sort [3]
+  var 40 T1
+  var T2
+  var T3
+  var T4
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  var t18
+  var t19
+  var t20
+  var t21
+  var t22
+  var t23
+  var t24
+  var t25
+  var t26
+  var t27
+  var t28
+  var t29
+  var t30
+  var t31
+  var t32
+  var t33
+  var t34
+  var t35
+  var t36
+  var t37
+  var t38
+  var t39
+  var t40
+  var t41
+  var t42
+  T4 = 0
+  T2 = 0
+  T3 = 0
+l0:
+  t0 = T4 < 10
+  if t0 == 0 goto l1
+  t1 = T4 * 4
+  T1 [ t1 ] = 0
+  t2 = T4 + 1
+  T4 = t2
+  goto l0
+l1:
+l2:
+  t3 = T2 < p2
+  if t3 == 0 goto l3
+  t4 = T2 * 4
+  t5 = p0 [ t4 ]
+  t6 = t5 * 4
+  t7 = T2 * 4
+  t8 = p0 [ t7 ]
+  t9 = t8 * 4
+  t10 = T1 [ t9 ]
+  t11 = t10 + 1
+  T1 [ t6 ] = t11
+  t12 = T2 + 1
+  T2 = t12
+  goto l2
+l3:
+  T4 = 1
+l4:
+  t13 = T4 < 10
+  if t13 == 0 goto l5
+  t14 = T4 * 4
+  t15 = T4 * 4
+  t16 = T1 [ t15 ]
+  t17 = T4 - 1
+  t18 = t17 * 4
+  t19 = T1 [ t18 ]
+  t20 = t16 + t19
+  T1 [ t14 ] = t20
+  t21 = T4 + 1
+  T4 = t21
+  goto l4
+l5:
+  T3 = p2
+l6:
+  t22 = T3 > 0
+  if t22 == 0 goto l7
+  t23 = T3 - 1
+  t24 = t23 * 4
+  t25 = p0 [ t24 ]
+  t26 = t25 * 4
+  t27 = T3 - 1
+  t28 = t27 * 4
+  t29 = p0 [ t28 ]
+  t30 = t29 * 4
+  t31 = T1 [ t30 ]
+  t32 = t31 - 1
+  T1 [ t26 ] = t32
+  t33 = T3 - 1
+  t34 = t33 * 4
+  t35 = p0 [ t34 ]
+  t36 = t35 * 4
+  t37 = T1 [ t36 ]
+  t38 = t37 * 4
+  t39 = T3 - 1
+  t40 = t39 * 4
+  t41 = p0 [ t40 ]
+  p1 [ t38 ] = t41
+  t42 = T3 - 1
+  T3 = t42
+  goto l6
+l7:
+  return 0
+end f_counting_sort
+f_main [0]
+  var 40 T5
+  var T6
+  var 40 T7
+  var t43
+  var t44
+  var t45
+  var t46
+  var t47
+  var t48
+  var t49
+  var T8
+  var t50
+  var t51
+  var t52
+  var t53
+  var t54
+  T0 = 10
+  T5 [ 0 ] = 4
+  T5 [ 4 ] = 3
+  T5 [ 8 ] = 9
+  T5 [ 12 ] = 2
+  T5 [ 16 ] = 0
+  T5 [ 20 ] = 1
+  T5 [ 24 ] = 6
+  T5 [ 28 ] = 5
+  T5 [ 32 ] = 7
+  T5 [ 36 ] = 8
+  T6 = 0
+  t43 = T5 + 0
+  t44 = t43
+  t45 = T7 + 0
+  t46 = t45
+  t47 = T0
+  param t44
+  param t46
+  param t47
+  t48 = call f_counting_sort
+  T6 = t48
+l8:
+  t49 = T6 < T0
+  if t49 == 0 goto l9
+  t50 = T6 * 4
+  t51 = T7 [ t50 ]
+  T8 = t51
+  t52 = T8
+  param t52
+  call f_putint
+  T8 = 10
+  t53 = T8
+  param t53
+  call f_putch
+  t54 = T6 + 1
+  T6 = t54
+  goto l8
+l9:
+  return 0
+end f_main

@@ -1,0 +1,117 @@
+var T0
+f_select_sort [2]
+  var T1
+  var T2
+  var T3
+  var t0
+  var t1
+  var t2
+  var t3
+  var t4
+  var t5
+  var t6
+  var t7
+  var t8
+  var t9
+  var t10
+  var T4
+  var t11
+  var t12
+  var t13
+  var t14
+  var t15
+  var t16
+  var t17
+  T1 = 0
+l0:
+  t0 = p1 - 1
+  t1 = T1 < t0
+  if t1 == 0 goto l5
+  T3 = T1
+  t2 = T1 + 1
+  T2 = t2
+l1:
+  t3 = T2 < p1
+  if t3 == 0 goto l3
+  t4 = T3 * 4
+  t5 = p0 [ t4 ]
+  t6 = T2 * 4
+  t7 = p0 [ t6 ]
+  t8 = t5 > t7
+  if t8 == 0 goto l2
+  T3 = T2
+l2:
+  t9 = T2 + 1
+  T2 = t9
+  goto l1
+l3:
+  t10 = T3 != T1
+  if t10 == 0 goto l4
+  t11 = T3 * 4
+  t12 = p0 [ t11 ]
+  T4 = t12
+  t13 = T3 * 4
+  t14 = T1 * 4
+  t15 = p0 [ t14 ]
+  p0 [ t13 ] = t15
+  t16 = T1 * 4
+  p0 [ t16 ] = T4
+l4:
+  t17 = T1 + 1
+  T1 = t17
+  goto l0
+l5:
+  return 0
+end f_select_sort
+f_main [0]
+  var 40 T5
+  var T6
+  var t18
+  var t19
+  var t20
+  var t21
+  var t22
+  var T7
+  var t23
+  var t24
+  var t25
+  var t26
+  var t27
+  T0 = 10
+  T5 [ 0 ] = 4
+  T5 [ 4 ] = 3
+  T5 [ 8 ] = 9
+  T5 [ 12 ] = 2
+  T5 [ 16 ] = 0
+  T5 [ 20 ] = 1
+  T5 [ 24 ] = 6
+  T5 [ 28 ] = 5
+  T5 [ 32 ] = 7
+  T5 [ 36 ] = 8
+  T6 = 0
+  t18 = T5 + 0
+  t19 = t18
+  t20 = T0
+  param t19
+  param t20
+  t21 = call f_select_sort
+  T6 = t21
+l6:
+  t22 = T6 < T0
+  if t22 == 0 goto l7
+  t23 = T6 * 4
+  t24 = T5 [ t23 ]
+  T7 = t24
+  t25 = T7
+  param t25
+  call f_putint
+  T7 = 10
+  t26 = T7
+  param t26
+  call f_putch
+  t27 = T6 + 1
+  T6 = t27
+  goto l6
+l7:
+  return 0
+end f_main
