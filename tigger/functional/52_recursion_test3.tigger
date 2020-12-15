@@ -1,0 +1,44 @@
+v0 = 0
+v1 = 0
+f_fac [1] [6]
+    load 1 t0
+    t0 = a0 < 2
+    store t0 1
+    store a0 0
+    if t0 == x0 goto l0
+    a0 = 1
+    return
+l0:
+    load 2 t0
+    load 0 t1
+    t0 = t1 + -1
+    load v0 t2
+    t2 = t0
+    load 3 t3
+    t3 = t2
+    a0 = t3
+    loadaddr v0 s0
+    s0 [0] = t2
+    call f_fac
+    load v1 t0
+    t0 = a0
+    load 5 t1
+    load 0 t2
+    t1 = t2 * t0
+    t0 = t1
+    a0 = t0
+    loadaddr v1 s0
+    s0 [0] = t0
+    return
+end f_fac
+f_main [0] [3]
+    load 0 t0
+    t0 = 5
+    load 1 t1
+    t1 = t0
+    a0 = t1
+    call f_fac
+    store a0 2
+    load 2 a0
+    return
+end f_main

@@ -1,0 +1,69 @@
+f_dec2bin [1] [11]
+    load 1 t0
+    t0 = 0
+    load 2 t1
+    t1 = 1
+    load 4 t2
+    t2 = a0
+    store t0 1
+    store t1 2
+    store t2 4
+    store a0 0
+l0:
+    load 5 t0
+    load 4 t1
+    t0 = t1 != x0
+    store t0 5
+    if t0 == x0 goto l1
+    load 6 t0
+    load 4 t1
+    t2 = 2
+    t0 = t1 % t2
+    load 3 t3
+    t3 = t0
+    load 7 t4
+    load 2 t5
+    t4 = t5 * t3
+    load 8 t6
+    load 1 s1
+    t6 = t4 + s1
+    s1 = t6
+    load 9 s2
+    s3 = 10
+    s2 = t5 * s3
+    t5 = s2
+    load 10 s4
+    s5 = 2
+    s4 = t1 / s5
+    t1 = s4
+    store s1 1
+    store t1 4
+    store t5 2
+    goto l0
+l1:
+    load 1 a0
+    return
+end f_dec2bin
+f_main [0] [6]
+    load 0 t0
+    t0 = 400
+    load 2 t1
+    t1 = t0
+    a0 = t1
+    call f_dec2bin
+    load 1 t0
+    t0 = a0
+    load 4 t1
+    t1 = t0
+    a0 = t1
+    store t0 1
+    call f_putint
+    load 1 t0
+    t0 = 10
+    load 5 t1
+    t1 = t0
+    a0 = t1
+    call f_putch
+    a0 = 0
+    return
+end f_main

@@ -1,0 +1,53 @@
+v0 = 0
+f_myFunc [3] [8]
+    a0 = 2
+    load 3 t0
+    t0 = 0
+    load 4 t1
+    t1 = t0 != x0
+    store t1 4
+    store a0 0
+    store a1 1
+    if t1 == x0 goto l0
+    a0 = 0
+    return
+l0:
+l1:
+    load 5 t0
+    load 1 t1
+    t0 = t1 > x0
+    store t0 5
+    if t0 == x0 goto l2
+    load 6 t0
+    load 1 t1
+    t0 = t1 + -1
+    t1 = t0
+    store t1 1
+    goto l1
+l2:
+    load 7 t0
+    load 0 t1
+    load 1 t2
+    t0 = t1 + t2
+    a0 = t0
+    store t0 7
+    return
+end f_myFunc
+f_main [0] [3]
+    load v0 t0
+    t0 = 3
+    a0 = 1
+    a1 = 2
+    a2 = 1
+    loadaddr v0 s0
+    s0 [0] = t0
+    call f_myFunc
+    load 0 t0
+    t0 = a0
+    load 2 t1
+    load v0 t2
+    t1 = t2 + t0
+    a0 = t1
+    store t1 2
+    return
+end f_main

@@ -1,0 +1,48 @@
+f_doubleWhile [0] [7]
+    load 0 t0
+    t0 = 5
+    load 1 t1
+    t1 = 7
+    store t0 0
+    store t1 1
+l0:
+    load 2 t0
+    load 0 t1
+    t0 = t1 < 100
+    store t0 2
+    if t0 == x0 goto l3
+    load 3 t0
+    load 0 t1
+    t0 = t1 + 30
+    t1 = t0
+    store t0 3
+    store t1 0
+l1:
+    load 4 t0
+    load 1 t1
+    t0 = t1 < 100
+    store t0 4
+    if t0 == x0 goto l2
+    load 5 t0
+    load 1 t1
+    t0 = t1 + 6
+    t1 = t0
+    store t1 1
+    goto l1
+l2:
+    load 6 t0
+    load 1 t1
+    t0 = t1 + -100
+    t1 = t0
+    store t1 1
+    goto l0
+l3:
+    load 1 a0
+    return
+end f_doubleWhile
+f_main [0] [1]
+    call f_doubleWhile
+    store a0 0
+    load 0 a0
+    return
+end f_main

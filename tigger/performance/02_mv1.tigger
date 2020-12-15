@@ -1,0 +1,329 @@
+v0 = 0
+v1 = 0
+v2 = malloc 16160400
+v3 = malloc 8040
+v4 = malloc 8040
+f_mv [4] [36]
+    load 5 t0
+    t0 = 0
+    load 4 t1
+    t1 = 11
+    load 6 t2
+    t2 = 0
+    store t0 5
+    store t1 4
+    store t2 6
+    store a0 0
+    store a1 1
+    store a2 2
+    store a3 3
+l0:
+    load 8 t0
+    load 6 t1
+    load 0 t2
+    t0 = t1 < t2
+    store t0 8
+    if t0 == x0 goto l1
+    load 9 t0
+    load 6 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 3 t3
+    t4 = t3 + t0
+    t4 [0] = x0
+    load 10 t5
+    t5 = t1 + 1
+    t1 = t5
+    store t1 6
+    goto l0
+l1:
+    load 6 t0
+    t0 = 0
+    load 7 t1
+    t1 = 0
+    store t0 6
+    store t1 7
+l2:
+    load 11 t0
+    load 6 t1
+    load 0 t2
+    t0 = t1 < t2
+    store t0 11
+    if t0 == x0 goto l7
+    load 7 t0
+    t0 = 0
+    store t0 7
+l3:
+    load 12 t0
+    load 7 t1
+    load 0 t2
+    t0 = t1 < t2
+    store t0 12
+    if t0 == x0 goto l6
+    load 13 t0
+    load 6 t1
+    t2 = 2010
+    t0 = t1 * t2
+    load 7 t3
+    t0 = t0 + t3
+    load 14 t4
+    t5 = 4
+    t4 = t0 * t5
+    load 15 t6
+    load 1 s1
+    s2 = s1 + t4
+    t6 = s2 [0]
+    load 16 s3
+    s3 = t6 == x0
+    store s3 16
+    if s3 == x0 goto l4
+    load 17 t0
+    load 6 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 18 t3
+    load 2 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 19 t6
+    load 4 s1
+    t6 = s1 * t3
+    load 20 s2
+    load 7 s3
+    s4 = 4
+    s2 = s3 * s4
+    load 21 s5
+    s6 = t4 + s2
+    s5 = s6 [0]
+    load 22 s7
+    s7 = t6 + s5
+    s1 = s7
+    load 23 s8
+    load 5 s9
+    s8 = s9 - s1
+    s9 = s8
+    store s1 4
+    store s9 5
+    goto l5
+l4:
+    load 24 t0
+    load 6 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 25 t3
+    t4 = 4
+    t3 = t1 * t4
+    load 26 t5
+    load 3 t6
+    s1 = t6 + t3
+    t5 = s1 [0]
+    load 27 s2
+    s3 = 2010
+    s2 = t1 * s3
+    load 7 s4
+    s2 = s2 + s4
+    load 28 s5
+    s6 = 4
+    s5 = s2 * s6
+    load 29 s7
+    load 1 s8
+    s9 = s8 + s5
+    s7 = s9 [0]
+    load 30 s10
+    s11 = 4
+    s10 = s4 * s11
+    load 31 a0
+    load 2 a1
+    a2 = a1 + s10
+    a0 = a2 [0]
+    load 32 a3
+    a3 = s7 * a0
+    load 33 a4
+    a4 = t5 + a3
+    a5 = t6 + t0
+    a5 [0] = a4
+    store t0 24
+    store a4 33
+l5:
+    load 34 t0
+    load 7 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 7
+    goto l3
+l6:
+    load 35 t0
+    load 6 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 6
+    goto l2
+l7:
+    a0 = 0
+    return
+end f_mv
+f_main [0] [34]
+    load v1 t0
+    t0 = 2010
+    loadaddr v1 s0
+    s0 [0] = t0
+    call f_getint
+    load 0 t0
+    t0 = a0
+    load 2 t1
+    t1 = 0
+    store t0 0
+    store t1 2
+l8:
+    load 4 t0
+    load 2 t1
+    load 0 t2
+    t0 = t1 < t2
+    store t0 4
+    if t0 == x0 goto l11
+    load 3 t0
+    t0 = 0
+    store t0 3
+l9:
+    load 5 t0
+    load 3 t1
+    load 0 t2
+    t0 = t1 < t2
+    store t0 5
+    if t0 == x0 goto l10
+    load 6 t0
+    load 2 t1
+    t2 = 2010
+    t0 = t1 * t2
+    load 3 t3
+    t0 = t0 + t3
+    load 7 t4
+    t5 = 4
+    t4 = t0 * t5
+    store t4 7
+    call f_getint
+    loadaddr v2 t0
+    load 7 t1
+    t3 = t0 + t1
+    t3 [0] = a0
+    load 9 t4
+    load 3 t6
+    t4 = t6 + 1
+    t6 = t4
+    store t6 3
+    store a0 8
+    goto l9
+l10:
+    load 10 t0
+    load 2 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 2
+    goto l8
+l11:
+    load 2 t0
+    t0 = 0
+    store t0 2
+l12:
+    load 11 t0
+    load 2 t1
+    load 0 t2
+    t0 = t1 < t2
+    store t0 11
+    if t0 == x0 goto l13
+    load 12 t0
+    load 2 t1
+    t2 = 4
+    t0 = t1 * t2
+    store t0 12
+    call f_getint
+    loadaddr v3 t0
+    load 12 t1
+    t3 = t0 + t1
+    t3 [0] = a0
+    load 14 t4
+    load 2 t5
+    t4 = t5 + 1
+    t5 = t4
+    store t5 2
+    store a0 13
+    goto l12
+l13:
+    call f_starttime
+    load 2 t0
+    t0 = 0
+    store t0 2
+l14:
+    load 15 t0
+    load 2 t1
+    t0 = t1 < 50
+    store t0 15
+    if t0 == x0 goto l15
+    load 16 t0
+    load 0 t1
+    t0 = t1
+    load 17 t2
+    loadaddr v2 t3
+    t2 = t3 + 0
+    load 18 t4
+    t4 = t2
+    load 19 t5
+    loadaddr v3 t6
+    t5 = t6 + 0
+    load 20 s1
+    s1 = t5
+    load 21 s2
+    loadaddr v4 s3
+    s2 = s3 + 0
+    load 22 s4
+    s4 = s2
+    a0 = t0
+    a1 = t4
+    a2 = s1
+    a3 = s4
+    call f_mv
+    load 23 t0
+    load 0 t1
+    t0 = t1
+    load 24 t2
+    loadaddr v2 t3
+    t2 = t3 + 0
+    load 25 t4
+    t4 = t2
+    load 26 t5
+    loadaddr v4 t6
+    t5 = t6 + 0
+    load 27 s1
+    s1 = t5
+    load 28 s2
+    loadaddr v3 s3
+    s2 = s3 + 0
+    load 29 s4
+    s4 = s2
+    a0 = t0
+    a1 = t4
+    a2 = s1
+    a3 = s4
+    call f_mv
+    load 30 t0
+    load 2 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 2
+    goto l14
+l15:
+    call f_stoptime
+    load 31 t0
+    load 0 t1
+    t0 = t1
+    load 32 t2
+    loadaddr v4 t3
+    t2 = t3 + 0
+    load 33 t4
+    t4 = t2
+    a0 = t0
+    a1 = t4
+    call f_putarray
+    a0 = 0
+    return
+end f_main

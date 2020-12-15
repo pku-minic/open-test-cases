@@ -1,0 +1,8 @@
+f_main [0] [2]
+    call f_getint
+    load 0 t0
+    t0 = a0
+    a0 = t0
+    store t0 0
+    return
+end f_main

@@ -1,0 +1,424 @@
+f_func [2] [146]
+    load 3 t0
+    t0 = a0 + a1
+    load 2 t1
+    t1 = t0
+    load 4 t2
+    t2 = 1
+    load 5 t3
+    t3 = 2
+    load 6 t4
+    t4 = 3
+    load 7 t5
+    t5 = 4
+    load 40 t6
+    t6 = t2 + 1
+    load 8 s1
+    s1 = t6
+    load 41 s2
+    s2 = t3 + 2
+    load 9 s3
+    s3 = s2
+    load 42 s4
+    s4 = t4 + 3
+    load 10 s5
+    s5 = s4
+    load 43 s6
+    s6 = t5 + 4
+    load 11 s7
+    s7 = s6
+    load 44 s8
+    s8 = s1 + 1
+    load 12 s9
+    s9 = s8
+    load 45 s10
+    s10 = s3 + 2
+    load 13 s11
+    s11 = s10
+    load 46 a2
+    a2 = s5 + 3
+    load 14 a3
+    a3 = a2
+    load 47 a4
+    a4 = s7 + 4
+    load 15 a5
+    a5 = a4
+    load 48 a6
+    a6 = s9 + 1
+    load 16 a7
+    a7 = a6
+    load 49 t0
+    t0 = s11 + 2
+    load 17 t6
+    t6 = t0
+    load 50 t0
+    t0 = a3 + 3
+    load 18 s2
+    s2 = t0
+    load 51 t0
+    t0 = a5 + 4
+    load 19 s4
+    s4 = t0
+    load 52 t0
+    t0 = a7 + 1
+    load 20 s6
+    s6 = t0
+    load 53 t0
+    t0 = t6 + 2
+    load 21 s8
+    s8 = t0
+    load 54 t0
+    t0 = s2 + 3
+    load 22 s10
+    s10 = t0
+    load 55 t0
+    t0 = s4 + 4
+    load 23 a2
+    a2 = t0
+    load 56 t0
+    t0 = s6 + 1
+    load 24 a4
+    a4 = t0
+    load 57 t0
+    t0 = s8 + 2
+    load 25 a6
+    a6 = t0
+    load 58 t0
+    t0 = s10 + 3
+    store a6 25
+    load 26 a6
+    a6 = t0
+    load 59 t0
+    t0 = a2 + 4
+    store a6 26
+    load 27 a6
+    a6 = t0
+    load 60 t0
+    t0 = a4 + 1
+    store a6 27
+    load 28 a6
+    a6 = t0
+    load 61 t0
+    store a6 28
+    load 25 a6
+    t0 = a6 + 2
+    load 29 a6
+    a6 = t0
+    load 62 t0
+    store a6 29
+    load 26 a6
+    t0 = a6 + 3
+    load 30 a6
+    a6 = t0
+    load 63 t0
+    store a6 30
+    load 27 a6
+    t0 = a6 + 4
+    load 31 a6
+    a6 = t0
+    load 64 t0
+    store a6 31
+    load 28 a6
+    t0 = a6 + 1
+    load 32 a6
+    a6 = t0
+    load 65 t0
+    store a6 32
+    load 29 a6
+    t0 = a6 + 2
+    load 33 a6
+    a6 = t0
+    load 66 t0
+    store a6 33
+    load 30 a6
+    t0 = a6 + 3
+    load 34 a6
+    a6 = t0
+    load 67 t0
+    store a6 34
+    load 31 a6
+    t0 = a6 + 4
+    load 35 a6
+    a6 = t0
+    load 68 t0
+    store a6 35
+    load 32 a6
+    t0 = a6 + 1
+    load 36 a6
+    a6 = t0
+    load 69 t0
+    store a6 36
+    load 33 a6
+    t0 = a6 + 2
+    load 37 a6
+    a6 = t0
+    load 70 t0
+    store a6 37
+    load 34 a6
+    t0 = a6 + 3
+    load 38 a6
+    a6 = t0
+    load 71 t0
+    store a6 38
+    load 35 a6
+    t0 = a6 + 4
+    load 39 a6
+    a6 = t0
+    load 72 t0
+    t0 = a0 - a1
+    load 73 a0
+    a0 = t0 + 10
+    t1 = a0
+    load 74 t0
+    load 32 a0
+    t0 = a0 + 1
+    load 36 a1
+    a1 = t0
+    load 75 t0
+    store a6 39
+    load 33 a6
+    t0 = a6 + 2
+    store a1 36
+    load 37 a1
+    a1 = t0
+    load 76 t0
+    store a1 37
+    load 34 a1
+    t0 = a1 + 3
+    load 38 a1
+    a1 = t0
+    load 77 t0
+    store a1 38
+    load 35 a1
+    t0 = a1 + 4
+    load 39 a1
+    a1 = t0
+    load 78 t0
+    store a1 39
+    load 28 a1
+    t0 = a1 + 1
+    a0 = t0
+    load 79 t0
+    load 29 a6
+    t0 = a6 + 2
+    store a0 32
+    load 33 a0
+    a0 = t0
+    load 80 t0
+    store a0 33
+    load 30 a0
+    t0 = a0 + 3
+    load 34 a0
+    a0 = t0
+    load 81 t0
+    store a0 34
+    load 31 a0
+    t0 = a0 + 4
+    load 35 a0
+    a0 = t0
+    load 82 t0
+    t0 = a4 + 1
+    a1 = t0
+    load 83 t0
+    store a0 35
+    load 25 a0
+    t0 = a0 + 2
+    a6 = t0
+    load 84 t0
+    store a6 29
+    load 26 a6
+    t0 = a6 + 3
+    store a1 28
+    load 30 a1
+    a1 = t0
+    load 85 t0
+    store a1 30
+    load 27 a1
+    t0 = a1 + 4
+    load 31 a1
+    a1 = t0
+    load 86 t0
+    t0 = s6 + 1
+    a4 = t0
+    load 87 t0
+    t0 = s8 + 2
+    a0 = t0
+    load 88 t0
+    t0 = s10 + 3
+    a6 = t0
+    load 89 t0
+    t0 = a2 + 4
+    store a1 31
+    load 27 a1
+    a1 = t0
+    load 90 t0
+    t0 = a7 + 1
+    s6 = t0
+    load 91 t0
+    t0 = t6 + 2
+    s8 = t0
+    load 92 t0
+    t0 = s2 + 3
+    s10 = t0
+    load 93 t0
+    t0 = s4 + 4
+    a2 = t0
+    load 94 t0
+    t0 = s9 + 1
+    a7 = t0
+    load 95 t0
+    t0 = s11 + 2
+    t6 = t0
+    load 96 t0
+    t0 = a3 + 3
+    s2 = t0
+    load 97 t0
+    t0 = a5 + 4
+    s4 = t0
+    load 98 t0
+    t0 = s1 + 1
+    s9 = t0
+    load 99 t0
+    t0 = s3 + 2
+    s11 = t0
+    load 100 t0
+    t0 = s5 + 3
+    a3 = t0
+    load 101 t0
+    t0 = s7 + 4
+    a5 = t0
+    load 102 t0
+    t0 = t2 + 1
+    s1 = t0
+    load 103 t0
+    t0 = t3 + 2
+    s3 = t0
+    load 104 t0
+    t0 = t4 + 3
+    s5 = t0
+    load 105 t0
+    t0 = t5 + 4
+    s7 = t0
+    load 106 t0
+    store a1 27
+    load 36 a1
+    t0 = a1 + 1
+    t2 = t0
+    load 107 t0
+    load 37 a1
+    t0 = a1 + 2
+    t3 = t0
+    load 108 t0
+    load 38 a1
+    t0 = a1 + 3
+    t4 = t0
+    load 109 t0
+    load 39 a1
+    t0 = a1 + 4
+    t5 = t0
+    load 110 t0
+    t0 = t1 + t2
+    load 111 t1
+    t1 = t0 + t3
+    load 112 t0
+    t0 = t1 + t4
+    load 113 t1
+    t1 = t0 + t5
+    load 114 t0
+    t0 = t1 - s1
+    load 115 t1
+    t1 = t0 - s3
+    load 116 t0
+    t0 = t1 - s5
+    load 117 t1
+    t1 = t0 - s7
+    load 118 t0
+    t0 = t1 + s9
+    load 119 t1
+    t1 = t0 + s11
+    load 120 t0
+    t0 = t1 + a3
+    load 121 t1
+    t1 = t0 + a5
+    load 122 t0
+    t0 = t1 - a7
+    load 123 t1
+    t1 = t0 - t6
+    load 124 t0
+    t0 = t1 - s2
+    load 125 t1
+    t1 = t0 - s4
+    load 126 t0
+    t0 = t1 + s6
+    load 127 t1
+    t1 = t0 + s8
+    load 128 t0
+    t0 = t1 + s10
+    load 129 t1
+    t1 = t0 + a2
+    load 130 t0
+    t0 = t1 - a4
+    load 131 t1
+    t1 = t0 - a0
+    load 132 t0
+    t0 = t1 - a6
+    load 133 t1
+    load 27 t2
+    t1 = t0 - t2
+    load 134 t0
+    load 28 t2
+    t0 = t1 + t2
+    load 135 t1
+    load 29 t2
+    t1 = t0 + t2
+    load 136 t0
+    load 30 t2
+    t0 = t1 + t2
+    load 137 t1
+    load 31 t2
+    t1 = t0 + t2
+    load 138 t0
+    load 32 t2
+    t0 = t1 - t2
+    load 139 t1
+    load 33 t2
+    t1 = t0 - t2
+    load 140 t0
+    load 34 t2
+    t0 = t1 - t2
+    load 141 t1
+    load 35 t2
+    t1 = t0 - t2
+    load 142 t0
+    load 36 t2
+    t0 = t1 + t2
+    load 143 t1
+    load 37 t2
+    t1 = t0 + t2
+    load 144 t0
+    load 38 t2
+    t0 = t1 + t2
+    load 145 t1
+    t1 = t0 + a1
+    a0 = t1
+    store t1 145
+    return
+end f_func
+f_main [0] [6]
+    load 0 t0
+    t0 = 1
+    load 2 t1
+    t1 = t0 + 18
+    load 1 t2
+    t2 = t1
+    load 3 t3
+    t3 = t0
+    load 4 t4
+    t4 = t2
+    a0 = t3
+    a1 = t4
+    call f_func
+    store a0 5
+    load 5 a0
+    return
+end f_main

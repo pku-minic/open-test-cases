@@ -1,0 +1,205 @@
+f_canJump [2] [44]
+    load 2 t0
+    t1 = 1
+    t0 = a1 == t1
+    store t0 2
+    store a0 0
+    store a1 1
+    if t0 == x0 goto l0
+    a0 = 1
+    return
+l0:
+    load 3 t0
+    load 0 t1
+    t0 = t1 [0]
+    load 4 t2
+    load 1 t3
+    t2 = t3 + -2
+    load 5 t4
+    t4 = t0 > t2
+    store t4 5
+    if t4 == x0 goto l1
+    a0 = 1
+    return
+l1:
+    load 16 t0
+    t0 = 0
+    store t0 16
+l2:
+    load 17 t0
+    load 1 t1
+    t0 = t1 + -1
+    load 18 t2
+    load 16 t3
+    t2 = t3 < t0
+    store t2 18
+    if t2 == x0 goto l3
+    load 19 t0
+    load 16 t1
+    t2 = 4
+    t0 = t1 * t2
+    loadaddr 6 t3
+    t4 = t3 + t0
+    t4 [0] = x0
+    load 20 t5
+    t5 = t1 + 1
+    t1 = t5
+    store t1 16
+    goto l2
+l3:
+    load 21 t0
+    load 1 t1
+    t0 = t1 + -1
+    load 22 t2
+    t3 = 4
+    t2 = t0 * t3
+    loadaddr 6 t4
+    t5 = 1
+    t6 = t4 + t2
+    t6 [0] = t5
+    load 23 s1
+    s1 = t1 + -2
+    load 16 s2
+    s2 = s1
+    store s1 23
+    store s2 16
+l4:
+    load 24 t0
+    load 16 t1
+    t2 = -1
+    t0 = t1 > t2
+    store t0 24
+    if t0 == x0 goto l10
+    load 26 t0
+    load 16 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 27 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 28 t6
+    load 1 s1
+    t6 = s1 + -1
+    load 29 s2
+    s2 = t6 - t1
+    load 30 s3
+    s3 = t3 < s2
+    store s3 30
+    if s3 == x0 goto l5
+    load 31 t0
+    load 16 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 32 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 25 t6
+    t6 = t3
+    store t6 25
+    goto l6
+l5:
+    load 33 t0
+    load 1 t1
+    t0 = t1 + -1
+    load 34 t2
+    load 16 t3
+    t2 = t0 - t3
+    load 25 t4
+    t4 = t2
+    store t2 34
+    store t4 25
+    store t4 25
+l6:
+l7:
+    load 35 t0
+    load 25 t1
+    t2 = -1
+    t0 = t1 > t2
+    store t0 35
+    if t0 == x0 goto l9
+    load 36 t0
+    load 16 t1
+    load 25 t2
+    t0 = t1 + t2
+    load 37 t3
+    t4 = 4
+    t3 = t0 * t4
+    load 38 t5
+    loadaddr 6 t6
+    s1 = t6 + t3
+    t5 = s1 [0]
+    load 39 s2
+    s2 = t5 != x0
+    store s2 39
+    if s2 == x0 goto l8
+    load 40 t0
+    load 16 t1
+    t2 = 4
+    t0 = t1 * t2
+    loadaddr 6 t3
+    t4 = 1
+    t5 = t3 + t0
+    t5 [0] = t4
+    store t0 40
+l8:
+    load 41 t0
+    load 25 t1
+    t0 = t1 + -1
+    t1 = t0
+    store t1 25
+    goto l7
+l9:
+    load 42 t0
+    load 16 t1
+    t0 = t1 + -1
+    t1 = t0
+    store t1 16
+    goto l4
+l10:
+    load 43 t0
+    loadaddr 6 t1
+    t0 = t1 [0]
+    a0 = t0
+    store t0 43
+    return
+end f_canJump
+f_main [0] [15]
+    loadaddr 1 t0
+    t1 = 3
+    t0 [0] = t1
+    t2 = 3
+    t0 [4] = t2
+    t3 = 9
+    t0 [8] = t3
+    t0 [12] = x0
+    t0 [16] = x0
+    t4 = 1
+    t0 [20] = t4
+    t5 = 1
+    t0 [24] = t5
+    t6 = 5
+    t0 [28] = t6
+    s1 = 7
+    t0 [32] = s1
+    s2 = 8
+    t0 [36] = s2
+    load 0 s3
+    s3 = 10
+    load 11 s4
+    s4 = t0 + 0
+    load 12 s5
+    s5 = s4
+    load 13 s6
+    s6 = s3
+    a0 = s5
+    a1 = s6
+    store s3 0
+    call f_canJump
+    load 0 t0
+    t0 = a0
+    a0 = t0
+    store t0 0
+    return
+end f_main

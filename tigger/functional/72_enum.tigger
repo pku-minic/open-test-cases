@@ -1,0 +1,93 @@
+f_main [0] [21]
+    load 0 t0
+    t0 = 0
+    load 1 t1
+    t1 = 0
+    load 2 t2
+    t2 = 0
+    store t0 0
+    store t1 1
+    store t2 2
+l0:
+    load 4 t0
+    load 0 t1
+    t0 = t1 < 21
+    store t0 4
+    if t0 == x0 goto l4
+l1:
+    load 5 t0
+    load 0 t1
+    t0 = - t1
+    t0 = t0 + 101
+    load 6 t2
+    load 1 t3
+    t2 = t3 < t0
+    store t2 6
+    if t2 == x0 goto l3
+    load 7 t0
+    load 0 t1
+    t0 = - t1
+    t0 = t0 + 100
+    load 8 t2
+    load 1 t3
+    t2 = t0 - t3
+    load 2 t4
+    t4 = t2
+    load 9 t5
+    t6 = 5
+    t5 = t6 * t1
+    load 10 s1
+    s2 = 1
+    s1 = s2 * t3
+    load 11 s3
+    s3 = t5 + s1
+    load 12 s4
+    s5 = 2
+    s4 = t4 / s5
+    load 13 s6
+    s6 = s3 + s4
+    load 14 s7
+    s8 = 100
+    s7 = s6 == s8
+    store s7 14
+    store t4 2
+    if s7 == x0 goto l2
+    load 15 t0
+    load 0 t1
+    t0 = t1
+    a0 = t0
+    call f_putint
+    load 16 t0
+    load 1 t1
+    t0 = t1
+    a0 = t0
+    call f_putint
+    load 17 t0
+    load 2 t1
+    t0 = t1
+    a0 = t0
+    call f_putint
+    load 3 t0
+    t0 = 10
+    load 18 t1
+    t1 = t0
+    a0 = t1
+    call f_putch
+l2:
+    load 19 t0
+    load 1 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 1
+    goto l1
+l3:
+    load 20 t0
+    load 0 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 0
+    goto l0
+l4:
+    a0 = 0
+    return
+end f_main

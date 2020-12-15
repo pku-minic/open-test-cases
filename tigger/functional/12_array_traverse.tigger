@@ -1,0 +1,88 @@
+v0 = malloc 48
+f_main [0] [16]
+    load 0 t0
+    t0 = 0
+    load 1 t1
+    t1 = 0
+    store t0 0
+    store t1 1
+l0:
+    load 3 t0
+    load 0 t1
+    t2 = 5
+    t0 = t1 > t2
+    load 2 t3
+    t3 = t0 == x0
+    store t3 2
+    if t3 == x0 goto l6
+    load 4 t0
+    load 0 t1
+    t0 = t1
+    store t0 4
+l1:
+    load 6 t0
+    load 4 t1
+    t0 = t1 < 0
+    load 5 t2
+    t2 = t0 == x0
+    store t2 5
+    if t2 == x0 goto l5
+    load 7 t0
+    load 4 t1
+    t0 = t1 < 4
+    store t0 7
+    if t0 == x0 goto l2
+    load 9 t0
+    load 0 t1
+    load 4 t2
+    t0 = t1 - t2
+    load 10 t3
+    t3 = t0 < 3
+    store t3 10
+    if t3 == x0 goto l2
+    load 8 t0
+    t0 = 1
+    store t0 8
+    goto l3
+l2:
+    load 8 t0
+    t0 = 0
+    store t0 8
+l3:
+    load 8 t0
+    if t0 == x0 goto l4
+    load 11 t0
+    load 0 t1
+    load 4 t2
+    t0 = t1 - t2
+    load 12 t3
+    t4 = 4
+    t3 = t0 * t4
+    t3 = t3 + t2
+    load 13 t5
+    t6 = 4
+    t5 = t3 * t6
+    loadaddr v0 s1
+    load 1 s2
+    s3 = s1 + t5
+    s3 [0] = s2
+    s2 = 1
+    store s2 1
+l4:
+    load 14 t0
+    load 4 t1
+    t0 = t1 + -1
+    t1 = t0
+    store t1 4
+    goto l1
+l5:
+    load 15 t0
+    load 0 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 0
+    goto l0
+l6:
+    a0 = 0
+    return
+end f_main

@@ -1,0 +1,304 @@
+v0 = 0
+f_QuickSort [3] [47]
+    load 3 t0
+    t0 = a1 < a2
+    store t0 3
+    store a0 0
+    store a1 1
+    store a2 2
+    if t0 == x0 goto l12
+    load 4 t0
+    load 1 t1
+    t0 = t1
+    load 5 t2
+    load 2 t3
+    t2 = t3
+    load 7 t4
+    t5 = 4
+    t4 = t1 * t5
+    load 8 t6
+    load 0 s1
+    s2 = s1 + t4
+    t6 = s2 [0]
+    load 6 s3
+    s3 = t6
+    store s3 6
+    store t0 4
+    store t2 5
+    store t6 8
+l0:
+    load 9 t0
+    load 4 t1
+    load 5 t2
+    t0 = t1 < t2
+    store t0 9
+    if t0 == x0 goto l11
+l1:
+    load 10 t0
+    load 4 t1
+    load 5 t2
+    t0 = t1 < t2
+    store t0 10
+    if t0 == x0 goto l2
+    load 12 t0
+    load 5 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 13 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 14 t6
+    load 6 s1
+    t6 = s1 + -1
+    load 15 s2
+    s2 = t3 > t6
+    store s2 15
+    if s2 == x0 goto l2
+    load 11 t0
+    t0 = 1
+    store t0 11
+    goto l3
+l2:
+    load 11 t0
+    t0 = 0
+    store t0 11
+l3:
+    load 11 t0
+    if t0 == x0 goto l4
+    load 16 t0
+    load 5 t1
+    t0 = t1 + -1
+    t1 = t0
+    store t1 5
+    goto l1
+l4:
+    load 17 t0
+    load 4 t1
+    load 5 t2
+    t0 = t1 < t2
+    store t0 17
+    if t0 == x0 goto l5
+    load 18 t0
+    load 4 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 19 t3
+    load 5 t4
+    t5 = 4
+    t3 = t4 * t5
+    load 20 t6
+    load 0 s1
+    s2 = s1 + t3
+    t6 = s2 [0]
+    s3 = s1 + t0
+    s3 [0] = t6
+    load 21 s4
+    s4 = t1 + 1
+    t1 = s4
+    store s4 21
+    store t1 4
+    store t1 4
+l5:
+l6:
+    load 22 t0
+    load 4 t1
+    load 5 t2
+    t0 = t1 < t2
+    store t0 22
+    if t0 == x0 goto l7
+    load 24 t0
+    load 4 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 25 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 26 t6
+    load 6 s1
+    t6 = t3 < s1
+    store t6 26
+    if t6 == x0 goto l7
+    load 23 t0
+    t0 = 1
+    store t0 23
+    goto l8
+l7:
+    load 23 t0
+    t0 = 0
+    store t0 23
+l8:
+    load 23 t0
+    if t0 == x0 goto l9
+    load 27 t0
+    load 4 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 4
+    goto l6
+l9:
+    load 28 t0
+    load 4 t1
+    load 5 t2
+    t0 = t1 < t2
+    store t0 28
+    if t0 == x0 goto l10
+    load 29 t0
+    load 5 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 30 t3
+    load 4 t4
+    t5 = 4
+    t3 = t4 * t5
+    load 31 t6
+    load 0 s1
+    s2 = s1 + t3
+    t6 = s2 [0]
+    s3 = s1 + t0
+    s3 [0] = t6
+    load 32 s4
+    s4 = t1 + -1
+    t1 = s4
+    store s4 32
+    store t1 5
+l10:
+    goto l0
+l11:
+    load 33 t0
+    load 4 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 0 t3
+    load 6 t4
+    t5 = t3 + t0
+    t5 [0] = t4
+    load 35 t6
+    t6 = t1 + -1
+    load 34 s1
+    s1 = t6
+    load 36 s2
+    s2 = t3 + 0
+    load 37 s3
+    s3 = s2
+    load 38 s4
+    load 1 s5
+    s4 = s5
+    load 39 s6
+    s6 = s1
+    a0 = s3
+    a1 = s4
+    a2 = s6
+    store s1 34
+    call f_QuickSort
+    load 34 t0
+    t0 = a0
+    load 41 t1
+    load 4 t3
+    t1 = t3 + 1
+    t0 = t1
+    load 42 t4
+    load 0 t6
+    t4 = t6 + 0
+    load 43 s1
+    s1 = t4
+    load 44 s2
+    s2 = t0
+    load 45 s3
+    load 2 s4
+    s3 = s4
+    a0 = s1
+    a1 = s2
+    a2 = s3
+    call f_QuickSort
+    t0 = a0
+    store a0 46
+l12:
+    a0 = 0
+    return
+end f_QuickSort
+f_main [0] [24]
+    load v0 t0
+    t0 = 10
+    loadaddr 0 t1
+    t2 = 4
+    t1 [0] = t2
+    t3 = 3
+    t1 [4] = t3
+    t4 = 9
+    t1 [8] = t4
+    t5 = 2
+    t1 [12] = t5
+    t1 [16] = x0
+    t6 = 1
+    t1 [20] = t6
+    s1 = 6
+    t1 [24] = s1
+    s2 = 5
+    t1 [28] = s2
+    s3 = 7
+    t1 [32] = s3
+    s4 = 8
+    t1 [36] = s4
+    load 10 s5
+    s5 = 0
+    load 11 s6
+    s6 = 9
+    load 12 s7
+    s7 = t1 + 0
+    load 13 s8
+    s8 = s7
+    load 14 s9
+    s9 = s5
+    load 15 s10
+    s10 = s6
+    a0 = s8
+    a1 = s9
+    a2 = s10
+    store s5 10
+    loadaddr v0 s0
+    s0 [0] = t0
+    call f_QuickSort
+    load 10 t0
+    t0 = a0
+    store t0 10
+    store a0 16
+l13:
+    load 17 t0
+    load 10 t1
+    load v0 t2
+    t0 = t1 < t2
+    store t0 17
+    if t0 == x0 goto l14
+    load 19 t0
+    load 10 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 20 t3
+    loadaddr 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 18 t6
+    t6 = t3
+    load 21 s1
+    s1 = t6
+    a0 = s1
+    store t6 18
+    call f_putint
+    load 18 t0
+    t0 = 10
+    load 22 t1
+    t1 = t0
+    a0 = t1
+    call f_putch
+    load 23 t0
+    load 10 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 10
+    goto l13
+l14:
+    a0 = 0
+    return
+end f_main

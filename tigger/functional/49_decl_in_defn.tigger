@@ -1,0 +1,10 @@
+f_main [0] [3]
+    load 0 t0
+    t0 = 12
+    load 2 t1
+    t1 = t0
+    a0 = t1
+    call f_putint
+    a0 = 0
+    return
+end f_main

@@ -1,0 +1,27 @@
+f_main [0] [4]
+    load 0 t0
+    t0 = 10
+    store t0 0
+l0:
+    load 1 t0
+    load 0 t1
+    t0 = t1 > x0
+    store t0 1
+    if t0 == x0 goto l2
+    load 2 t0
+    load 0 t1
+    t0 = t1 + -1
+    t1 = t0
+    load 3 t2
+    t3 = 5
+    t2 = t1 == t3
+    store t1 0
+    store t2 3
+    if t2 == x0 goto l1
+    goto l2
+l1:
+    goto l0
+l2:
+    load 0 a0
+    return
+end f_main

@@ -1,0 +1,132 @@
+f_main [0] [27]
+    load 0 t0
+    t0 = 5
+    load 1 t1
+    t1 = 5
+    load 2 t2
+    t2 = 1
+    load 3 t3
+    t3 = -2
+    load 4 t4
+    t4 = 2
+    load 5 t5
+    t6 = 1
+    t5 = t3 * t6
+    load 6 s1
+    s2 = 2
+    s1 = t5 / s2
+    load 7 s3
+    s3 = s1 < 0
+    store s3 7
+    store t0 0
+    store t1 1
+    store t2 2
+    store t3 3
+    store t4 4
+    if s3 != x0 goto l2
+    load 9 t0
+    load 0 t1
+    load 1 t2
+    t0 = t1 - t2
+    load 10 t3
+    t3 = t0 != x0
+    store t3 10
+    if t3 == x0 goto l0
+    load 12 t0
+    load 2 t1
+    t0 = t1 + 3
+    load 13 t2
+    t3 = 2
+    t2 = t0 % t3
+    load 14 t4
+    t4 = t2 != x0
+    store t4 14
+    if t4 == x0 goto l0
+    load 11 t0
+    t0 = 1
+    store t0 11
+    goto l1
+l0:
+    load 11 t0
+    t0 = 0
+    store t0 11
+l1:
+    load 11 t0
+    if t0 != x0 goto l2
+    load 8 t0
+    t0 = 0
+    store t0 8
+    goto l3
+l2:
+    load 8 t0
+    t0 = 1
+    store t0 8
+l3:
+    load 8 t0
+    if t0 == x0 goto l4
+    load 15 t0
+    load 4 t1
+    t0 = t1
+    a0 = t0
+    call f_putint
+l4:
+    load 16 t0
+    load 3 t1
+    t2 = 2
+    t0 = t1 % t2
+    load 17 t3
+    t3 = t0 + 67
+    load 18 t4
+    t4 = t3 < 0
+    store t4 18
+    if t4 != x0 goto l7
+    load 20 t0
+    load 0 t1
+    load 1 t2
+    t0 = t1 - t2
+    load 21 t3
+    t3 = t0 != x0
+    store t3 21
+    if t3 == x0 goto l5
+    load 23 t0
+    load 2 t1
+    t0 = t1 + 2
+    load 24 t2
+    t3 = 2
+    t2 = t0 % t3
+    load 25 t4
+    t4 = t2 != x0
+    store t4 25
+    if t4 == x0 goto l5
+    load 22 t0
+    t0 = 1
+    store t0 22
+    goto l6
+l5:
+    load 22 t0
+    t0 = 0
+    store t0 22
+l6:
+    load 22 t0
+    if t0 != x0 goto l7
+    load 19 t0
+    t0 = 0
+    store t0 19
+    goto l8
+l7:
+    load 19 t0
+    t0 = 1
+    store t0 19
+l8:
+    load 19 t0
+    if t0 == x0 goto l9
+    load 4 t0
+    t0 = 4
+    load 26 t1
+    t1 = t0
+    a0 = t1
+    call f_putint
+l9:
+    a0 = 0
+    return
+end f_main

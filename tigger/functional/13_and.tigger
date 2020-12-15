@@ -1,0 +1,38 @@
+v0 = 0
+v1 = 0
+f_main [0] [3]
+    call f_getint
+    load v0 t0
+    t0 = a0
+    loadaddr v0 s0
+    s0 [0] = t0
+    call f_getint
+    load v1 t0
+    t0 = a0
+    loadaddr v1 s0
+    s0 [0] = t0
+    load v0 t1
+    if t1 == x0 goto l0
+    load v1 t0
+    if t0 == x0 goto l0
+    load 2 t0
+    t0 = 1
+    store t0 2
+    goto l1
+l0:
+    load 2 t0
+    t0 = 0
+    store t0 2
+l1:
+    load 2 t0
+    if t0 == x0 goto l2
+    a0 = 1
+    return
+    goto l3
+l2:
+    a0 = 0
+    return
+l3:
+    a0 = 0
+    return
+end f_main

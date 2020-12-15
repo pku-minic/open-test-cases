@@ -1,0 +1,100 @@
+f_main [0] [35]
+    load 0 t0
+    t0 = 5
+    load 1 t1
+    t1 = 5
+    load 2 t2
+    t2 = 1
+    load 3 t3
+    t3 = -2
+    loadaddr 4 t4
+    t5 = 1
+    t4 [0] = t5
+    t6 = 2
+    t4 [4] = t6
+    s1 = 3
+    t4 [8] = s1
+    s2 = 4
+    t4 [12] = s2
+    s3 = 5
+    t4 [16] = s3
+    load 10 s4
+    s5 = 1
+    s4 = t3 * s5
+    load 11 s6
+    s7 = 2
+    s6 = s4 / s7
+    load 12 s8
+    s8 = s6 + 4
+    load 13 s9
+    s9 = t0 - t1
+    load 14 s10
+    s10 = s8 + s9
+    load 15 s11
+    s11 = t2 + 3
+    load 16 a0
+    a0 = - s11
+    load 17 a1
+    a2 = 2
+    a1 = a0 % a2
+    load 18 a3
+    a3 = s10 - a1
+    load 19 a4
+    a5 = 5
+    a4 = a3 % a5
+    load 20 a6
+    a7 = 4
+    a6 = a4 * a7
+    load 21 t3
+    t5 = t4 + a6
+    t3 = t5 [0]
+    load 9 t5
+    t5 = t3
+    load 22 t3
+    t3 = t5
+    a0 = t3
+    store t0 0
+    store t1 1
+    store t2 2
+    store t5 9
+    call f_putint
+    load 23 t0
+    load 2 t1
+    t2 = 2
+    t0 = t1 % t2
+    load 24 t3
+    t3 = t0 + 67
+    load 25 t4
+    load 0 t5
+    t4 = t3 + t5
+    load 26 s4
+    load 1 s6
+    s4 = t4 - s6
+    load 27 s8
+    s8 = t1 + 2
+    load 28 s9
+    s10 = 2
+    s9 = s8 % s10
+    load 29 s11
+    s11 = - s9
+    load 30 a1
+    a1 = s4 - s11
+    load 31 a3
+    a4 = 5
+    a3 = a1 % a4
+    load 32 a6
+    t0 = 4
+    a6 = a3 * t0
+    load 33 t0
+    loadaddr 4 t1
+    t2 = t1 + a6
+    t0 = t2 [0]
+    load 9 t1
+    t1 = t0
+    load 34 t0
+    t0 = t1
+    a0 = t0
+    call f_putint
+    a0 = 0
+    return
+end f_main

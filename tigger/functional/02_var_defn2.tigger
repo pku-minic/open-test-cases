@@ -1,0 +1,10 @@
+v0 = 0
+v1 = 0
+f_main [0] [1]
+    load v0 t0
+    t0 = 10
+    load 0 t1
+    t1 = 10
+    a0 = 0
+    return
+end f_main

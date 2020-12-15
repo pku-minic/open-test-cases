@@ -1,0 +1,64 @@
+v0 = 0
+v1 = 0
+f_factor [1] [9]
+    load 2 t0
+    t0 = 0
+    load 1 t1
+    t1 = 1
+    store t0 2
+    store t1 1
+    store a0 0
+l0:
+    load 3 t0
+    load 0 t1
+    t0 = t1 + 1
+    load 4 t2
+    load 1 t3
+    t2 = t3 < t0
+    store t2 4
+    if t2 == x0 goto l2
+    load 5 t0
+    load 0 t1
+    load 1 t2
+    t0 = t1 % t2
+    load 6 t3
+    t3 = t0 == x0
+    store t3 6
+    if t3 == x0 goto l1
+    load 7 t0
+    load 2 t1
+    load 1 t2
+    t0 = t1 + t2
+    t1 = t0
+    store t0 7
+    store t1 2
+l1:
+    load 8 t0
+    load 1 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 1
+    goto l0
+l2:
+    load 2 a0
+    return
+end f_factor
+f_main [0] [5]
+    load v0 t0
+    t0 = 4
+    load v1 t1
+    t1 = 10
+    load 1 t2
+    t2 = 1478
+    load 3 t3
+    t3 = t2
+    a0 = t3
+    loadaddr v0 s0
+    s0 [0] = t0
+    loadaddr v1 s0
+    s0 [0] = t1
+    call f_factor
+    store a0 4
+    load 4 a0
+    return
+end f_main

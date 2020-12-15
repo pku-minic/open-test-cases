@@ -1,0 +1,104 @@
+v0 = 0
+v1 = 0
+f_split [2] [9]
+    load 3 t0
+    load v0 t1
+    t0 = t1 + -1
+    load 2 t2
+    t2 = t0
+    store t0 3
+    store t2 2
+    store a0 0
+    store a1 1
+l0:
+    load 4 t0
+    load 2 t1
+    t2 = -1
+    t0 = t1 != t2
+    store t0 4
+    if t0 == x0 goto l1
+    load 5 t0
+    load 2 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 6 t3
+    load 0 t4
+    t5 = 10
+    t3 = t4 % t5
+    load 1 t6
+    s1 = t6 + t0
+    s1 [0] = t3
+    load 7 s2
+    s3 = 10
+    s2 = t4 / s3
+    t4 = s2
+    load 8 s4
+    s4 = t1 + -1
+    t1 = s4
+    store t1 2
+    store t4 0
+    goto l0
+l1:
+    a0 = 0
+    return
+end f_split
+f_main [0] [17]
+    load v0 t0
+    t0 = 4
+    load v1 t1
+    t1 = 10
+    load 1 t2
+    t2 = 1478
+    load 6 t3
+    t3 = t2
+    load 7 t4
+    loadaddr 2 t5
+    t4 = t5 + 0
+    load 8 t6
+    t6 = t4
+    a0 = t3
+    a1 = t6
+    loadaddr v0 s0
+    s0 [0] = t0
+    loadaddr v1 s0
+    s0 [0] = t1
+    call f_split
+    t0 = a0
+    load 0 t1
+    t1 = 0
+    store t1 0
+l2:
+    load 11 t0
+    load 0 t1
+    t0 = t1 < 4
+    store t0 11
+    if t0 == x0 goto l3
+    load 12 t0
+    load 0 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 13 t3
+    loadaddr 2 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 10 t6
+    t6 = t3
+    load 14 s1
+    s1 = t6
+    a0 = s1
+    call f_putint
+    load 15 t0
+    load v1 t1
+    t0 = t1
+    a0 = t0
+    call f_putch
+    load 16 t0
+    load 0 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 0
+    goto l2
+l3:
+    a0 = 0
+    return
+end f_main

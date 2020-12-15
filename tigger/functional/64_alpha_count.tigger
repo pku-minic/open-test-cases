@@ -1,0 +1,98 @@
+f_main [0] [515]
+    load 502 t0
+    t0 = 0
+    load 501 t1
+    t1 = 0
+    load 500 t2
+    t2 = 0
+    store t0 502
+    store t1 501
+    store t2 500
+l0:
+    load 503 t0
+    load 500 t1
+    t2 = 10
+    t0 = t1 != t2
+    store t0 503
+    if t0 == x0 goto l8
+    call f_getch
+    load 500 t0
+    t0 = a0
+    load 505 t1
+    t3 = 40
+    t1 = t0 > t3
+    store t0 500
+    store t1 505
+    store a0 504
+    if t1 == x0 goto l1
+    load 507 t0
+    load 500 t1
+    t0 = t1 < 91
+    store t0 507
+    if t0 == x0 goto l1
+    load 506 t0
+    t0 = 1
+    store t0 506
+    goto l2
+l1:
+    load 506 t0
+    t0 = 0
+    store t0 506
+l2:
+    load 506 t0
+    if t0 != x0 goto l5
+    load 509 t0
+    load 500 t1
+    t2 = 96
+    t0 = t1 > t2
+    store t0 509
+    if t0 == x0 goto l3
+    load 511 t0
+    load 500 t1
+    t0 = t1 < 123
+    store t0 511
+    if t0 == x0 goto l3
+    load 510 t0
+    t0 = 1
+    store t0 510
+    goto l4
+l3:
+    load 510 t0
+    t0 = 0
+    store t0 510
+l4:
+    load 510 t0
+    if t0 != x0 goto l5
+    load 508 t0
+    t0 = 0
+    store t0 508
+    goto l6
+l5:
+    load 508 t0
+    t0 = 1
+    store t0 508
+l6:
+    load 508 t0
+    if t0 == x0 goto l7
+    load 512 t0
+    load 502 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t0 512
+    store t1 502
+l7:
+    load 513 t0
+    load 501 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 501
+    goto l0
+l8:
+    load 514 t0
+    load 502 t1
+    t0 = t1
+    a0 = t0
+    call f_putint
+    a0 = 0
+    return
+end f_main

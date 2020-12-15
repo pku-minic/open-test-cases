@@ -1,0 +1,67 @@
+f_deepWhileBr [2] [12]
+    load 3 t0
+    t0 = a0 + a1
+    load 2 t1
+    t1 = t0
+    store t0 3
+    store t1 2
+l0:
+    load 4 t0
+    load 2 t1
+    t0 = t1 < 75
+    store t0 4
+    if t0 == x0 goto l3
+    load 5 t0
+    t0 = 42
+    load 6 t1
+    load 2 t2
+    t1 = t2 < 100
+    store t0 5
+    store t1 6
+    if t1 == x0 goto l2
+    load 7 t0
+    load 2 t1
+    load 5 t2
+    t0 = t1 + t2
+    t1 = t0
+    load 8 t3
+    t4 = 99
+    t3 = t1 > t4
+    store t1 2
+    store t3 8
+    if t3 == x0 goto l1
+    load 10 t0
+    load 5 t1
+    t2 = 2
+    t0 = t1 * t2
+    load 9 t3
+    t3 = t0
+    load 11 t4
+    t5 = 2
+    t4 = t3 * t5
+    load 2 t6
+    t6 = t4
+    store t4 11
+    store t6 2
+    store t6 2
+l1:
+l2:
+    goto l0
+l3:
+    load 2 a0
+    return
+end f_deepWhileBr
+f_main [0] [4]
+    load 0 t0
+    t0 = 2
+    load 1 t1
+    t1 = t0
+    load 2 t2
+    t2 = t0
+    a0 = t1
+    a1 = t2
+    call f_deepWhileBr
+    store a0 3
+    load 3 a0
+    return
+end f_main

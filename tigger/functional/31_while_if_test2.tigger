@@ -1,0 +1,64 @@
+f_ifWhile [0] [9]
+    load 0 t0
+    t0 = 0
+    load 1 t1
+    t1 = 3
+    load 2 t2
+    t3 = 5
+    t2 = t0 == t3
+    store t0 0
+    store t1 1
+    store t2 2
+    if t2 == x0 goto l2
+l0:
+    load 3 t0
+    load 1 t1
+    t2 = 2
+    t0 = t1 == t2
+    store t0 3
+    if t0 == x0 goto l1
+    load 4 t0
+    load 1 t1
+    t0 = t1 + 2
+    t1 = t0
+    store t1 1
+    goto l0
+l1:
+    load 5 t0
+    load 1 t1
+    t0 = t1 + 25
+    t1 = t0
+    store t1 1
+    goto l5
+    store t1 1
+l2:
+l3:
+    load 6 t0
+    load 0 t1
+    t0 = t1 < 5
+    store t0 6
+    if t0 == x0 goto l4
+    load 7 t0
+    load 1 t1
+    t2 = 2
+    t0 = t1 * t2
+    t1 = t0
+    load 8 t3
+    load 0 t4
+    t3 = t4 + 1
+    t4 = t3
+    store t1 1
+    store t4 0
+    goto l3
+    store t1 1
+l4:
+l5:
+    load 1 a0
+    return
+end f_ifWhile
+f_main [0] [1]
+    call f_ifWhile
+    store a0 0
+    load 0 a0
+    return
+end f_main

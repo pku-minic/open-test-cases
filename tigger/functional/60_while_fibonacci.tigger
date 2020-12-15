@@ -1,0 +1,69 @@
+v0 = 0
+f_fib [1] [9]
+    load 1 t0
+    t0 = 0
+    load 2 t1
+    t1 = 1
+    load 4 t2
+    t2 = a0 == x0
+    store t0 1
+    store t1 2
+    store t2 4
+    store a0 0
+    if t2 == x0 goto l0
+    a0 = 0
+    return
+l0:
+    load 5 t0
+    load 0 t1
+    t2 = 1
+    t0 = t1 == t2
+    store t0 5
+    if t0 == x0 goto l1
+    a0 = 1
+    return
+l1:
+l2:
+    load 6 t0
+    load 0 t1
+    t2 = 1
+    t0 = t1 > t2
+    store t0 6
+    if t0 == x0 goto l3
+    load 7 t0
+    load 1 t1
+    load 2 t2
+    t0 = t1 + t2
+    load 3 t3
+    t3 = t0
+    t1 = t2
+    t2 = t3
+    load 8 t4
+    load 0 t5
+    t4 = t5 + -1
+    t5 = t4
+    store t1 1
+    store t2 2
+    store t3 3
+    store t5 0
+    goto l2
+l3:
+    load 3 a0
+    return
+end f_fib
+f_main [0] [4]
+    call f_getint
+    load v0 t0
+    t0 = a0
+    load 2 t1
+    t1 = t0
+    a0 = t1
+    loadaddr v0 s0
+    s0 [0] = t0
+    call f_fib
+    load 1 t0
+    t0 = a0
+    a0 = t0
+    store t0 1
+    return
+end f_main

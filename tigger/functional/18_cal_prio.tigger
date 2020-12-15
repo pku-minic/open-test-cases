@@ -1,0 +1,29 @@
+v0 = 0
+v1 = 0
+v2 = 0
+f_main [0] [6]
+    call f_getint
+    load v0 t0
+    t0 = a0
+    loadaddr v0 s0
+    s0 [0] = t0
+    call f_getint
+    load v1 t0
+    t0 = a0
+    loadaddr v1 s0
+    s0 [0] = t0
+    call f_getint
+    load v2 t0
+    t0 = a0
+    load 4 t1
+    load v1 t2
+    t1 = t2 * t0
+    load 5 t3
+    load v0 t4
+    t3 = t4 + t1
+    load 3 t5
+    t5 = t3
+    a0 = t5
+    store t5 3
+    return
+end f_main

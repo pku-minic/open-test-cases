@@ -1,0 +1,67 @@
+v0 = 0
+f_gcd [2] [8]
+    load 4 t0
+    t0 = a0 < a1
+    store t0 4
+    store a0 0
+    store a1 1
+    if t0 == x0 goto l0
+    load 2 t0
+    load 0 t1
+    t0 = t1
+    load 1 t2
+    t1 = t2
+    t2 = t0
+    store t0 2
+    store t1 0
+    store t2 1
+l0:
+    load 5 t0
+    load 0 t1
+    load 1 t2
+    t0 = t1 % t2
+    load 3 t3
+    t3 = t0
+    store t0 5
+    store t3 3
+l1:
+    load 6 t0
+    load 3 t1
+    t0 = t1 != x0
+    store t0 6
+    if t0 == x0 goto l2
+    load 0 t0
+    load 1 t1
+    t0 = t1
+    load 3 t2
+    t1 = t2
+    load 7 t3
+    t3 = t0 % t1
+    t2 = t3
+    store t1 1
+    store t2 3
+    goto l1
+l2:
+    load 1 a0
+    return
+end f_gcd
+f_main [0] [7]
+    call f_getint
+    load 0 t0
+    t0 = a0
+    store t0 0
+    call f_getint
+    load 1 t0
+    t0 = a0
+    load 4 t1
+    load 0 t2
+    t1 = t2
+    load 5 t3
+    t3 = t0
+    a0 = t1
+    a1 = t3
+    call f_gcd
+    store a0 6
+    load 6 a0
+    return
+end f_main

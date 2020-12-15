@@ -1,0 +1,64 @@
+f_fsqrt [1] [9]
+    load 1 t0
+    t0 = 0
+    load 3 t1
+    t2 = 2
+    t1 = a0 / t2
+    load 2 t3
+    t3 = t1
+    store t0 1
+    store t1 3
+    store t3 2
+    store a0 0
+l0:
+    load 4 t0
+    load 1 t1
+    load 2 t2
+    t0 = t1 - t2
+    load 5 t3
+    t3 = t0 != x0
+    store t3 5
+    if t3 == x0 goto l1
+    load 1 t0
+    load 2 t1
+    t0 = t1
+    load 6 t2
+    load 0 t3
+    t2 = t3 / t0
+    load 7 t4
+    t4 = t0 + t2
+    t1 = t4
+    load 8 t5
+    t6 = 2
+    t5 = t1 / t6
+    t1 = t5
+    store t0 1
+    store t1 2
+    goto l0
+l1:
+    load 2 a0
+    return
+end f_fsqrt
+f_main [0] [6]
+    load 0 t0
+    t0 = 400
+    load 2 t1
+    t1 = t0
+    a0 = t1
+    call f_fsqrt
+    load 1 t0
+    t0 = a0
+    load 4 t1
+    t1 = t0
+    a0 = t1
+    store t0 1
+    call f_putint
+    load 1 t0
+    t0 = 10
+    load 5 t1
+    t1 = t0
+    a0 = t1
+    call f_putch
+    a0 = 0
+    return
+end f_main

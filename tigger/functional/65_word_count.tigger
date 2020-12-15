@@ -1,0 +1,114 @@
+f_wc [2] [12]
+    load 3 t0
+    t0 = 0
+    load 2 t1
+    t1 = 0
+    load 4 t2
+    t2 = 0
+    store t0 3
+    store t1 2
+    store t2 4
+    store a0 0
+    store a1 1
+l0:
+    load 5 t0
+    load 3 t1
+    load 1 t2
+    t0 = t1 < t2
+    store t0 5
+    if t0 == x0 goto l4
+    load 6 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 7 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 8 t6
+    s1 = 32
+    t6 = t3 != s1
+    store t6 8
+    if t6 == x0 goto l2
+    load 9 t0
+    load 2 t1
+    t0 = t1 == x0
+    store t0 9
+    if t0 == x0 goto l1
+    load 10 t0
+    load 4 t1
+    t0 = t1 + 1
+    t1 = t0
+    load 2 t2
+    t2 = 1
+    store t1 4
+    store t2 2
+l1:
+    goto l3
+l2:
+    load 2 t0
+    t0 = 0
+    store t0 2
+l3:
+    load 11 t0
+    load 3 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 3
+    goto l0
+l4:
+    load 4 a0
+    return
+end f_wc
+f_main [0] [511]
+    load 501 t0
+    t0 = 0
+    load 500 t1
+    t1 = 0
+    store t0 501
+    store t1 500
+l5:
+    load 502 t0
+    load 500 t1
+    t2 = 10
+    t0 = t1 != t2
+    store t0 502
+    if t0 == x0 goto l6
+    call f_getch
+    load 500 t0
+    t0 = a0
+    load 504 t1
+    load 501 t3
+    t4 = 4
+    t1 = t3 * t4
+    loadaddr 0 t5
+    t6 = t5 + t1
+    t6 [0] = t0
+    load 505 s1
+    s1 = t3 + 1
+    t3 = s1
+    store t0 500
+    store t3 501
+    store a0 503
+    goto l5
+l6:
+    load 506 t0
+    loadaddr 0 t1
+    t0 = t1 + 0
+    load 507 t2
+    t2 = t0
+    load 508 t3
+    load 501 t4
+    t3 = t4
+    a0 = t2
+    a1 = t3
+    call f_wc
+    load 500 t0
+    t0 = a0
+    load 510 t1
+    t1 = t0
+    a0 = t1
+    call f_putint
+    a0 = 0
+    return
+end f_main

@@ -1,0 +1,104 @@
+f_FourWhile [0] [18]
+    load 0 t0
+    t0 = 5
+    load 1 t1
+    t1 = 6
+    load 2 t2
+    t2 = 7
+    load 3 t3
+    t3 = 10
+    store t0 0
+    store t1 1
+    store t2 2
+    store t3 3
+l0:
+    load 4 t0
+    load 0 t1
+    t0 = t1 < 20
+    store t0 4
+    if t0 == x0 goto l7
+    load 5 t0
+    load 0 t1
+    t0 = t1 + 3
+    t1 = t0
+    store t0 5
+    store t1 0
+l1:
+    load 6 t0
+    load 1 t1
+    t0 = t1 < 10
+    store t0 6
+    if t0 == x0 goto l6
+    load 7 t0
+    load 1 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t0 7
+    store t1 1
+l2:
+    load 8 t0
+    load 2 t1
+    t2 = 7
+    t0 = t1 == t2
+    store t0 8
+    if t0 == x0 goto l5
+    load 9 t0
+    load 2 t1
+    t0 = t1 + -1
+    t1 = t0
+    store t0 9
+    store t1 2
+l3:
+    load 10 t0
+    load 3 t1
+    t0 = t1 < 20
+    store t0 10
+    if t0 == x0 goto l4
+    load 11 t0
+    load 3 t1
+    t0 = t1 + 3
+    t1 = t0
+    store t1 3
+    goto l3
+l4:
+    load 12 t0
+    load 3 t1
+    t0 = t1 + -1
+    t1 = t0
+    store t1 3
+    goto l2
+l5:
+    load 13 t0
+    load 2 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 2
+    goto l1
+l6:
+    load 14 t0
+    load 1 t1
+    t0 = t1 + -2
+    t1 = t0
+    store t1 1
+    goto l0
+l7:
+    load 15 t0
+    load 1 t1
+    load 3 t2
+    t0 = t1 + t2
+    load 16 t3
+    load 0 t4
+    t3 = t4 + t0
+    load 17 t5
+    load 2 t6
+    t5 = t3 + t6
+    a0 = t5
+    store t5 17
+    return
+end f_FourWhile
+f_main [0] [1]
+    call f_FourWhile
+    store a0 0
+    load 0 a0
+    return
+end f_main

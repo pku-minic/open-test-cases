@@ -1,0 +1,20 @@
+v0 = 0
+v1 = 0
+f_main [0] [4]
+    load v0 t0
+    t0 = 10
+    load v1 t1
+    t1 = 5
+    load 1 t2
+    t3 = 2
+    t2 = t0 * t3
+    load 2 t4
+    t4 = t2 + t1
+    load 3 t5
+    t5 = t4 + 3
+    load 0 t6
+    t6 = t5
+    a0 = t6
+    store t6 0
+    return
+end f_main

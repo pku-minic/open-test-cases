@@ -1,0 +1,55 @@
+v0 = 0
+v1 = malloc 40
+f_main [0] [6]
+    load v0 t0
+    t0 = 5
+    loadaddr v1 t1
+    t2 = 9
+    t1 [0] = t2
+    t3 = 8
+    t1 [4] = t3
+    t4 = 7
+    t1 [8] = t4
+    t5 = 6
+    t1 [12] = t5
+    t6 = 5
+    t1 [16] = t6
+    s1 = 4
+    t1 [20] = s1
+    s2 = 3
+    t1 [24] = s2
+    s3 = 2
+    t1 [28] = s3
+    s4 = 1
+    t1 [32] = s4
+    load 0 s5
+    s5 = 0
+    store s5 0
+    loadaddr v0 s0
+    s0 [0] = t0
+l0:
+    load 1 t0
+    load 0 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 2 t3
+    loadaddr v1 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 4 t6
+    load v0 s1
+    t6 = t3 < s1
+    load 3 s2
+    s2 = t6 == x0
+    store s2 3
+    if s2 == x0 goto l1
+    load 5 t0
+    load 0 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 0
+    goto l0
+l1:
+    load 0 a0
+    return
+end f_main

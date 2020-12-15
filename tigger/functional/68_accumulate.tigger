@@ -1,0 +1,33 @@
+f_main [0] [6]
+    load 1 t0
+    t0 = 0
+    load 0 t1
+    t1 = 0
+    store t0 1
+    store t1 0
+l0:
+    load 2 t0
+    load 0 t1
+    t0 = t1 < 21
+    store t0 2
+    if t0 == x0 goto l1
+    load 3 t0
+    load 1 t1
+    load 0 t2
+    t0 = t1 + t2
+    t1 = t0
+    load 4 t3
+    t3 = t2 + 1
+    t2 = t3
+    store t1 1
+    store t2 0
+    goto l0
+l1:
+    load 5 t0
+    load 1 t1
+    t0 = t1
+    a0 = t0
+    call f_putint
+    a0 = 0
+    return
+end f_main

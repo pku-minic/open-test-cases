@@ -1,0 +1,15 @@
+v0 = malloc 20
+f_main [0] [0]
+    loadaddr v0 t0
+    t0 [0] = x0
+    t1 = 1
+    t0 [4] = t1
+    t2 = 2
+    t0 [8] = t2
+    t3 = 3
+    t0 [12] = t3
+    t4 = 4
+    t0 [16] = t4
+    a0 = 4
+    return
+end f_main

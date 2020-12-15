@@ -1,0 +1,183 @@
+f_concat [3] [16]
+    load 3 t0
+    t0 = 0
+    store t0 3
+    store a0 0
+    store a1 1
+    store a2 2
+l0:
+    load 4 t0
+    load 3 t1
+    t0 = t1 < 3
+    store t0 4
+    if t0 == x0 goto l1
+    load 5 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 6 t3
+    t4 = 4
+    t3 = t1 * t4
+    load 7 t5
+    load 0 t6
+    s1 = t6 + t3
+    t5 = s1 [0]
+    load 2 s2
+    s3 = s2 + t0
+    s3 [0] = t5
+    load 8 s4
+    s4 = t1 + 1
+    t1 = s4
+    store t1 3
+    goto l0
+l1:
+    load 9 t0
+    t0 = 0
+    store t0 9
+l2:
+    load 10 t0
+    load 9 t1
+    t0 = t1 < 3
+    store t0 10
+    if t0 == x0 goto l3
+    load 11 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 12 t3
+    load 9 t4
+    t5 = 4
+    t3 = t4 * t5
+    load 13 t6
+    load 1 s1
+    s2 = s1 + t3
+    t6 = s2 [0]
+    load 2 s3
+    s4 = s3 + t0
+    s4 [0] = t6
+    load 14 s5
+    s5 = t1 + 1
+    t1 = s5
+    load 15 s6
+    s6 = t4 + 1
+    t4 = s6
+    store t1 3
+    store t4 9
+    goto l2
+l3:
+    a0 = 0
+    return
+end f_concat
+f_main [0] [53]
+    load 30 t0
+    t0 = 0
+    store t0 30
+l4:
+    load 31 t0
+    load 30 t1
+    t0 = t1 < 3
+    store t0 31
+    if t0 == x0 goto l5
+    load 32 t0
+    load 30 t1
+    t2 = 4
+    t0 = t1 * t2
+    loadaddr 0 t3
+    t4 = t3 + t0
+    t4 [0] = t1
+    load 33 t5
+    t6 = 4
+    t5 = t1 * t6
+    loadaddr 3 s1
+    s2 = s1 + t5
+    s2 [0] = t1
+    load 34 s3
+    s4 = 4
+    s3 = t1 * s4
+    loadaddr 6 s5
+    s6 = s5 + s3
+    s6 [0] = t1
+    load 35 s7
+    s8 = 4
+    s7 = t1 * s8
+    loadaddr 9 s9
+    s10 = s9 + s7
+    s10 [0] = t1
+    load 36 s11
+    a0 = 4
+    s11 = t1 * a0
+    loadaddr 12 a1
+    a2 = a1 + s11
+    a2 [0] = t1
+    load 37 a3
+    a4 = 4
+    a3 = t1 * a4
+    loadaddr 15 a5
+    a6 = a5 + a3
+    a6 [0] = t1
+    load 38 a7
+    a7 = t1 + 1
+    t1 = a7
+    store t1 30
+    goto l4
+l5:
+    load 39 t0
+    loadaddr 0 t1
+    t0 = t1 + 0
+    load 40 t2
+    t2 = t0
+    load 41 t3
+    loadaddr 9 t4
+    t3 = t4 + 0
+    load 42 t5
+    t5 = t3
+    load 43 t6
+    loadaddr 18 s1
+    t6 = s1 + 0
+    load 44 s2
+    s2 = t6
+    a0 = t2
+    a1 = t5
+    a2 = s2
+    call f_concat
+    load 30 t0
+    t0 = a0
+    store t0 30
+    store a0 45
+l6:
+    load 47 t0
+    load 30 t1
+    t0 = t1 < 6
+    store t0 47
+    if t0 == x0 goto l7
+    load 48 t0
+    load 30 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 49 t3
+    loadaddr 18 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 46 t6
+    t6 = t3
+    load 50 s1
+    s1 = t6
+    a0 = s1
+    store t6 46
+    call f_putint
+    load 51 t0
+    load 30 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 30
+    goto l6
+l7:
+    load 46 t0
+    t0 = 10
+    load 52 t1
+    t1 = t0
+    a0 = t1
+    call f_putch
+    a0 = 0
+    return
+end f_main

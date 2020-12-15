@@ -1,0 +1,114 @@
+f_palindrome [1] [19]
+    load 5 t0
+    t0 = 0
+    store t0 5
+    store a0 0
+l0:
+    load 7 t0
+    load 5 t1
+    t0 = t1 < 4
+    store t0 7
+    if t0 == x0 goto l1
+    load 8 t0
+    load 5 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 9 t3
+    load 0 t4
+    t5 = 10
+    t3 = t4 % t5
+    loadaddr 1 t6
+    s1 = t6 + t0
+    s1 [0] = t3
+    load 10 s2
+    s3 = 10
+    s2 = t4 / s3
+    t4 = s2
+    load 11 s4
+    s4 = t1 + 1
+    t1 = s4
+    store t1 5
+    store t4 0
+    goto l0
+l1:
+    load 12 t0
+    loadaddr 1 t1
+    t0 = t1 [0]
+    load 13 t2
+    t2 = t1 [12]
+    load 14 t3
+    t3 = t0 == t2
+    store t3 14
+    if t3 == x0 goto l2
+    load 16 t0
+    loadaddr 1 t1
+    t0 = t1 [4]
+    load 17 t2
+    t2 = t1 [8]
+    load 18 t3
+    t3 = t0 == t2
+    store t3 18
+    if t3 == x0 goto l2
+    load 15 t0
+    t0 = 1
+    store t0 15
+    goto l3
+l2:
+    load 15 t0
+    t0 = 0
+    store t0 15
+l3:
+    load 15 t0
+    if t0 == x0 goto l4
+    load 6 t0
+    t0 = 1
+    store t0 6
+    goto l5
+l4:
+    load 6 t0
+    t0 = 0
+    store t0 6
+l5:
+    load 6 a0
+    return
+end f_palindrome
+f_main [0] [8]
+    load 0 t0
+    t0 = 1221
+    load 2 t1
+    t1 = t0
+    a0 = t1
+    store t0 0
+    call f_palindrome
+    load 1 t0
+    t0 = a0
+    load 4 t1
+    t2 = 1
+    t1 = t0 == t2
+    store t0 1
+    store t1 4
+    if t1 == x0 goto l6
+    load 5 t0
+    load 0 t1
+    t0 = t1
+    a0 = t0
+    call f_putint
+    goto l7
+l6:
+    load 1 t0
+    t0 = 0
+    load 6 t1
+    t1 = t0
+    a0 = t1
+    store t0 1
+    call f_putint
+l7:
+    load 1 t0
+    t0 = 10
+    load 7 t1
+    t1 = t0
+    a0 = t1
+    call f_putch
+    a0 = 0
+    return
+end f_main

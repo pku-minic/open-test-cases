@@ -1,0 +1,41 @@
+v0 = 0
+f_main [0] [9]
+    call f_getint
+    load 0 t0
+    t0 = a0
+    store t0 0
+    call f_getint
+    load 1 t0
+    t0 = a0
+    load 4 t1
+    load 0 t2
+    t1 = t2
+    t2 = t0
+    t0 = t1
+    load 5 t3
+    t3 = t2
+    a0 = t3
+    store t0 1
+    store t1 4
+    call f_putint
+    load 4 t0
+    t0 = 10
+    load 6 t1
+    t1 = t0
+    a0 = t1
+    store t0 4
+    call f_putch
+    load 7 t0
+    load 1 t1
+    t0 = t1
+    a0 = t0
+    call f_putint
+    load 4 t0
+    t0 = 10
+    load 8 t1
+    t1 = t0
+    a0 = t1
+    call f_putch
+    a0 = 0
+    return
+end f_main

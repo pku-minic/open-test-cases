@@ -1,0 +1,9 @@
+v0 = 0
+f_main [0] [0]
+    load v0 t0
+    t0 = 10
+    a0 = t0
+    loadaddr v0 s0
+    s0 [0] = t0
+    return
+end f_main

@@ -1,0 +1,283 @@
+f_atoi_ [1] [44]
+    load 1 t0
+    t0 = 0
+    load 2 t1
+    t1 = 1
+    load 3 t2
+    t2 = 0
+    store t0 1
+    store t1 2
+    store t2 3
+    store a0 0
+l0:
+    load 4 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 5 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 6 t6
+    s1 = 32
+    t6 = t3 == s1
+    store t6 6
+    if t6 == x0 goto l1
+    load 7 t0
+    load 3 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 3
+    goto l0
+l1:
+    load 8 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 9 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 10 t6
+    s1 = 43
+    t6 = t3 == s1
+    store t6 10
+    if t6 != x0 goto l2
+    load 12 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 13 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 14 t6
+    s1 = 45
+    t6 = t3 == s1
+    store t6 14
+    if t6 != x0 goto l2
+    load 11 t0
+    t0 = 0
+    store t0 11
+    goto l3
+l2:
+    load 11 t0
+    t0 = 1
+    store t0 11
+l3:
+    load 11 t0
+    if t0 == x0 goto l5
+    load 15 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 16 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 17 t6
+    s1 = 45
+    t6 = t3 == s1
+    store t6 17
+    if t6 == x0 goto l4
+    load 2 t0
+    t0 = -1
+    store t0 2
+l4:
+    load 18 t0
+    load 3 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 3
+    goto l9
+l5:
+    load 19 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 20 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 21 t6
+    t6 = t3 < 48
+    store t6 21
+    if t6 != x0 goto l6
+    load 23 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 24 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 25 t6
+    s1 = 57
+    t6 = t3 > s1
+    store t6 25
+    if t6 != x0 goto l6
+    load 22 t0
+    t0 = 0
+    store t0 22
+    goto l7
+l6:
+    load 22 t0
+    t0 = 1
+    store t0 22
+l7:
+    load 22 t0
+    if t0 == x0 goto l8
+    load 1 t0
+    t0 = 2147483647
+    a0 = t0
+    store t0 1
+    return
+    store t0 1
+l8:
+l9:
+l10:
+    load 26 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 27 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 28 t6
+    t6 = t3 != x0
+    store t6 28
+    if t6 == x0 goto l11
+    load 30 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 31 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 32 t6
+    s1 = 47
+    t6 = t3 > s1
+    store t6 32
+    if t6 == x0 goto l11
+    load 29 t0
+    t0 = 1
+    store t0 29
+    goto l12
+l11:
+    load 29 t0
+    t0 = 0
+    store t0 29
+l12:
+    load 29 t0
+    if t0 == x0 goto l13
+    load 34 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 35 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 36 t6
+    t6 = t3 < 58
+    store t6 36
+    if t6 == x0 goto l13
+    load 33 t0
+    t0 = 1
+    store t0 33
+    goto l14
+l13:
+    load 33 t0
+    t0 = 0
+    store t0 33
+l14:
+    load 33 t0
+    if t0 == x0 goto l15
+    load 37 t0
+    load 1 t1
+    t2 = 10
+    t0 = t1 * t2
+    load 38 t3
+    load 3 t4
+    t5 = 4
+    t3 = t4 * t5
+    load 39 t6
+    load 0 s1
+    s2 = s1 + t3
+    t6 = s2 [0]
+    load 40 s3
+    s3 = t0 + t6
+    load 41 s4
+    s4 = s3 + -48
+    t1 = s4
+    load 42 s5
+    s5 = t4 + 1
+    t4 = s5
+    store t1 1
+    store t4 3
+    goto l10
+l15:
+    load 43 t0
+    load 1 t1
+    load 2 t2
+    t0 = t1 * t2
+    a0 = t0
+    store t0 43
+    return
+end f_atoi_
+f_main [0] [511]
+    load 500 t0
+    t0 = 0
+    load 501 t1
+    t1 = 0
+    store t0 500
+    store t1 501
+l16:
+    load 502 t0
+    load 500 t1
+    t2 = 10
+    t0 = t1 != t2
+    store t0 502
+    if t0 == x0 goto l17
+    call f_getch
+    load 500 t0
+    t0 = a0
+    load 504 t1
+    load 501 t3
+    t4 = 4
+    t1 = t3 * t4
+    loadaddr 0 t5
+    t6 = t5 + t1
+    t6 [0] = t0
+    load 505 s1
+    s1 = t3 + 1
+    t3 = s1
+    store t0 500
+    store t3 501
+    store a0 503
+    goto l16
+l17:
+    load 506 t0
+    load 501 t1
+    t2 = 4
+    t0 = t1 * t2
+    loadaddr 0 t3
+    t4 = t3 + t0
+    t4 [0] = x0
+    load 507 t5
+    t5 = t3 + 0
+    load 508 t6
+    t6 = t5
+    a0 = t6
+    call f_atoi_
+    load 501 t0
+    t0 = a0
+    load 510 t1
+    t1 = t0
+    a0 = t1
+    call f_putint
+    a0 = 0
+    return
+end f_main

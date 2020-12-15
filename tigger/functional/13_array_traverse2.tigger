@@ -1,0 +1,77 @@
+v0 = malloc 108
+f_main [0] [14]
+    load 0 t0
+    t0 = 0
+    load 1 t1
+    t1 = 0
+    load 2 t2
+    t2 = 0
+    load 3 t3
+    t3 = 0
+    store t0 0
+    store t1 1
+    store t2 2
+    store t3 3
+l0:
+    load 4 t0
+    load 0 t1
+    t0 = t1 < 3
+    store t0 4
+    if t0 == x0 goto l5
+l1:
+    load 5 t0
+    load 1 t1
+    t0 = t1 < 3
+    store t0 5
+    if t0 == x0 goto l4
+l2:
+    load 6 t0
+    load 2 t1
+    t0 = t1 < 3
+    store t0 6
+    if t0 == x0 goto l3
+    load 7 t0
+    load 0 t1
+    t2 = 3
+    t0 = t1 * t2
+    load 1 t3
+    t0 = t0 + t3
+    load 8 t4
+    t5 = 3
+    t4 = t0 * t5
+    load 2 t6
+    t4 = t4 + t6
+    load 9 s1
+    s2 = 4
+    s1 = t4 * s2
+    loadaddr v0 s3
+    load 3 s4
+    s5 = s3 + s1
+    s5 [0] = s4
+    load 10 s6
+    s6 = s4 + 1
+    s4 = s6
+    load 11 s7
+    s7 = t6 + 1
+    t6 = s7
+    store s4 3
+    store t6 2
+    goto l2
+l3:
+    load 12 t0
+    load 1 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 1
+    goto l1
+l4:
+    load 13 t0
+    load 0 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 0
+    goto l0
+l5:
+    a0 = 0
+    return
+end f_main

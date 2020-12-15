@@ -1,0 +1,172 @@
+v0 = 0
+f_insert [2] [17]
+    load 2 t0
+    t0 = 0
+    store t0 2
+    store a0 0
+    store a1 1
+l0:
+    load 4 t0
+    load 2 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 5 t3
+    load 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 6 t6
+    load 1 s1
+    t6 = s1 > t3
+    store t6 6
+    if t6 == x0 goto l1
+    load 8 t0
+    load 2 t1
+    load v0 t2
+    t0 = t1 < t2
+    store t0 8
+    if t0 == x0 goto l1
+    load 7 t0
+    t0 = 1
+    store t0 7
+    goto l2
+l1:
+    load 7 t0
+    t0 = 0
+    store t0 7
+l2:
+    load 7 t0
+    if t0 == x0 goto l3
+    load 9 t0
+    load 2 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 2
+    goto l0
+l3:
+    load 3 t0
+    load v0 t1
+    t0 = t1
+    store t0 3
+l4:
+    load 10 t0
+    load 3 t1
+    load 2 t2
+    t0 = t1 > t2
+    store t0 10
+    if t0 == x0 goto l5
+    load 11 t0
+    load 3 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 12 t3
+    t3 = t1 + -1
+    load 13 t4
+    t5 = 4
+    t4 = t3 * t5
+    load 14 t6
+    load 0 s1
+    s2 = s1 + t4
+    t6 = s2 [0]
+    s3 = s1 + t0
+    s3 [0] = t6
+    load 15 s4
+    load 2 s5
+    s6 = 4
+    s4 = s5 * s6
+    load 1 s7
+    s8 = s1 + s4
+    s8 [0] = s7
+    load 16 s9
+    s9 = t1 + -1
+    t1 = s9
+    store t1 3
+    goto l4
+l5:
+    a0 = 0
+    return
+end f_insert
+f_main [0] [24]
+    load v0 t0
+    t0 = 10
+    loadaddr 0 t1
+    t2 = 1
+    t1 [0] = t2
+    t3 = 3
+    t1 [4] = t3
+    t4 = 4
+    t1 [8] = t4
+    t5 = 7
+    t1 [12] = t5
+    t6 = 8
+    t1 [16] = t6
+    s1 = 11
+    t1 [20] = s1
+    s2 = 13
+    t1 [24] = s2
+    s3 = 18
+    t1 [28] = s3
+    s4 = 56
+    t1 [32] = s4
+    s5 = 78
+    t1 [36] = s5
+    load 12 s6
+    s6 = 0
+    store s6 12
+    loadaddr v0 s0
+    s0 [0] = t0
+    call f_getint
+    load 11 t0
+    t0 = a0
+    load 14 t1
+    loadaddr 0 s6
+    t1 = s6 + 0
+    load 15 s7
+    s7 = t1
+    load 16 s8
+    s8 = t0
+    a0 = s7
+    a1 = s8
+    store t0 11
+    call f_insert
+    load 11 t0
+    t0 = a0
+    store t0 11
+    store a0 17
+l6:
+    load 18 t0
+    load 12 t1
+    load v0 t2
+    t0 = t1 < t2
+    store t0 18
+    if t0 == x0 goto l7
+    load 19 t0
+    load 12 t1
+    t2 = 4
+    t0 = t1 * t2
+    load 20 t3
+    loadaddr 0 t4
+    t5 = t4 + t0
+    t3 = t5 [0]
+    load 11 t6
+    t6 = t3
+    load 21 s1
+    s1 = t6
+    a0 = s1
+    store t6 11
+    call f_putint
+    load 11 t0
+    t0 = 10
+    load 22 t1
+    t1 = t0
+    a0 = t1
+    call f_putch
+    load 23 t0
+    load 12 t1
+    t0 = t1 + 1
+    t1 = t0
+    store t1 12
+    goto l6
+l7:
+    a0 = 0
+    return
+end f_main

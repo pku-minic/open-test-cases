@@ -1,0 +1,7 @@
+v0 = 0
+f_main [0] [0]
+    load v0 t0
+    t0 = 4
+    a0 = 4
+    return
+end f_main

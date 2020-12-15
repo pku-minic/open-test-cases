@@ -1,0 +1,31 @@
+f_ifElse [0] [3]
+    load 0 t0
+    t0 = 5
+    load 1 t1
+    t2 = 5
+    t1 = t0 == t2
+    store t0 0
+    store t1 1
+    if t1 == x0 goto l0
+    load 0 t0
+    t0 = 25
+    store t0 0
+    goto l1
+l0:
+    load 2 t0
+    load 0 t1
+    t2 = 2
+    t0 = t1 * t2
+    t1 = t0
+    store t0 2
+    store t1 0
+l1:
+    load 0 a0
+    return
+end f_ifElse
+f_main [0] [1]
+    call f_ifElse
+    store a0 0
+    load 0 a0
+    return
+end f_main

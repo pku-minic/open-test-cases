@@ -1,0 +1,34 @@
+v0 = 0
+v1 = 0
+f_main [0] [3]
+    load v1 t0
+    t0 = 0
+    load v0 t1
+    t1 = 3
+    loadaddr v1 s0
+    s0 [0] = t0
+    loadaddr v0 s0
+    s0 [0] = t1
+l0:
+    load 0 t0
+    load v0 t1
+    t0 = t1 > x0
+    store t0 0
+    if t0 == x0 goto l1
+    load 1 t0
+    load v1 t1
+    load v0 t2
+    t0 = t1 + t2
+    t1 = t0
+    load 2 t3
+    t3 = t2 + -1
+    t2 = t3
+    loadaddr v1 s0
+    s0 [0] = t1
+    loadaddr v0 s0
+    s0 [0] = t2
+    goto l0
+l1:
+    load v1 a0
+    return
+end f_main

@@ -1,0 +1,91 @@
+f_main [0] [19]
+    load 0 t0
+    t0 = 3
+    load 1 t1
+    t1 = 8
+    load 2 t2
+    t2 = -4
+    load 3 t3
+    t3 = 15
+    load 5 t4
+    t4 = t1 - t0
+    load 6 t5
+    t5 = t3 % t4
+    load 7 t6
+    t6 = t5 != x0
+    store t0 0
+    store t1 1
+    store t2 2
+    store t3 3
+    store t6 7
+    if t6 == x0 goto l0
+    load 9 t0
+    load 0 t1
+    t0 = t1 > x0
+    store t0 9
+    if t0 == x0 goto l0
+    load 8 t0
+    t0 = 1
+    store t0 8
+    goto l1
+l0:
+    load 8 t0
+    t0 = 0
+    store t0 8
+l1:
+    load 8 t0
+    if t0 != x0 goto l4
+    load 11 t0
+    load 3 t1
+    t2 = 3
+    t0 = t1 % t2
+    load 12 t3
+    t3 = t0 == x0
+    store t3 12
+    if t3 == x0 goto l2
+    load 14 t0
+    load 2 t1
+    t0 = t1 > x0
+    store t0 14
+    if t0 == x0 goto l2
+    load 13 t0
+    t0 = 1
+    store t0 13
+    goto l3
+l2:
+    load 13 t0
+    t0 = 0
+    store t0 13
+l3:
+    load 13 t0
+    if t0 != x0 goto l4
+    load 10 t0
+    t0 = 0
+    store t0 10
+    goto l5
+l4:
+    load 10 t0
+    t0 = 1
+    store t0 10
+l5:
+    load 10 t0
+    if t0 == x0 goto l6
+    load 15 t0
+    load 3 t1
+    load 2 t2
+    t0 = t1 + t2
+    load 16 t3
+    load 1 t4
+    t3 = - t4
+    load 17 t5
+    t5 = t0 - t3
+    load 4 t6
+    t6 = t5
+    load 18 s1
+    s1 = t6
+    a0 = s1
+    call f_putint
+l6:
+    a0 = 0
+    return
+end f_main
