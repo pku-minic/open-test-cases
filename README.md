@@ -13,8 +13,8 @@ $ git clone --recursive https://github.com/pku-minic/open-test-cases.git
 ## 目录结构
 
 * `sysy` 目录: 大赛公开的 SysY 功能/性能测试.
-* `eeyore` 目录: 公开的 Eeyore 功能/性能测试, 输入/输出与 SysY 测试用例相同
-* `tigger` 目录: 公开的 Tigger 功能/性能测试.
+* `eeyore` 目录: 公开的 Eeyore 功能/性能测试, 输入/输出与 SysY 测试用例相同.
+* `tigger` 目录: 公开的 Tigger 功能/性能测试, 输入/输出与 SysY 测试用例相同.
 * `risc-v` 目录: 可构建 RISC-V 开发环境的 `Dockerfile`.
 
 ## 相关工具
