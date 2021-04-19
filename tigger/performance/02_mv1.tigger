@@ -249,7 +249,8 @@ l12:
     store a0 13
     goto l12
 l13:
-    call f_starttime
+    a0 = 0
+    call f__sysy_starttime
     load 2 t0
     t0 = 0
     store t0 2
@@ -312,7 +313,8 @@ l14:
     store t1 2
     goto l14
 l15:
-    call f_stoptime
+    a0 = 0
+    call f__sysy_stoptime
     load 31 t0
     load 0 t1
     t0 = t1

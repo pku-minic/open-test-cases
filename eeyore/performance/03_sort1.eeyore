@@ -367,7 +367,8 @@ f_main [0]
   param t112
   t113 = call f_getarray
   T14 = t113
-  call f_starttime
+  param 0
+  call f__sysy_starttime
   t114 = T12 + 0
   t115 = t114
   t116 = T14
@@ -396,7 +397,8 @@ l22:
   t126 = - T13
   T13 = t126
 l23:
-  call f_stoptime
+  param 0
+  call f__sysy_stoptime
   t127 = T13
   param t127
   call f_putint

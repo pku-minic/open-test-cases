@@ -190,7 +190,8 @@ f_main [0]
   t54 = t53
   param t54
   t55 = call f_getarray
-  call f_starttime
+  param 0
+  call f__sysy_starttime
   T13 = 0
 l8:
   t56 = T13 < 100
@@ -235,7 +236,8 @@ l8:
   T13 = t79
   goto l8
 l9:
-  call f_stoptime
+  param 0
+  call f__sysy_stoptime
   t80 = T11
   t81 = T9 + 0
   t82 = t81

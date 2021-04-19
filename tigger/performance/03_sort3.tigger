@@ -559,7 +559,8 @@ f_main [0] [19]
     load 0 t0
     t0 = a0
     store t0 0
-    call f_starttime
+    a0 = 0
+    call f__sysy_starttime
     load 4 t0
     loadaddr v1 t1
     t0 = t1 + 0
@@ -622,7 +623,8 @@ l22:
     loadaddr v2 s0
     s0 [0] = t1
 l23:
-    call f_stoptime
+    a0 = 0
+    call f__sysy_stoptime
     load 18 t0
     load v2 t1
     t0 = t1

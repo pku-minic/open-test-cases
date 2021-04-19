@@ -167,7 +167,8 @@ l12:
   T10 = t39
   goto l12
 l13:
-  call f_starttime
+  param 0
+  call f__sysy_starttime
   T10 = 0
 l14:
   t40 = T10 < 50
@@ -200,7 +201,8 @@ l14:
   T10 = t55
   goto l14
 l15:
-  call f_stoptime
+  param 0
+  call f__sysy_stoptime
   t56 = T9
   t57 = T8 + 0
   t58 = t57

@@ -205,7 +205,8 @@ l17:
   T8 = t44
   goto l15
 l18:
-  call f_starttime
+  param 0
+  call f__sysy_starttime
   T8 = 0
 l19:
   t45 = T8 < 5
@@ -261,7 +262,8 @@ l23:
   T8 = t68
   goto l21
 l24:
-  call f_stoptime
+  param 0
+  call f__sysy_stoptime
   t69 = T10
   param t69
   call f_putint

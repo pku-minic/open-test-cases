@@ -250,7 +250,8 @@ f_main [0] [43]
     t2 = t0
     a0 = t2
     call f_getarray
-    call f_starttime
+    a0 = 0
+    call f__sysy_starttime
     load 15 t0
     t0 = 0
     store t0 15
@@ -337,7 +338,8 @@ l8:
     store t1 15
     goto l8
 l9:
-    call f_stoptime
+    a0 = 0
+    call f__sysy_stoptime
     load 40 t0
     load 0 t1
     t0 = t1

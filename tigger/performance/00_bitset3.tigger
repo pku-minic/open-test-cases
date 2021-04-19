@@ -345,7 +345,8 @@ f_main [0] [18]
     t0 = a0
     loadaddr v1 s0
     s0 [0] = t0
-    call f_starttime
+    a0 = 0
+    call f__sysy_starttime
 l9:
     load 5 t0
     load 0 t1
@@ -388,7 +389,8 @@ l9:
     call f_set
     goto l9
 l10:
-    call f_stoptime
+    a0 = 0
+    call f__sysy_stoptime
     load 16 t0
     loadaddr v2 t1
     t0 = t1 + 0

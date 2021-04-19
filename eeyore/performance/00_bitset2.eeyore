@@ -241,7 +241,8 @@ f_main [0]
   T7 = t81
   t82 = call f_getint
   T5 = t82
-  call f_starttime
+  param 0
+  call f__sysy_starttime
 l9:
   t83 = T7 > 0
   if t83 == 0 goto l10
@@ -263,7 +264,8 @@ l9:
   t93 = call f_set
   goto l9
 l10:
-  call f_stoptime
+  param 0
+  call f__sysy_stoptime
   t94 = T6 + 0
   t95 = t94
   param 10000
