@@ -1,34 +1,52 @@
-v0 = 0
-v1 = 0
+// BEGIN TIGGER
+//--- SCALAR DECL
 v2 = 0
-f_add [2] [3]
-    load 2 t0
+v1 = 0
+v0 = 0
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_add [2] [0]
+// DESTROYS: a0 a1
+
+//     {global}T2 = {reg: a0}p0 + {reg: a1}p1
     t0 = a0 + a1
-    load v2 t1
-    t1 = t0
-    a0 = 0
-    loadaddr v2 s0
-    s0 [0] = t1
-    return
-    a0 = 0
+    loadaddr v2 t1
+    t1 [0] = t0
+
+//     return
     return
 end f_add
-f_main [0] [2]
-    load v0 t0
+
+f_main [0] [0]
+// DESTROYS: a1 a0
+
+//     {global}T0 = 3
     t0 = 3
+    loadaddr v0 t1
+    t1 [0] = t0
+
+//     {global}T1 = 2
+    t0 = 2
+    loadaddr v1 t1
+    t1 [0] = t0
+
+
+
+//     param {global}T0 // #0
+//     param {global}T1 // #1
+//     call f_add
+    load v0 t1
+    a0 = t1
     load v1 t1
-    t1 = 2
-    load 0 t2
-    t2 = t0
-    load 1 t3
-    t3 = t1
-    a0 = t2
-    a1 = t3
-    loadaddr v0 s0
-    s0 [0] = t0
-    loadaddr v1 s0
-    s0 [0] = t1
+    a1 = t1
     call f_add
-    load v2 a0
+
+//     return {global}T2
+    load v2 t1
+    a0 = t1
     return
 end f_main
+
+// END TIGGER

@@ -1,125 +1,138 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_concat [3]
-  var T0
-  var t0
-  var t1
-  var t2
-  var t3
-  var t4
-  var T1
-  var t5
-  var t6
-  var t7
-  var t8
-  var t9
-  var t10
-  T0 = 0
-l0:
-  t0 = T0 < 3
-  if t0 == 0 goto l1
-  t1 = T0 * 4
-  t2 = T0 * 4
-  t3 = p0 [ t2 ]
-  p2 [ t1 ] = t3
-  t4 = T0 + 1
-  T0 = t4
-  goto l0
-l1:
-  T1 = 0
-l2:
-  t5 = T1 < 3
-  if t5 == 0 goto l3
-  t6 = T0 * 4
-  t7 = T1 * 4
-  t8 = p1 [ t7 ]
-  p2 [ t6 ] = t8
-  t9 = T0 + 1
-  T0 = t9
-  t10 = T1 + 1
-  T1 = t10
-  goto l2
-l3:
-  return 0
+var T0 // local: i
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var T1 // local: j
+var t7
+var t8
+var t9
+var t10
+var t11
+var t12
+var t13
+var t14
+    T0 = 0
+    l0: // stmt: while - ltest
+    if T0 >= 3 goto l1 // stmt: while - done
+    t2 = 4 * T0
+    t3 = p0 + t2
+    t1 = t3 [0]
+    t4 = 4 * T0
+    t5 = p2 + t4
+    t5 [0] = t1
+    T0 = T0 + 1
+    goto l0 // stmt: while - to test
+    l1: // stmt: while - ldone
+    T1 = 0
+    l2: // stmt: while - ltest
+    if T1 >= 3 goto l3 // stmt: while - done
+    t9 = 4 * T1
+    t10 = p1 + t9
+    t8 = t10 [0]
+    t11 = 4 * T0
+    t12 = p2 + t11
+    t12 [0] = t8
+    T0 = T0 + 1
+    T1 = T1 + 1
+    goto l2 // stmt: while - to test
+    l3: // stmt: while - ldone
+    return 0
+    return 0 // stmt: func epilog
 end f_concat
+
 f_main [0]
-  var 12 T2
-  var 12 T3
-  var 12 T4
-  var 12 T5
-  var 12 T6
-  var 12 T7
-  var 24 T8
-  var 12 T9
-  var 12 T10
-  var T11
-  var t11
-  var t12
-  var t13
-  var t14
-  var t15
-  var t16
-  var t17
-  var t18
-  var t19
-  var t20
-  var t21
-  var t22
-  var t23
-  var t24
-  var t25
-  var T12
-  var t26
-  var t27
-  var t28
-  var t29
-  var t30
-  var t31
-  T11 = 0
-l4:
-  t11 = T11 < 3
-  if t11 == 0 goto l5
-  t12 = T11 * 4
-  T2 [ t12 ] = T11
-  t13 = T11 * 4
-  T3 [ t13 ] = T11
-  t14 = T11 * 4
-  T4 [ t14 ] = T11
-  t15 = T11 * 4
-  T5 [ t15 ] = T11
-  t16 = T11 * 4
-  T6 [ t16 ] = T11
-  t17 = T11 * 4
-  T7 [ t17 ] = T11
-  t18 = T11 + 1
-  T11 = t18
-  goto l4
-l5:
-  t19 = T2 + 0
-  t20 = t19
-  t21 = T5 + 0
-  t22 = t21
-  t23 = T8 + 0
-  t24 = t23
-  param t20
-  param t22
-  param t24
-  t25 = call f_concat
-  T11 = t25
-l6:
-  t26 = T11 < 6
-  if t26 == 0 goto l7
-  t27 = T11 * 4
-  t28 = T8 [ t27 ]
-  T12 = t28
-  t29 = T12
-  param t29
-  call f_putint
-  t30 = T11 + 1
-  T11 = t30
-  goto l6
-l7:
-  T12 = 10
-  t31 = T12
-  param t31
-  call f_putch
-  return 0
+var 12 T2 // local: a0
+var 12 T3 // local: a1
+var 12 T4 // local: a2
+var 12 T5 // local: b0
+var 12 T6 // local: b1
+var 12 T7 // local: b2
+var 24 T8 // local: c0
+var 12 T9 // local: c1
+var 12 T10 // local: c2
+var T11 // local: i
+var t15
+var t16
+var t17
+var t18
+var t19
+var t20
+var t21
+var t22
+var t23
+var t24
+var t25
+var t26
+var t27
+var t28
+var t29
+var t30
+var t31
+var t32
+var T12 // local: x
+var t33
+var t34
+var t35
+var t36
+var t37
+    T11 = 0
+    l4: // stmt: while - ltest
+    if T11 >= 3 goto l5 // stmt: while - done
+    t16 = 4 * T11
+    t17 = T2 + t16
+    t17 [0] = T11
+    t18 = 4 * T11
+    t19 = T3 + t18
+    t19 [0] = T11
+    t20 = 4 * T11
+    t21 = T4 + t20
+    t21 [0] = T11
+    t22 = 4 * T11
+    t23 = T5 + t22
+    t23 [0] = T11
+    t24 = 4 * T11
+    t25 = T6 + t24
+    t25 [0] = T11
+    t26 = 4 * T11
+    t27 = T7 + t26
+    t27 [0] = T11
+    T11 = T11 + 1
+    goto l4 // stmt: while - to test
+    l5: // stmt: while - ldone
+    t30 = T2 + 0 // stmt: param array access
+    t31 = T5 + 0 // stmt: param array access
+    t32 = T8 + 0 // stmt: param array access
+    param t30 // #0
+    param t31 // #1
+    param t32 // #2
+    T11 = call f_concat
+    l6: // stmt: while - ltest
+    if T11 >= 6 goto l7 // stmt: while - done
+    t35 = 4 * T11
+    t36 = T8 + t35
+    t34 = t36 [0]
+    T12 = t34
+    param T12 // #0
+    call f_putint
+    T11 = T11 + 1
+    goto l6 // stmt: while - to test
+    l7: // stmt: while - ldone
+    T12 = 10
+    param T12 // #0
+    call f_putch
+    return 0
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

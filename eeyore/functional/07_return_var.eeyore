@@ -1,5 +1,14 @@
-var T0
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: a
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_main [0]
-  T0 = 10
-  return T0
+    T0 = 10
+    return T0
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

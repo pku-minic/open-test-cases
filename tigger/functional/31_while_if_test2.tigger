@@ -1,64 +1,84 @@
-f_ifWhile [0] [9]
-    load 0 t0
-    t0 = 0
-    load 1 t1
-    t1 = 3
-    load 2 t2
-    t3 = 5
-    t2 = t0 == t3
-    store t0 0
-    store t1 1
-    store t2 2
-    if t2 == x0 goto l2
-l0:
-    load 3 t0
-    load 1 t1
-    t2 = 2
-    t0 = t1 == t2
-    store t0 3
-    if t0 == x0 goto l1
-    load 4 t0
-    load 1 t1
-    t0 = t1 + 2
-    t1 = t0
-    store t1 1
-    goto l0
-l1:
-    load 5 t0
-    load 1 t1
-    t0 = t1 + 25
-    t1 = t0
-    store t1 1
-    goto l5
-    store t1 1
-l2:
-l3:
-    load 6 t0
-    load 0 t1
-    t0 = t1 < 5
-    store t0 6
-    if t0 == x0 goto l4
-    load 7 t0
-    load 1 t1
-    t2 = 2
-    t0 = t1 * t2
-    t1 = t0
-    load 8 t3
-    load 0 t4
-    t3 = t4 + 1
-    t4 = t3
-    store t1 1
-    store t4 0
+// BEGIN TIGGER
+//--- SCALAR DECL
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_ifWhile [0] [0]
+// DESTROYS: a0 s4
+
+//     {reg: s4}T0 = 0
+    s4 = 0
+
+//     {reg: a0}T1 = 3
+    a0 = 3
+
+//     if {reg: s4}T0 != 5 goto l0
+    t1 = 5
+    if s4 != t1 goto l0
+
+//     l1:
+    l1:
+
+//     if {reg: a0}T1 != 2 goto l2
+    t1 = 2
+    if a0 != t1 goto l2
+
+//     {reg: a0}T1 = {reg: a0}T1 + 2
+    a0 = a0 + 2
+
+//     goto l1
+    goto l1
+
+//     l2:
+    l2:
+
+//     {reg: a0}T1 = {reg: a0}T1 + 25
+    a0 = a0 + 25
+
+//     goto l3
     goto l3
-    store t1 1
-l4:
-l5:
-    load 1 a0
+
+//     l0:
+    l0:
+
+//     l4:
+    l4:
+
+//     if {reg: s4}T0 >= 5 goto l5
+    t1 = 5
+    if s4 >= t1 goto l5
+
+//     {reg: a0}T1 = {reg: a0}T1 * 2
+    a0 = a0 * 2 // shift left
+
+//     {reg: s4}T0 = {reg: s4}T0 + 1
+    s4 = s4 + 1
+
+//     goto l4
+    goto l4
+
+//     l5:
+    l5:
+
+//     l3:
+    l3:
+
+//     return {reg: a0}T1
+    a0 = a0
     return
 end f_ifWhile
-f_main [0] [1]
+
+f_main [0] [0]
+// DESTROYS: a0 s4
+
+//     {reg: a0}t7 = call f_ifWhile
     call f_ifWhile
-    store a0 0
-    load 0 a0
+    a0 = a0
+
+//     return {reg: a0}t7
+    a0 = a0
     return
 end f_main
+
+// END TIGGER

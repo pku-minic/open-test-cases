@@ -1,24 +1,40 @@
+// BEGIN TIGGER
+//--- SCALAR DECL
 v0 = 0
-f_func [1] [2]
-    load 1 t0
-    t0 = a0 + -1
-    a0 = t0
-    store a0 0
-    load 0 a0
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_func [1] [0]
+// DESTROYS: a0
+
+//     {reg: a0}p0 = {reg: a0}p0 - 1
+    a0 = a0 + -1
+
+//     return {reg: a0}p0
+    a0 = a0
     return
 end f_func
-f_main [0] [3]
-    load v0 t0
+
+f_main [0] [0]
+// DESTROYS: a0
+
+//     {global}T0 = 10
     t0 = 10
-    load 1 t1
-    t1 = t0
+    loadaddr v0 t1
+    t1 [0] = t0
+
+
+//     param {global}T0 // #0
+//     {reg: a0}T1 = call f_func
+    load v0 t1
     a0 = t1
-    loadaddr v0 s0
-    s0 [0] = t0
     call f_func
-    load 0 t0
-    t0 = a0
-    a0 = t0
-    store t0 0
+    a0 = a0
+
+//     return {reg: a0}T1
+    a0 = a0
     return
 end f_main
+
+// END TIGGER

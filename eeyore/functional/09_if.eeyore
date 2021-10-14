@@ -1,10 +1,18 @@
-var T0
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: a
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_main [0]
-  var t0
-  T0 = 10
-  t0 = T0 > 0
-  if t0 == 0 goto l0
-  return 1
-l0:
-  return 0
+var t0
+    T0 = 10
+    if T0 <= 0 goto l0 // stmt: ifonly
+    return 1
+    l0: // stmt: ifonly - lskip
+    return 0
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

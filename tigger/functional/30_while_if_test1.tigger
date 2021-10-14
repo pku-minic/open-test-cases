@@ -1,62 +1,84 @@
-f_whileIf [0] [7]
-    load 0 t0
-    t0 = 0
-    load 1 t1
-    t1 = 0
-    store t0 0
-    store t1 1
-l0:
-    load 2 t0
-    load 0 t1
-    t0 = t1 < 100
-    store t0 2
-    if t0 == x0 goto l5
-    load 3 t0
-    load 0 t1
-    t2 = 5
-    t0 = t1 == t2
-    store t0 3
-    if t0 == x0 goto l1
-    load 1 t0
-    t0 = 25
-    store t0 1
-    goto l4
-l1:
-    load 4 t0
-    load 0 t1
-    t2 = 10
-    t0 = t1 == t2
-    store t0 4
-    if t0 == x0 goto l2
-    load 1 t0
-    t0 = 42
-    store t0 1
+// BEGIN TIGGER
+//--- SCALAR DECL
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_whileIf [0] [0]
+// DESTROYS: a0 s4
+
+//     {reg: s4}T0 = 0
+    s4 = 0
+
+//     {reg: a0}T1 = 0
+    a0 = 0
+
+//     l0:
+    l0:
+
+//     if {reg: s4}T0 >= 100 goto l1
+    t1 = 100
+    if s4 >= t1 goto l1
+
+//     if {reg: s4}T0 != 5 goto l2
+    t1 = 5
+    if s4 != t1 goto l2
+
+//     {reg: a0}T1 = 25
+    a0 = 25
+
+//     goto l3
     goto l3
-l2:
-    load 5 t0
-    load 0 t1
-    t2 = 2
-    t0 = t1 * t2
-    load 1 t3
-    t3 = t0
-    store t0 5
-    store t3 1
-    store t3 1
-l3:
-l4:
-    load 6 t0
-    load 0 t1
-    t0 = t1 + 1
-    t1 = t0
-    store t1 0
+
+//     l2:
+    l2:
+
+//     if {reg: s4}T0 != 10 goto l4
+    t1 = 10
+    if s4 != t1 goto l4
+
+//     {reg: a0}T1 = 42
+    a0 = 42
+
+//     goto l5
+    goto l5
+
+//     l4:
+    l4:
+
+//     {reg: a0}T1 = {reg: s4}T0 * 2
+    a0 = s4 * 2 // shift left
+
+//     l5:
+    l5:
+
+//     l3:
+    l3:
+
+//     {reg: s4}T0 = {reg: s4}T0 + 1
+    s4 = s4 + 1
+
+//     goto l0
     goto l0
-l5:
-    load 1 a0
+
+//     l1:
+    l1:
+
+//     return {reg: a0}T1
+    a0 = a0
     return
 end f_whileIf
-f_main [0] [1]
+
+f_main [0] [0]
+// DESTROYS: a0 s4
+
+//     {reg: a0}t5 = call f_whileIf
     call f_whileIf
-    store a0 0
-    load 0 a0
+    a0 = a0
+
+//     return {reg: a0}t5
+    a0 = a0
     return
 end f_main
+
+// END TIGGER

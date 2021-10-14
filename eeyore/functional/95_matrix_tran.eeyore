@@ -1,0 +1,189 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: M
+var T1 // global: L
+var T2 // global: N
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
+f_tran [9]
+var T3 // local: i
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var t7
+var t8
+    T3 = 0
+    t0 = p2 [4]
+    p7 [8] = t0
+    t1 = p1 [8]
+    p8 [4] = t1
+    t2 = p1 [0]
+    p6 [4] = t2
+    t3 = p2 [0]
+    p6 [8] = t3
+    t4 = p0 [4]
+    p7 [0] = t4
+    t5 = p0 [8]
+    p8 [0] = t5
+    t6 = p1 [4]
+    p7 [4] = t6
+    t7 = p2 [8]
+    p8 [8] = t7
+    t8 = p0 [0]
+    p6 [0] = t8
+    return 0
+    return 0 // stmt: func epilog
+end f_tran
+
+f_main [0]
+var 12 T4 // local: a0
+var 12 T5 // local: a1
+var 12 T6 // local: a2
+var 12 T7 // local: b0
+var 12 T8 // local: b1
+var 12 T9 // local: b2
+var 24 T10 // local: c0
+var 12 T11 // local: c1
+var 12 T12 // local: c2
+var T13 // local: i
+var t9
+var t10
+var t11
+var t12
+var t13
+var t14
+var t15
+var t16
+var t17
+var t18
+var t19
+var t20
+var t21
+var t22
+var t23
+var t24
+var t25
+var t26
+var t27
+var t28
+var t29
+var t30
+var t31
+var t32
+var T14 // local: x
+var t33
+var t34
+var t35
+var t36
+var t37
+var t38
+var t39
+var t40
+var t41
+var t42
+var t43
+var t44
+var t45
+var t46
+var t47
+    T2 = 3
+    T0 = 3
+    T1 = 3
+    T13 = 0
+    l0: // stmt: while - ltest
+    if T13 >= T0 goto l1 // stmt: while - done
+    t10 = 4 * T13
+    t11 = T4 + t10
+    t11 [0] = T13
+    t12 = 4 * T13
+    t13 = T5 + t12
+    t13 [0] = T13
+    t14 = 4 * T13
+    t15 = T6 + t14
+    t15 [0] = T13
+    t16 = 4 * T13
+    t17 = T7 + t16
+    t17 [0] = T13
+    t18 = 4 * T13
+    t19 = T8 + t18
+    t19 [0] = T13
+    t20 = 4 * T13
+    t21 = T9 + t20
+    t21 [0] = T13
+    T13 = T13 + 1
+    goto l0 // stmt: while - to test
+    l1: // stmt: while - ldone
+    t24 = T4 + 0 // stmt: param array access
+    t25 = T5 + 0 // stmt: param array access
+    t26 = T6 + 0 // stmt: param array access
+    t27 = T7 + 0 // stmt: param array access
+    t28 = T8 + 0 // stmt: param array access
+    t29 = T9 + 0 // stmt: param array access
+    t30 = T10 + 0 // stmt: param array access
+    t31 = T11 + 0 // stmt: param array access
+    t32 = T12 + 0 // stmt: param array access
+    param t24 // #0
+    param t25 // #1
+    param t26 // #2
+    param t27 // #3
+    param t28 // #4
+    param t29 // #5
+    param t30 // #6
+    param t31 // #7
+    param t32 // #8
+    T13 = call f_tran
+    l2: // stmt: while - ltest
+    if T13 >= T2 goto l3 // stmt: while - done
+    t35 = 4 * T13
+    t36 = T10 + t35
+    t34 = t36 [0]
+    T14 = t34
+    param T14 // #0
+    call f_putint
+    T13 = T13 + 1
+    goto l2 // stmt: while - to test
+    l3: // stmt: while - ldone
+    T14 = 10
+    param T14 // #0
+    call f_putch
+    T13 = 0
+    l4: // stmt: while - ltest
+    if T13 >= T2 goto l5 // stmt: while - done
+    t40 = 4 * T13
+    t41 = T11 + t40
+    t39 = t41 [0]
+    T14 = t39
+    param T14 // #0
+    call f_putint
+    T13 = T13 + 1
+    goto l4 // stmt: while - to test
+    l5: // stmt: while - ldone
+    T14 = 10
+    T13 = 0
+    param T14 // #0
+    call f_putch
+    l6: // stmt: while - ltest
+    if T13 >= T2 goto l7 // stmt: while - done
+    t45 = 4 * T13
+    t46 = T12 + t45
+    t44 = t46 [0]
+    T14 = t44
+    param T14 // #0
+    call f_putint
+    T13 = T13 + 1
+    goto l6 // stmt: while - to test
+    l7: // stmt: while - ldone
+    T14 = 10
+    param T14 // #0
+    call f_putch
+    return 0
+    return 0 // stmt: func epilog
+end f_main
+
+// END EEYORE

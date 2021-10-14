@@ -1,10 +1,17 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_main [0]
-  var T0
-  var T1
-  var t0
-  T0 = 12
-  t0 = T0
-  param t0
-  call f_putint
-  return 0
+var T0 // local: a
+var T1 // local: t
+    T0 = 12
+    param T0 // #0
+    call f_putint
+    return 0
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

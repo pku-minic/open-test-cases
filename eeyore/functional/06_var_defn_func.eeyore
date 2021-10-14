@@ -1,10 +1,20 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_defn [0]
-  return 4
+    return 4
+    return 0 // stmt: func epilog
 end f_defn
+
 f_main [0]
-  var T0
-  var t0
-  t0 = call f_defn
-  T0 = t0
-  return T0
+var T0 // local: a
+var t0
+    T0 = call f_defn
+    return T0
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

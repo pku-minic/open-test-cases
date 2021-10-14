@@ -1,9 +1,22 @@
+// BEGIN TIGGER
+//--- SCALAR DECL
 v0 = 0
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
 f_main [0] [0]
-    load v0 t0
+// DESTROYS: a0
+
+//     {global}T0 = 10
     t0 = 10
-    a0 = t0
-    loadaddr v0 s0
-    s0 [0] = t0
+    loadaddr v0 t1
+    t1 [0] = t0
+
+//     return {global}T0
+    load v0 t1
+    a0 = t1
     return
 end f_main
+
+// END TIGGER

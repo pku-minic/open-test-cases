@@ -1,40 +1,59 @@
-f_if_if_Else [0] [5]
-    load 0 t0
-    t0 = 5
-    load 1 t1
+// BEGIN TIGGER
+//--- SCALAR DECL
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_if_if_Else [0] [0]
+// DESTROYS: s4 a0
+
+//     {reg: a0}T0 = 5
+    a0 = 5
+
+//     {reg: s4}T1 = 10
+    s4 = 10
+
+//     if {reg: a0}T0 != 5 goto l0
+    t1 = 5
+    if a0 != t1 goto l0
+
+//     if {reg: s4}T1 != 10 goto l1
     t1 = 10
-    load 2 t2
-    t3 = 5
-    t2 = t0 == t3
-    store t0 0
-    store t1 1
-    store t2 2
-    if t2 == x0 goto l1
-    load 3 t0
-    load 1 t1
-    t2 = 10
-    t0 = t1 == t2
-    store t0 3
-    if t0 == x0 goto l0
-    load 0 t0
-    t0 = 25
-    store t0 0
-l0:
+    if s4 != t1 goto l1
+
+//     {reg: a0}T0 = 25
+    a0 = 25
+
+//     l1:
+    l1:
+
+//     goto l2
     goto l2
-l1:
-    load 4 t0
-    load 0 t1
-    t0 = t1 + 15
-    t1 = t0
-    store t0 4
-    store t1 0
-l2:
-    load 0 a0
+
+//     l0:
+    l0:
+
+//     {reg: a0}T0 = {reg: a0}T0 + 15
+    a0 = a0 + 15
+
+//     l2:
+    l2:
+
+//     return {reg: a0}T0
+    a0 = a0
     return
 end f_if_if_Else
-f_main [0] [1]
+
+f_main [0] [0]
+// DESTROYS: a0 s4
+
+//     {reg: a0}t3 = call f_if_if_Else
     call f_if_if_Else
-    store a0 0
-    load 0 a0
+    a0 = a0
+
+//     return {reg: a0}t3
+    a0 = a0
     return
 end f_main
+
+// END TIGGER

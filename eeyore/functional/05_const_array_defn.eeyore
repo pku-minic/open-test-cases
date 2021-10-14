@@ -1,9 +1,18 @@
-var 20 T0
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var 20 T0 // global: a
+
+//--- GLOBAL INIT
+T0 [0] = 0 // init: a
+T0 [4] = 1 // init: a
+T0 [8] = 2 // init: a
+T0 [12] = 3 // init: a
+T0 [16] = 4 // init: a
+
+//--- FUNCTIONS
 f_main [0]
-  T0 [ 0 ] = 0
-  T0 [ 4 ] = 1
-  T0 [ 8 ] = 2
-  T0 [ 12 ] = 3
-  T0 [ 16 ] = 4
-  return 4
+    return 4
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

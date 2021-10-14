@@ -1,56 +1,81 @@
-f_fib [1] [12]
-    load 1 t0
-    t0 = a0 == x0
-    store t0 1
-    store a0 0
-    if t0 == x0 goto l0
+// BEGIN TIGGER
+//--- SCALAR DECL
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_fib [1] [2]
+// DESTROYS: a0 s4
+
+//     if {reg: a0}p0 != 0 goto l0
+    if a0 != x0 goto l0
+
+//     return 0
     a0 = 0
     return
-l0:
-    load 2 t0
-    load 0 t1
-    t2 = 1
-    t0 = t1 == t2
-    store t0 2
-    if t0 == x0 goto l1
+
+//     l0:
+    l0:
+
+//     if {reg: a0}p0 != 1 goto l1
+    t1 = 1
+    if a0 != t1 goto l1
+
+//     return 1
     a0 = 1
     return
-l1:
-    load 4 t0
-    load 0 t1
-    t0 = t1 + -1
-    load 3 t2
-    t2 = t0
-    load 6 t3
-    t3 = t1 + -2
-    load 5 t4
-    t4 = t3
-    load 7 t5
-    t5 = t2
-    a0 = t5
-    store t4 5
+
+//     l1:
+    l1:
+
+//     {reg: s4}T0 = {reg: a0}p0 - 1
+    s4 = a0 + -1
+
+//     {reg: a0}T1 = {reg: a0}p0 - 2
+    a0 = a0 + -2
+
+
+//     param {reg: s4}T0 // #0
+//     {reg: s4}t5 = call f_fib
+    store a0 0
+    a0 = s4
     call f_fib
-    load 9 t0
-    load 5 t1
-    t0 = t1
-    store a0 8
-    a0 = t0
+    s4 = a0
+    load 0 a0
+
+
+//     param {reg: a0}T1 // #0
+//     {reg: a0}t6 = call f_fib
+    store s4 0
+    a0 = a0
     call f_fib
-    load 11 t0
-    load 8 t1
-    t0 = t1 + a0
-    a0 = t0
-    store t0 11
+    a0 = a0
+    load 0 s4
+
+//     {reg: s4}t4 = {reg: s4}t5 + {reg: a0}t6
+    s4 = s4 + a0
+
+//     return {reg: s4}t4
+    a0 = s4
     return
 end f_fib
-f_main [0] [3]
-    load 0 t0
-    t0 = 10
-    load 1 t1
-    t1 = t0
-    a0 = t1
+
+f_main [0] [1]
+// DESTROYS: a0 s4
+
+//     {reg: a0}T2 = 10
+    a0 = 10
+
+
+//     param {reg: a0}T2 // #0
+//     {reg: a0}t7 = call f_fib
+    a0 = a0
     call f_fib
-    store a0 2
-    load 2 a0
+    a0 = a0
+
+//     return {reg: a0}t7
+    a0 = a0
     return
 end f_main
+
+// END TIGGER

@@ -1,337 +1,753 @@
+// BEGIN TIGGER
+//--- SCALAR DECL
 v0 = 0
-f_main [0] [98]
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_main [0] [19]
+// DESTROYS: t0 t1 a3 s4 a2 s3 a1 s2 t5 t4 t3 t2 s10 s9 s8 a7 s7 a6 a5 s6 s1 a0 s0 s5 a4 s11 t6
+
+//     {reg: a2}T31 = call f_getint
     call f_getint
-    load 30 t0
-    t0 = a0
-    store t0 30
-    store a0 31
-l0:
-    load 32 t0
-    load 30 t1
-    t2 = 5
-    t0 = t1 == t2
-    store t0 32
-    if t0 == x0 goto l1
-    load 33 t0
-    load 30 t1
-    t0 = t1 + 1
-    t1 = t0
-    store t1 30
+    a2 = a0
+
+//     l0:
+    l0:
+
+//     if {reg: a2}T31 != 5 goto l1
+    t1 = 5
+    if a2 != t1 goto l1
+
+//     {reg: a2}T31 = {reg: a2}T31 + 1
+    a2 = a2 + 1
+
+//     goto l0
     goto l0
-l1:
-    load 0 t0
+
+//     l1:
+    l1:
+
+//     {stk #1}T1 = 0
     t0 = 0
-    load 34 t1
-    t1 = t0 + 1
-    load 1 t2
-    t2 = t1
-    load 35 t3
-    t3 = t2 + 1
-    load 2 t4
-    t4 = t3
-    load 36 t5
-    t5 = t4 + 1
-    load 3 t6
-    t6 = t5
-    load 37 s1
-    s1 = t6 + 1
-    load 4 s2
-    s2 = s1
-    load 38 s3
-    s3 = s2 + 1
-    load 5 s4
-    s4 = s3
-    load 39 s5
-    s5 = s4 + 1
-    load 6 s6
-    s6 = s5
-    load 40 s7
-    s7 = s6 + 1
-    load 7 s8
-    s8 = s7
-    load 41 s9
-    s9 = s8 + 1
-    load 8 s10
-    s10 = s9
-    load 42 s11
-    s11 = s10 + 1
-    load 9 a0
-    a0 = s11
-    load 43 a1
-    a1 = a0 + 1
-    load 10 a2
-    a2 = a1
-    load 44 a3
-    a3 = a2 + 1
-    load 11 a4
-    a4 = a3
-    load 45 a5
-    a5 = a4 + 1
-    load 12 a6
-    a6 = a5
-    load 46 a7
-    a7 = a6 + 1
-    load 13 t1
-    t1 = a7
-    load 47 t3
-    t3 = t1 + 1
-    load 14 t5
-    t5 = t3
-    load 48 t3
-    t3 = t5 + 1
-    load 15 s1
-    s1 = t3
-    load 49 t3
-    t3 = s1 + 1
-    load 16 s3
-    s3 = t3
-    load 50 t3
-    t3 = s3 + 1
-    load 17 s5
-    s5 = t3
-    load 51 t3
-    t3 = s5 + 1
-    load 18 s7
-    s7 = t3
-    load 52 t3
-    t3 = s7 + 1
-    load 19 s9
-    s9 = t3
-    load 53 t3
-    t3 = s9 + 1
-    load 20 s11
-    s11 = t3
-    load 54 t3
-    t3 = s11 + 1
-    load 21 a1
-    a1 = t3
-    load 55 t3
-    t3 = a1 + 1
-    load 22 a3
-    a3 = t3
-    load 56 t3
-    t3 = a3 + 1
-    load 23 a5
-    a5 = t3
-    load 57 t3
-    t3 = a5 + 1
-    load 24 a7
-    a7 = t3
-    load 58 t3
-    t3 = a7 + 1
-    store a7 24
-    load 25 a7
-    a7 = t3
-    load 59 t3
-    t3 = a7 + 1
-    store a7 25
-    load 26 a7
-    a7 = t3
-    load 60 t3
-    t3 = a7 + 1
-    store a7 26
-    load 27 a7
-    a7 = t3
-    load 61 t3
-    t3 = a7 + 1
-    store a7 27
-    load 28 a7
-    a7 = t3
-    load 62 t3
-    t3 = a7 + 1
-    store a7 28
-    load 29 a7
-    a7 = t3
-    load 64 t3
-    t3 = t0
-    store a0 9
-    a0 = t3
-    store s1 15
-    store s2 4
-    store s3 16
-    store s4 5
-    store s5 17
-    store s6 6
-    store s7 18
-    store s8 7
-    store s9 19
-    store s10 8
-    store s11 20
-    store t1 13
-    store t2 1
-    store t4 2
+    store t0 1
+
+//     {stk #2}T2 = {stk #1}T1 + 1
+    load 1 t0
+    t0 = t0 + 1
+    store t0 2
+
+//     {stk #3}T3 = {stk #2}T2 + 1
+    load 2 t0
+    t0 = t0 + 1
+    store t0 3
+
+//     {stk #4}T4 = {stk #3}T3 + 1
+    load 3 t0
+    t0 = t0 + 1
+    store t0 4
+
+//     {stk #5}T5 = {stk #4}T4 + 1
+    load 4 t0
+    t0 = t0 + 1
+    store t0 5
+
+//     {reg: a0}T6 = {stk #5}T5 + 1
+    load 5 t0
+    a0 = t0 + 1
+
+//     {reg: s4}T7 = {reg: a0}T6 + 1
+    s4 = a0 + 1
+
+//     {reg: a3}T8 = {reg: s4}T7 + 1
+    a3 = s4 + 1
+
+//     {stk #0}T9 = {reg: a3}T8 + 1
+    t0 = a3 + 1
+    store t0 0
+
+//     {reg: a1}T10 = {stk #0}T9 + 1
+    load 0 t0
+    a1 = t0 + 1
+
+//     {reg: t6}T11 = {reg: a1}T10 + 1
+    t6 = a1 + 1
+
+//     {reg: t5}T12 = {reg: t6}T11 + 1
+    t5 = t6 + 1
+
+//     {reg: t4}T13 = {reg: t5}T12 + 1
+    t4 = t5 + 1
+
+//     {reg: t3}T14 = {reg: t4}T13 + 1
+    t3 = t4 + 1
+
+//     {reg: t2}T15 = {reg: t3}T14 + 1
+    t2 = t3 + 1
+
+//     {reg: s10}T16 = {reg: t2}T15 + 1
+    s10 = t2 + 1
+
+//     {reg: s9}T17 = {reg: s10}T16 + 1
+    s9 = s10 + 1
+
+//     {reg: s8}T18 = {reg: s9}T17 + 1
+    s8 = s9 + 1
+
+//     {reg: s7}T19 = {reg: s8}T18 + 1
+    s7 = s8 + 1
+
+//     {reg: a7}T20 = {reg: s7}T19 + 1
+    a7 = s7 + 1
+
+//     {reg: s6}T21 = {reg: a7}T20 + 1
+    s6 = a7 + 1
+
+//     {reg: a6}T22 = {reg: s6}T21 + 1
+    a6 = s6 + 1
+
+//     {reg: s3}T23 = {reg: a6}T22 + 1
+    s3 = a6 + 1
+
+//     {reg: a5}T24 = {reg: s3}T23 + 1
+    a5 = s3 + 1
+
+//     {reg: s2}T25 = {reg: a5}T24 + 1
+    s2 = a5 + 1
+
+//     {reg: s11}T26 = {reg: s2}T25 + 1
+    s11 = s2 + 1
+
+//     {reg: s1}T27 = {reg: s11}T26 + 1
+    s1 = s11 + 1
+
+//     {reg: a4}T28 = {reg: s1}T27 + 1
+    a4 = s1 + 1
+
+//     {reg: s5}T29 = {reg: a4}T28 + 1
+    s5 = a4 + 1
+
+//     {reg: s0}T30 = {reg: s5}T29 + 1
+    s0 = s5 + 1
+
+
+//     param {stk #1}T1 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    store t4 13
     store t5 14
-    store t6 3
-    store a1 21
-    store a2 10
-    store a3 22
-    store a4 11
-    store a5 23
-    store a6 12
-    store a7 29
-    call f_putint
-    load 65 t0
+    store t6 15
+    store a1 16
+    store a3 17
+    store a0 18
     load 1 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 66 t0
-    load 2 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 67 t0
-    load 3 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 68 t0
-    load 4 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 69 t0
-    load 5 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 70 t0
-    load 6 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 71 t0
-    load 7 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 72 t0
-    load 8 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 73 t0
-    load 9 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 74 t0
-    load 10 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 75 t0
-    load 11 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 76 t0
-    load 12 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 77 t0
-    load 13 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 78 t0
-    load 14 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 79 t0
-    load 15 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 80 t0
-    load 16 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 81 t0
-    load 17 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 82 t0
-    load 18 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 83 t0
-    load 19 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 84 t0
-    load 20 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 85 t0
-    load 21 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 86 t0
-    load 22 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 87 t0
-    load 23 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 88 t0
-    load 24 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 89 t0
-    load 25 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 90 t0
-    load 26 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 91 t0
-    load 27 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 92 t0
-    load 28 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 93 t0
-    load 29 t1
-    t0 = t1
-    a0 = t0
-    call f_putint
-    load 94 t0
-    t0 = 10
-    load 95 t1
-    t1 = t0
     a0 = t1
-    store t0 94
-    call f_putch
-    load 96 t0
-    load 30 t1
-    t0 = t1
-    a0 = t0
     call f_putint
-    load 97 t0
-    load 94 t1
-    t0 = t1
-    a0 = t0
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+    load 13 t4
+    load 14 t5
+    load 15 t6
+    load 16 a1
+    load 17 a3
+    load 18 a0
+
+
+//     param {stk #2}T2 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    store t4 13
+    store t5 14
+    store t6 15
+    store a1 16
+    store a3 17
+    store a0 18
+    load 2 t1
+    a0 = t1
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+    load 13 t4
+    load 14 t5
+    load 15 t6
+    load 16 a1
+    load 17 a3
+    load 18 a0
+
+
+//     param {stk #3}T3 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    store t4 13
+    store t5 14
+    store t6 15
+    store a1 16
+    store a3 17
+    store a0 18
+    load 3 t1
+    a0 = t1
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+    load 13 t4
+    load 14 t5
+    load 15 t6
+    load 16 a1
+    load 17 a3
+    load 18 a0
+
+
+//     param {stk #4}T4 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    store t4 13
+    store t5 14
+    store t6 15
+    store a1 16
+    store a3 17
+    store a0 18
+    load 4 t1
+    a0 = t1
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+    load 13 t4
+    load 14 t5
+    load 15 t6
+    load 16 a1
+    load 17 a3
+    load 18 a0
+
+
+//     param {stk #5}T5 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    store t4 13
+    store t5 14
+    store t6 15
+    store a1 16
+    store a3 17
+    store a0 18
+    load 5 t1
+    a0 = t1
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+    load 13 t4
+    load 14 t5
+    load 15 t6
+    load 16 a1
+    load 17 a3
+    load 18 a0
+
+
+//     param {reg: a0}T6 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    store t4 13
+    store t5 14
+    store t6 15
+    store a1 16
+    store a3 17
+    a0 = a0
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+    load 13 t4
+    load 14 t5
+    load 15 t6
+    load 16 a1
+    load 17 a3
+
+
+//     param {reg: s4}T7 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    store t4 13
+    store t5 14
+    store t6 15
+    store a1 16
+    store a3 17
+    a0 = s4
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+    load 13 t4
+    load 14 t5
+    load 15 t6
+    load 16 a1
+    load 17 a3
+
+
+//     param {reg: a3}T8 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    store t4 13
+    store t5 14
+    store t6 15
+    store a1 16
+    a0 = a3
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+    load 13 t4
+    load 14 t5
+    load 15 t6
+    load 16 a1
+
+
+//     param {stk #0}T9 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    store t4 13
+    store t5 14
+    store t6 15
+    store a1 16
+    load 0 t1
+    a0 = t1
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+    load 13 t4
+    load 14 t5
+    load 15 t6
+    load 16 a1
+
+
+//     param {reg: a1}T10 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    store t4 13
+    store t5 14
+    store t6 15
+    a0 = a1
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+    load 13 t4
+    load 14 t5
+    load 15 t6
+
+
+//     param {reg: t6}T11 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    store t4 13
+    store t5 14
+    a0 = t6
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+    load 13 t4
+    load 14 t5
+
+
+//     param {reg: t5}T12 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    store t4 13
+    a0 = t5
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+    load 13 t4
+
+
+//     param {reg: t4}T13 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    store t3 12
+    a0 = t4
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+    load 12 t3
+
+
+//     param {reg: t3}T14 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    store t2 11
+    a0 = t3
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+    load 11 t2
+
+
+//     param {reg: t2}T15 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    a0 = t2
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+
+
+//     param {reg: s10}T16 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    a0 = s10
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+
+
+//     param {reg: s9}T17 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    a0 = s9
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+
+
+//     param {reg: s8}T18 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    a0 = s8
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+
+
+//     param {reg: s7}T19 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    store a7 10
+    a0 = s7
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+    load 10 a7
+
+
+//     param {reg: a7}T20 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    a0 = a7
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+
+
+//     param {reg: s6}T21 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    store a6 9
+    a0 = s6
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+    load 9 a6
+
+
+//     param {reg: a6}T22 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    a0 = a6
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+
+
+//     param {reg: s3}T23 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    store a5 8
+    a0 = s3
+    call f_putint
+    load 6 a2
+    load 7 a4
+    load 8 a5
+
+
+//     param {reg: a5}T24 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    a0 = a5
+    call f_putint
+    load 6 a2
+    load 7 a4
+
+
+//     param {reg: s2}T25 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    a0 = s2
+    call f_putint
+    load 6 a2
+    load 7 a4
+
+
+//     param {reg: s11}T26 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    a0 = s11
+    call f_putint
+    load 6 a2
+    load 7 a4
+
+
+//     param {reg: s1}T27 // #0
+//     call f_putint
+    store a2 6
+    store a4 7
+    a0 = s1
+    call f_putint
+    load 6 a2
+    load 7 a4
+
+
+//     param {reg: a4}T28 // #0
+//     call f_putint
+    store a2 6
+    a0 = a4
+    call f_putint
+    load 6 a2
+
+
+//     param {reg: s5}T29 // #0
+//     call f_putint
+    store a2 6
+    a0 = s5
+    call f_putint
+    load 6 a2
+
+
+//     param {reg: s0}T30 // #0
+//     call f_putint
+    store a2 6
+    a0 = s0
+    call f_putint
+    load 6 a2
+
+//     {reg: a0}T33 = 10
+    a0 = 10
+
+
+//     param {reg: a0}T33 // #0
+//     call f_putch
+    store a0 6
+    store a2 7
+    a0 = a0
     call f_putch
-    load 25 a0
+    load 6 a0
+    load 7 a2
+
+
+//     param {reg: a2}T31 // #0
+//     call f_putint
+    store a0 6
+    a0 = a2
+    call f_putint
+    load 6 a0
+
+
+//     param {reg: a0}T33 // #0
+//     call f_putch
+    a0 = a0
+    call f_putch
+
+//     return {reg: s11}T26
+    a0 = s11
     return
 end f_main
+
+// END TIGGER

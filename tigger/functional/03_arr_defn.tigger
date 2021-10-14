@@ -1,5 +1,16 @@
+// BEGIN TIGGER
+//--- SCALAR DECL
+
+//--- ARRAY DECL
 v0 = malloc 40
+
+//--- FUNCTIONS
 f_main [0] [0]
+// DESTROYS: a0
+
+//     return 0
     a0 = 0
     return
 end f_main
+
+// END TIGGER

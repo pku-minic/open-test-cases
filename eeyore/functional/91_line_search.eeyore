@@ -1,94 +1,89 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_main [0]
-  var T0
-  var T1
-  var 40 T2
-  var t0
-  var t1
-  var t2
-  var t3
-  var T3
-  var T4
-  var T5
-  var T6
-  var T7
-  var t4
-  var t5
-  var t6
-  var t7
-  var T8
-  var T9
-  var t8
-  var t9
-  var t10
-  var t11
-  var t12
-  var t13
-  var t14
-  var t15
-  var t16
-  var t17
-  var t18
-  T1 = 0
-  T0 = 0
-l0:
-  t0 = T0 < 10
-  if t0 == 0 goto l1
-  t1 = T0 * 4
-  t2 = T0 + 1
-  T2 [ t1 ] = t2
-  t3 = T0 + 1
-  T0 = t3
-  goto l0
-l1:
-  T7 = 10
-  t4 = call f_getint
-  T3 = t4
-  t5 = T7 - 1
-  T4 = t5
-  T5 = 0
-  t6 = T4 + T5
-  t7 = t6 / 2
-  T6 = t7
-  T8 = 0
-  T0 = 0
-  T9 = 0
-l2:
-  t8 = T0 < 10
-  if t8 == 0 goto l3
-  t10 = T8 == 0
-  if t10 == 0 goto l3
-  t9 = 1
-  goto l4
-l3:
-  t9 = 0
-l4:
-  if t9 == 0 goto l6
-  t11 = T0 * 4
-  t12 = T2 [ t11 ]
-  t13 = t12 == T3
-  if t13 == 0 goto l5
-  T8 = 1
-  T9 = T0
-l5:
-  t14 = T0 + 1
-  T0 = t14
-  goto l2
-l6:
-  t15 = T8 == 1
-  if t15 == 0 goto l7
-  t16 = T9
-  param t16
-  call f_putint
-  goto l8
-l7:
-  T3 = 0
-  t17 = T3
-  param t17
-  call f_putint
-l8:
-  T3 = 10
-  t18 = T3
-  param t18
-  call f_putch
-  return 0
+var T0 // local: i
+var T1 // local: sum
+var 40 T2 // local: a
+var t0
+var t1
+var t2
+var t3
+var t4
+var T3 // local: x
+var T4 // local: high
+var T5 // local: low
+var T6 // local: mid
+var T7 // local: n
+var t5
+var t6
+var t7
+var t8
+var T8 // local: flag
+var T9 // local: j
+var t9
+var t10
+var t11
+var t12
+var t13
+var t14
+var t15
+var t16
+var t17
+    T1 = 0
+    T0 = 0
+    l0: // stmt: while - ltest
+    if T0 >= 10 goto l1 // stmt: while - done
+    t1 = T0 + 1
+    t2 = 4 * T0
+    t3 = T2 + t2
+    t3 [0] = t1
+    T0 = T0 + 1
+    goto l0 // stmt: while - to test
+    l1: // stmt: while - ldone
+    T7 = 10
+    T3 = call f_getint
+    T4 = T7 - 1
+    T5 = 0
+    t8 = T4 + T5
+    T6 = t8 / 2
+    T8 = 0
+    T0 = 0
+    T9 = 0
+    l2: // stmt: while - ltest
+    t9 = 0 // stmt: op and - default value
+    if T0 >= 10 goto l4 // stmt: op and - test 1
+    if T8 != 0 goto l4 // stmt: op and - test 2
+    t9 = 1 // stmt: op and - passed test
+    l4: // stmt: op and - lskip
+    if t9 == 0 goto l3 // stmt: while - done
+    t14 = 4 * T0
+    t15 = T2 + t14
+    t13 = t15 [0]
+    if t13 != T3 goto l5 // stmt: ifonly
+    T8 = 1
+    T9 = T0
+    l5: // stmt: ifonly - lskip
+    T0 = T0 + 1
+    goto l2 // stmt: while - to test
+    l3: // stmt: while - ldone
+    if T8 != 1 goto l6 // stmt: ifelse
+    param T9 // #0
+    call f_putint
+    goto l7 // stmt: ifelse - true done
+    l6: // stmt: ifelse - lfalse
+    T3 = 0
+    param T3 // #0
+    call f_putint
+    l7: // stmt: ifelse - ldone
+    T3 = 10
+    param T3 // #0
+    call f_putch
+    return 0
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

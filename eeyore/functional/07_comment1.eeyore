@@ -1,3 +1,12 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_main [0]
-  return 0
+    return 0
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

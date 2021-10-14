@@ -1,7 +1,16 @@
-v0 = 0
+// BEGIN TIGGER
+//--- SCALAR DECL
+v0 = 4
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
 f_main [0] [0]
-    load v0 t0
-    t0 = 4
+// DESTROYS: a0
+
+//     return 4
     a0 = 4
     return
 end f_main
+
+// END TIGGER

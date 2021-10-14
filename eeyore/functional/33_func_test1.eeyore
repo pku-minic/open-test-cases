@@ -1,36 +1,43 @@
-var T0
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: a
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_myFunc [3]
-  var T1
-  var t0
-  var t1
-  var t2
-  var t3
-  p0 = 2
-  T1 = 0
-  t0 = T1 != 0
-  if t0 == 0 goto l0
-  return 0
-l0:
-l1:
-  t1 = p1 > 0
-  if t1 == 0 goto l2
-  t2 = p1 - 1
-  p1 = t2
-  goto l1
-l2:
-  t3 = p0 + p1
-  return t3
+var T1 // local: c
+var t0
+var t1
+var t2
+var t3
+    p0 = 2
+    T1 = 0
+    if T1 == 0 goto l0 // stmt: ifonly
+    return 0
+    l0: // stmt: ifonly - lskip
+    l1: // stmt: while - ltest
+    if p1 <= 0 goto l2 // stmt: while - done
+    p1 = p1 - 1
+    goto l1 // stmt: while - to test
+    l2: // stmt: while - ldone
+    t3 = p0 + p1
+    return t3
+    return 0 // stmt: func epilog
 end f_myFunc
+
 f_main [0]
-  var T2
-  var t4
-  var t5
-  T0 = 3
-  param 1
-  param 2
-  param 1
-  t4 = call f_myFunc
-  T2 = t4
-  t5 = T0 + T2
-  return t5
+var T2 // local: b
+var t4
+var t5
+    T0 = 3
+    param 1 // #0
+    param 2 // #1
+    param 1 // #2
+    T2 = call f_myFunc
+    t5 = T0 + T2
+    return t5
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

@@ -1,54 +1,55 @@
-var T0
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: n
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_gcd [2]
-  var T1
-  var T2
-  var T3
-  var T4
-  var t0
-  var t1
-  var t2
-  var t3
-  var t4
-  var t5
-  T1 = p0
-  T2 = p1
-  t0 = p0 < p1
-  if t0 == 0 goto l0
-  T3 = p0
-  p0 = p1
-  p1 = T3
-l0:
-  t1 = p0 % p1
-  T4 = t1
-l1:
-  t2 = T4 != 0
-  if t2 == 0 goto l2
-  p0 = p1
-  p1 = T4
-  t3 = p0 % p1
-  T4 = t3
-  goto l1
-l2:
-  t4 = T1 * T2
-  t5 = t4 / p1
-  return t5
+var T1 // local: a
+var T2 // local: b
+var T3 // local: t
+var T4 // local: r
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+    T1 = p0
+    T2 = p1
+    if p0 >= p1 goto l0 // stmt: ifonly
+    T3 = p0
+    p0 = p1
+    p1 = T3
+    l0: // stmt: ifonly - lskip
+    T4 = p0 % p1
+    l1: // stmt: while - ltest
+    if T4 == 0 goto l2 // stmt: while - done
+    p0 = p1
+    p1 = T4
+    T4 = p0 % p1
+    goto l1 // stmt: while - to test
+    l2: // stmt: while - ldone
+    t5 = T1 * T2
+    t4 = t5 / p1
+    return t4
+    return 0 // stmt: func epilog
 end f_gcd
+
 f_main [0]
-  var T5
-  var T6
-  var t6
-  var t7
-  var t8
-  var t9
-  var t10
-  t6 = call f_getint
-  T5 = t6
-  t7 = call f_getint
-  T6 = t7
-  t8 = T5
-  t9 = T6
-  param t8
-  param t9
-  t10 = call f_gcd
-  return t10
+var T5 // local: i
+var T6 // local: m
+var t6
+var t7
+var t8
+    T5 = call f_getint
+    T6 = call f_getint
+    param T5 // #0
+    param T6 // #1
+    t8 = call f_gcd
+    return t8
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

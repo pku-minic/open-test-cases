@@ -1,29 +1,37 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_ifElseElseIf [0]
-  var T0
-  var T1
-  var t0
-  var t1
-  var t2
-  T0 = 66
-  T1 = 8923
-  t0 = T0 == 5
-  if t0 == 0 goto l0
-  T1 = 25
-  goto l3
-l0:
-  t1 = T0 == 10
-  if t1 == 0 goto l1
-  T1 = 42
-  goto l2
-l1:
-  t2 = T0 * 2
-  T1 = t2
-l2:
-l3:
-  return T1
+var T0 // local: a
+var T1 // local: b
+var t0
+var t1
+var t2
+    T0 = 66
+    T1 = 8923
+    if T0 != 5 goto l0 // stmt: ifelse
+    T1 = 25
+    goto l1 // stmt: ifelse - true done
+    l0: // stmt: ifelse - lfalse
+    if T0 != 10 goto l2 // stmt: ifelse
+    T1 = 42
+    goto l3 // stmt: ifelse - true done
+    l2: // stmt: ifelse - lfalse
+    T1 = T0 * 2
+    l3: // stmt: ifelse - ldone
+    l1: // stmt: ifelse - ldone
+    return T1
+    return 0 // stmt: func epilog
 end f_ifElseElseIf
+
 f_main [0]
-  var t3
-  t3 = call f_ifElseElseIf
-  return t3
+var t3
+    t3 = call f_ifElseElseIf
+    return t3
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

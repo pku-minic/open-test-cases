@@ -1,21 +1,26 @@
-var T0
-var T1
-var T2
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: a
+var T1 // global: b
+var T2 // global: c
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_main [0]
-  var t0
-  var t1
-  var t2
-  var T3
-  var t3
-  var t4
-  t0 = call f_getint
-  T0 = t0
-  t1 = call f_getint
-  T1 = t1
-  t2 = call f_getint
-  T2 = t2
-  t3 = T1 * T2
-  t4 = T0 + t3
-  T3 = t4
-  return T3
+var t0
+var t1
+var t2
+var T3 // local: d
+var t3
+var t4
+    T0 = call f_getint
+    T1 = call f_getint
+    T2 = call f_getint
+    t4 = T1 * T2
+    T3 = T0 + t4
+    return T3
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

@@ -1,102 +1,111 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_maxArea [2]
-  var T0
-  var T1
-  var t0
-  var T2
-  var t1
-  var T3
-  var t2
-  var t3
-  var t4
-  var t5
-  var t6
-  var t7
-  var t8
-  var t9
-  var t10
-  var t11
-  var t12
-  var t13
-  var t14
-  var t15
-  var t16
-  var t17
-  var t18
-  var t19
-  var t20
-  var t21
-  var t22
-  T0 = 0
-  t0 = p1 - 1
-  T1 = t0
-  T2 = -1
-l0:
-  t1 = T0 < T1
-  if t1 == 0 goto l6
-  t2 = T0 * 4
-  t3 = p0 [ t2 ]
-  t4 = T1 * 4
-  t5 = p0 [ t4 ]
-  t6 = t3 < t5
-  if t6 == 0 goto l1
-  t7 = T1 - T0
-  t8 = T0 * 4
-  t9 = p0 [ t8 ]
-  t10 = t7 * t9
-  T3 = t10
-  goto l2
-l1:
-  t11 = T1 - T0
-  t12 = T1 * 4
-  t13 = p0 [ t12 ]
-  t14 = t11 * t13
-  T3 = t14
-l2:
-  t15 = T3 > T2
-  if t15 == 0 goto l3
-  T2 = T3
-l3:
-  t16 = T0 * 4
-  t17 = p0 [ t16 ]
-  t18 = T1 * 4
-  t19 = p0 [ t18 ]
-  t20 = t17 > t19
-  if t20 == 0 goto l4
-  t21 = T1 - 1
-  T1 = t21
-  goto l5
-l4:
-  t22 = T0 + 1
-  T0 = t22
-l5:
-  goto l0
-l6:
-  return T2
+var T0 // local: i
+var T1 // local: j
+var t0
+var T2 // local: max_val
+var t1
+var T3 // local: area
+var t2
+var t3
+var t4
+var t5
+var t6
+var t7
+var t8
+var t9
+var t10
+var t11
+var t12
+var t13
+var t14
+var t15
+var t16
+var t17
+var t18
+var t19
+var t20
+var t21
+var t22
+var t23
+var t24
+var t25
+var t26
+var t27
+var t28
+    T0 = 0
+    T1 = p1 - 1
+    T2 = -1
+    l0: // stmt: while - ltest
+    if T0 >= T1 goto l1 // stmt: while - done
+    t4 = 4 * T0
+    t5 = p0 + t4
+    t3 = t5 [0]
+    t7 = 4 * T1
+    t8 = p0 + t7
+    t6 = t8 [0]
+    if t3 >= t6 goto l2 // stmt: ifelse
+    t10 = T1 - T0
+    t12 = 4 * T0
+    t13 = p0 + t12
+    t11 = t13 [0]
+    T3 = t10 * t11
+    goto l3 // stmt: ifelse - true done
+    l2: // stmt: ifelse - lfalse
+    t15 = T1 - T0
+    t17 = 4 * T1
+    t18 = p0 + t17
+    t16 = t18 [0]
+    T3 = t15 * t16
+    l3: // stmt: ifelse - ldone
+    if T3 <= T2 goto l4 // stmt: ifonly
+    T2 = T3
+    l4: // stmt: ifonly - lskip
+    t22 = 4 * T0
+    t23 = p0 + t22
+    t21 = t23 [0]
+    t25 = 4 * T1
+    t26 = p0 + t25
+    t24 = t26 [0]
+    if t21 <= t24 goto l5 // stmt: ifelse
+    T1 = T1 - 1
+    goto l6 // stmt: ifelse - true done
+    l5: // stmt: ifelse - lfalse
+    T0 = T0 + 1
+    l6: // stmt: ifelse - ldone
+    goto l0 // stmt: while - to test
+    l1: // stmt: while - ldone
+    return T2
+    return 0 // stmt: func epilog
 end f_maxArea
+
 f_main [0]
-  var T4
-  var 40 T5
-  var t23
-  var t24
-  var t25
-  var t26
-  T5 [ 0 ] = 3
-  T5 [ 4 ] = 3
-  T5 [ 8 ] = 9
-  T5 [ 12 ] = 0
-  T5 [ 16 ] = 0
-  T5 [ 20 ] = 1
-  T5 [ 24 ] = 1
-  T5 [ 28 ] = 5
-  T5 [ 32 ] = 7
-  T5 [ 36 ] = 8
-  T4 = 10
-  t23 = T5 + 0
-  t24 = t23
-  t25 = T4
-  param t24
-  param t25
-  t26 = call f_maxArea
-  T4 = t26
-  return T4
+var T4 // local: res
+var 40 T5 // local: a
+var t29
+var t30
+    T5 [0] = 3
+    T5 [4] = 3
+    T5 [8] = 9
+    T5 [12] = 0
+    T5 [16] = 0
+    T5 [20] = 1
+    T5 [24] = 1
+    T5 [28] = 5
+    T5 [32] = 7
+    T5 [36] = 8
+    T4 = 10
+    t30 = T5 + 0 // stmt: param array access
+    param t30 // #0
+    param T4 // #1
+    T4 = call f_maxArea
+    return T4
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

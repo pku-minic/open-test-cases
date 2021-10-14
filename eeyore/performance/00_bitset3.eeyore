@@ -1,275 +1,306 @@
-var 12 T4
-var T5
-var 40000 T6
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var 12 T4 // global: seed
+var T5 // global: staticvalue
+var 40000 T6 // global: a
+
+//--- GLOBAL INIT
+T4 [0] = 19971231 // init: seed
+T4 [4] = 19981013 // init: seed
+T4 [8] = 1000000007 // init: seed
+T5 = 0 // init: staticvalue
+
+//--- FUNCTIONS
 f_set [3]
-  var T0
-  var 124 T1
-  var t0
-  var t1
-  var t2
-  var t3
-  var t4
-  var t5
-  var t6
-  var t7
-  var t8
-  var t9
-  var t10
-  var t11
-  var t12
-  var t13
-  var t14
-  var t15
-  var t16
-  var t17
-  var t18
-  var t19
-  var T2
-  var t20
-  var t21
-  var t22
-  var t23
-  var t24
-  var t25
-  var t26
-  var T3
-  var t27
-  var t28
-  var t29
-  var t30
-  var t31
-  var t32
-  var t33
-  var t34
-  var t35
-  var t36
-  var t37
-  var t38
-  var t39
-  var t40
-  var t41
-  var t42
-  var t43
-  var t44
-  var t45
-  var t46
-  var t47
-  var t48
-  var t49
-  var t50
-  var t51
-  var t52
-  var t53
-  var t54
-  var t55
-  var t56
-  var t57
-  var t58
-  var t59
-  var t60
-  var t61
-  var t62
-  var t63
-  var t64
-  var t65
-  var t66
-  var t67
-  var t68
-  var t69
-  var t70
-  var t71
-  T0 = 30
-  T1 [ 0 ] = 1
-  t0 = T1 [ 0 ]
-  t1 = t0 * 2
-  T1 [ 4 ] = t1
-  t2 = T1 [ 4 ]
-  t3 = t2 * 2
-  T1 [ 8 ] = t3
-  t4 = T1 [ 8 ]
-  t5 = t4 * 2
-  T1 [ 12 ] = t5
-  t6 = T1 [ 12 ]
-  t7 = t6 * 2
-  T1 [ 16 ] = t7
-  t8 = T1 [ 16 ]
-  t9 = t8 * 2
-  T1 [ 20 ] = t9
-  t10 = T1 [ 20 ]
-  t11 = t10 * 2
-  T1 [ 24 ] = t11
-  t12 = T1 [ 24 ]
-  t13 = t12 * 2
-  T1 [ 28 ] = t13
-  t14 = T1 [ 28 ]
-  t15 = t14 * 2
-  T1 [ 32 ] = t15
-  t16 = T1 [ 32 ]
-  t17 = t16 * 2
-  T1 [ 36 ] = t17
-  t18 = T1 [ 36 ]
-  t19 = t18 * 2
-  T1 [ 40 ] = t19
-  T2 = 10
-l0:
-  t20 = T2 < 30
-  if t20 == 0 goto l1
-  t21 = T2 + 1
-  T2 = t21
-  t22 = T2 * 4
-  t23 = T2 - 1
-  t24 = t23 * 4
-  t25 = T1 [ t24 ]
-  t26 = t25 * 2
-  T1 [ t22 ] = t26
-  goto l0
-l1:
-  T3 = 0
-  t27 = p1 / 30
-  t29 = t27 < 10000
-  t28 = t29 == 0
-  if t28 == 0 goto l2
-  return 0
-l2:
-  t30 = p1 / 30
-  t31 = t30 * 4
-  t32 = p0 [ t31 ]
-  t33 = p1 % 30
-  t34 = t33 * 4
-  t35 = T1 [ t34 ]
-  t36 = t32 / t35
-  t37 = t36 % 2
-  t38 = t37 != p2
-  if t38 == 0 goto l7
-  t39 = p1 / 30
-  t40 = t39 * 4
-  t41 = p0 [ t40 ]
-  t42 = p1 % 30
-  t43 = t42 * 4
-  t44 = T1 [ t43 ]
-  t45 = t41 / t44
-  t46 = t45 % 2
-  t47 = t46 == 0
-  if t47 == 0 goto l4
-  t48 = p2 == 1
-  if t48 == 0 goto l3
-  t49 = p1 % 30
-  t50 = t49 * 4
-  t51 = T1 [ t50 ]
-  T3 = t51
-l3:
-l4:
-  t52 = p1 / 30
-  t53 = t52 * 4
-  t54 = p0 [ t53 ]
-  t55 = p1 % 30
-  t56 = t55 * 4
-  t57 = T1 [ t56 ]
-  t58 = t54 / t57
-  t59 = t58 % 2
-  t60 = t59 == 1
-  if t60 == 0 goto l6
-  t61 = p2 == 0
-  if t61 == 0 goto l5
-  t62 = p1 % 30
-  t63 = t62 * 4
-  t64 = T1 [ t63 ]
-  t65 = T3 - t64
-  T3 = t65
-l5:
-l6:
-l7:
-  t66 = p1 / 30
-  t67 = t66 * 4
-  t68 = p1 / 30
-  t69 = t68 * 4
-  t70 = p0 [ t69 ]
-  t71 = t70 + T3
-  p0 [ t67 ] = t71
-  return 0
+var T0 // local: bitcount
+var 124 T1 // local: x
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var t7
+var t8
+var t9
+var t10
+var t11
+var t12
+var t13
+var t14
+var t15
+var t16
+var t17
+var t18
+var t19
+var T2 // local: i
+var t20
+var t21
+var t22
+var t23
+var t24
+var t25
+var t26
+var t27
+var t28
+var T3 // local: v
+var t29
+var t30
+var t31
+var t32
+var t33
+var t34
+var t35
+var t36
+var t37
+var t38
+var t39
+var t40
+var t41
+var t42
+var t43
+var t44
+var t45
+var t46
+var t47
+var t48
+var t49
+var t50
+var t51
+var t52
+var t53
+var t54
+var t55
+var t56
+var t57
+var t58
+var t59
+var t60
+var t61
+var t62
+var t63
+var t64
+var t65
+var t66
+var t67
+var t68
+var t69
+var t70
+var t71
+var t72
+var t73
+var t74
+var t75
+var t76
+var t77
+var t78
+var t79
+var t80
+var t81
+var t82
+    T0 = 30 // stmt: bitcount
+    T1 [0] = 0 // local_array_fill_zero T1
+    T1 [4] = 0 // local_array_fill_zero T1
+    T1 [8] = 0 // local_array_fill_zero T1
+    T1 [12] = 0 // local_array_fill_zero T1
+    T1 [16] = 0 // local_array_fill_zero T1
+    T1 [20] = 0 // local_array_fill_zero T1
+    T1 [24] = 0 // local_array_fill_zero T1
+    T1 [28] = 0 // local_array_fill_zero T1
+    T1 [32] = 0 // local_array_fill_zero T1
+    T1 [36] = 0 // local_array_fill_zero T1
+    T1 [40] = 0 // local_array_fill_zero T1
+    T1 [44] = 0 // local_array_fill_zero T1
+    T1 [48] = 0 // local_array_fill_zero T1
+    T1 [52] = 0 // local_array_fill_zero T1
+    T1 [56] = 0 // local_array_fill_zero T1
+    T1 [60] = 0 // local_array_fill_zero T1
+    T1 [64] = 0 // local_array_fill_zero T1
+    T1 [68] = 0 // local_array_fill_zero T1
+    T1 [72] = 0 // local_array_fill_zero T1
+    T1 [76] = 0 // local_array_fill_zero T1
+    T1 [80] = 0 // local_array_fill_zero T1
+    T1 [84] = 0 // local_array_fill_zero T1
+    T1 [88] = 0 // local_array_fill_zero T1
+    T1 [92] = 0 // local_array_fill_zero T1
+    T1 [96] = 0 // local_array_fill_zero T1
+    T1 [100] = 0 // local_array_fill_zero T1
+    T1 [104] = 0 // local_array_fill_zero T1
+    T1 [108] = 0 // local_array_fill_zero T1
+    T1 [112] = 0 // local_array_fill_zero T1
+    T1 [116] = 0 // local_array_fill_zero T1
+    T1 [120] = 0 // local_array_fill_zero T1
+    T1 [0] = 1
+    t1 = T1 [0]
+    t0 = t1 * 2
+    T1 [4] = t0
+    t3 = T1 [4]
+    t2 = t3 * 2
+    T1 [8] = t2
+    t5 = T1 [8]
+    t4 = t5 * 2
+    T1 [12] = t4
+    t7 = T1 [12]
+    t6 = t7 * 2
+    T1 [16] = t6
+    t9 = T1 [16]
+    t8 = t9 * 2
+    T1 [20] = t8
+    t11 = T1 [20]
+    t10 = t11 * 2
+    T1 [24] = t10
+    t13 = T1 [24]
+    t12 = t13 * 2
+    T1 [28] = t12
+    t15 = T1 [28]
+    t14 = t15 * 2
+    T1 [32] = t14
+    t17 = T1 [32]
+    t16 = t17 * 2
+    T1 [36] = t16
+    t19 = T1 [36]
+    t18 = t19 * 2
+    T1 [40] = t18
+    T2 = 10 // stmt: i
+    l0: // stmt: while - ltest
+    if T2 >= 30 goto l1 // stmt: while - done
+    T2 = T2 + 1
+    t25 = T2 - 1
+    t24 = 4 * t25
+    t26 = T1 + t24
+    t23 = t26 [0]
+    t22 = t23 * 2
+    t27 = 4 * T2
+    t28 = T1 + t27
+    t28 [0] = t22
+    goto l0 // stmt: while - to test
+    l1: // stmt: while - ldone
+    T3 = 0 // stmt: v
+    t30 = p1 / 30
+    if t30 < 10000 goto l2 // stmt: ifonly
+    return 0
+    l2: // stmt: ifonly - lskip
+    t36 = p1 / 30
+    t35 = 4 * t36
+    t37 = p0 + t35
+    t34 = t37 [0]
+    t40 = p1 % 30
+    t39 = 4 * t40
+    t41 = T1 + t39
+    t38 = t41 [0]
+    t33 = t34 / t38
+    t32 = t33 % 2
+    if t32 == p2 goto l3 // stmt: ifonly
+    t47 = p1 / 30
+    t46 = 4 * t47
+    t48 = p0 + t46
+    t45 = t48 [0]
+    t51 = p1 % 30
+    t50 = 4 * t51
+    t52 = T1 + t50
+    t49 = t52 [0]
+    t44 = t45 / t49
+    t43 = t44 % 2
+    if t43 != 0 goto l4 // stmt: ifonly
+    if p2 != 1 goto l5 // stmt: ifonly
+    t56 = p1 % 30
+    t55 = 4 * t56
+    t57 = T1 + t55
+    t54 = t57 [0]
+    T3 = t54
+    l5: // stmt: ifonly - lskip
+    l4: // stmt: ifonly - lskip
+    t63 = p1 / 30
+    t62 = 4 * t63
+    t64 = p0 + t62
+    t61 = t64 [0]
+    t67 = p1 % 30
+    t66 = 4 * t67
+    t68 = T1 + t66
+    t65 = t68 [0]
+    t60 = t61 / t65
+    t59 = t60 % 2
+    if t59 != 1 goto l6 // stmt: ifonly
+    if p2 != 0 goto l7 // stmt: ifonly
+    t73 = p1 % 30
+    t72 = 4 * t73
+    t74 = T1 + t72
+    t71 = t74 [0]
+    T3 = T3 - t71
+    l7: // stmt: ifonly - lskip
+    l6: // stmt: ifonly - lskip
+    l3: // stmt: ifonly - lskip
+    t78 = p1 / 30
+    t77 = 4 * t78
+    t79 = p0 + t77
+    t76 = t79 [0]
+    t75 = t76 + T3
+    t81 = p1 / 30
+    t80 = 4 * t81
+    t82 = p0 + t80
+    t82 [0] = t75
+    return 0
+    return 0 // stmt: func epilog
 end f_set
+
 f_rand [0]
-  var t72
-  var t73
-  var t74
-  var t75
-  var t76
-  var t77
-  var t78
-  var t79
-  var t80
-  t72 = T4 [ 0 ]
-  t73 = T5 * t72
-  t74 = T4 [ 4 ]
-  t75 = t73 + t74
-  T5 = t75
-  t76 = T4 [ 8 ]
-  t77 = T5 % t76
-  T5 = t77
-  t78 = T5 < 0
-  if t78 == 0 goto l8
-  t79 = T4 [ 8 ]
-  t80 = t79 + T5
-  T5 = t80
-l8:
-  return T5
+var t83
+var t84
+var t85
+var t86
+var t87
+    t84 = T5 * 19971231
+    T5 = t84 + 19981013
+    T5 = T5 % 1000000007
+    if T5 >= 0 goto l8 // stmt: ifonly
+    T5 = 1000000007 + T5
+    l8: // stmt: ifonly - lskip
+    return T5
+    return 0 // stmt: func epilog
 end f_rand
+
 f_main [0]
-  T4 [ 0 ] = 19971231
-  T4 [ 4 ] = 19981013
-  T4 [ 8 ] = 1000000007
-  T5 = 0
-  var T7
-  var t81
-  var t82
-  var T8
-  var T9
-  var t83
-  var t84
-  var t85
-  var t86
-  var t87
-  var t88
-  var t89
-  var t90
-  var t91
-  var t92
-  var t93
-  var t94
-  var t95
-  t81 = call f_getint
-  T7 = t81
-  t82 = call f_getint
-  T5 = t82
-  param 0
-  call f__sysy_starttime
-l9:
-  t83 = T7 > 0
-  if t83 == 0 goto l10
-  t84 = T7 - 1
-  T7 = t84
-  t85 = call f_rand
-  t86 = t85 % 300000
-  T8 = t86
-  t87 = call f_rand
-  t88 = t87 % 2
-  T9 = t88
-  t89 = T6 + 0
-  t90 = t89
-  t91 = T8
-  t92 = T9
-  param t90
-  param t91
-  param t92
-  t93 = call f_set
-  goto l9
-l10:
-  param 0
-  call f__sysy_stoptime
-  t94 = T6 + 0
-  t95 = t94
-  param 10000
-  param t95
-  call f_putarray
-  return 0
+var T7 // local: n
+var t88
+var t89
+var T8 // local: x
+var T9 // local: y
+var t90
+var t91
+var t92
+var t93
+var t94
+var t95
+var t96
+var t97
+var t98
+    T7 = call f_getint
+    T5 = call f_getint
+    param 56 // #0
+    call f__sysy_starttime
+    l9: // stmt: while - ltest
+    if T7 <= 0 goto l10 // stmt: while - done
+    T7 = T7 - 1
+    t93 = call f_rand
+    T8 = t93 % 300000
+    t95 = call f_rand
+    T9 = t95 % 2
+    t97 = T6 + 0 // stmt: param array access
+    param t97 // #0
+    param T8 // #1
+    param T9 // #2
+    t96 = call f_set
+    goto l9 // stmt: while - to test
+    l10: // stmt: while - ldone
+    param 64 // #0
+    call f__sysy_stoptime
+    t98 = T6 + 0 // stmt: param array access
+    param 10000 // #0
+    param t98 // #1
+    call f_putarray
+    return 0
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

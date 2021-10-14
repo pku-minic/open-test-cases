@@ -1,63 +1,59 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_main [0]
-  var T0
-  var T1
-  var T2
-  var T3
-  var T4
-  var t0
-  var t1
-  var t2
-  var t3
-  var t4
-  var t5
-  var t6
-  var t7
-  var t8
-  var t9
-  var t10
-  var t11
-  var t12
-  var t13
-  T0 = 3
-  T1 = 8
-  T2 = -4
-  T3 = 15
-  t0 = T1 - T0
-  t1 = T3 % t0
-  t2 = t1 != 0
-  if t2 == 0 goto l0
-  t4 = T0 > 0
-  if t4 == 0 goto l0
-  t3 = 1
-  goto l1
-l0:
-  t3 = 0
-l1:
-  if t3 != 0 goto l4
-  t6 = T3 % 3
-  t7 = t6 == 0
-  if t7 == 0 goto l2
-  t9 = T2 > 0
-  if t9 == 0 goto l2
-  t8 = 1
-  goto l3
-l2:
-  t8 = 0
-l3:
-  if t8 != 0 goto l4
-  t5 = 0
-  goto l5
-l4:
-  t5 = 1
-l5:
-  if t5 == 0 goto l6
-  t10 = T3 + T2
-  t11 = - T1
-  t12 = t10 - t11
-  T4 = t12
-  t13 = T4
-  param t13
-  call f_putint
-l6:
-  return 0
+var T0 // local: a
+var T1 // local: b
+var T2 // local: c
+var T3 // local: d
+var T4 // local: t
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var t7
+var t8
+var t9
+var t10
+var t11
+var t12
+    T0 = 3
+    T1 = 8
+    T2 = -4
+    T3 = 15
+    t0 = 1 // stmt: op or - default value
+    t1 = 0 // stmt: op and - default value
+    t4 = T1 - T0
+    t3 = T3 % t4
+    if t3 == 0 goto l1 // stmt: op and - test 1
+    if T0 <= 0 goto l1 // stmt: op and - test 2
+    t1 = 1 // stmt: op and - passed test
+    l1: // stmt: op and - lskip
+    if t1 != 0 goto l0 // stmt: op or - test 1
+    t6 = 0 // stmt: op and - default value
+    t8 = T3 % 3
+    if t8 != 0 goto l2 // stmt: op and - test 1
+    if T2 <= 0 goto l2 // stmt: op and - test 2
+    t6 = 1 // stmt: op and - passed test
+    l2: // stmt: op and - lskip
+    if t6 != 0 goto l0 // stmt: op or - test 2
+    t0 = 0 // stmt: op or - passed test
+    l0: // stmt: op or - lskip
+    if t0 == 0 goto l3 // stmt: ifonly
+    t11 = T3 + T2
+    t12 = - T1
+    T4 = t11 - t12
+    param T4 // #0
+    call f_putint
+    l3: // stmt: ifonly - lskip
+    return 0
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

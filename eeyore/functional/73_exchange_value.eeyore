@@ -1,34 +1,33 @@
-var T0
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: n
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_main [0]
-  var T1
-  var T2
-  var t0
-  var t1
-  var T3
-  var t2
-  var t3
-  var t4
-  var t5
-  t0 = call f_getint
-  T1 = t0
-  t1 = call f_getint
-  T2 = t1
-  T3 = T1
-  T1 = T2
-  T2 = T3
-  t2 = T1
-  param t2
-  call f_putint
-  T3 = 10
-  t3 = T3
-  param t3
-  call f_putch
-  t4 = T2
-  param t4
-  call f_putint
-  T3 = 10
-  t5 = T3
-  param t5
-  call f_putch
-  return 0
+var T1 // local: i
+var T2 // local: j
+var t0
+var t1
+var T3 // local: temp
+    T1 = call f_getint
+    T2 = call f_getint
+    T3 = T1
+    T1 = T2
+    T2 = T3
+    param T1 // #0
+    call f_putint
+    T3 = 10
+    param T3 // #0
+    call f_putch
+    param T2 // #0
+    call f_putint
+    T3 = 10
+    param T3 // #0
+    call f_putch
+    return 0
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

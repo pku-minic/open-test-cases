@@ -1,78 +1,101 @@
-f_enc [1] [4]
-    load 1 t0
+// BEGIN TIGGER
+//--- SCALAR DECL
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_enc [1] [0]
+// DESTROYS: a0
+
+//     if {reg: a0}p0 <= 25 goto l0
     t1 = 25
-    t0 = a0 > t1
-    store t0 1
-    store a0 0
-    if t0 == x0 goto l0
-    load 2 t0
-    load 0 t1
-    t0 = t1 + 60
-    t1 = t0
-    store t1 0
+    if a0 <= t1 goto l0
+
+//     {reg: a0}p0 = {reg: a0}p0 + 60
+    a0 = a0 + 60
+
+//     goto l1
     goto l1
-l0:
-    load 3 t0
-    load 0 t1
-    t0 = t1 + -15
-    t1 = t0
-    store t0 3
-    store t1 0
-l1:
-    load 0 a0
+
+//     l0:
+    l0:
+
+//     {reg: a0}p0 = {reg: a0}p0 - 15
+    a0 = a0 + -15
+
+//     l1:
+    l1:
+
+//     return {reg: a0}p0
+    a0 = a0
     return
 end f_enc
-f_dec [1] [4]
-    load 1 t0
+
+f_dec [1] [0]
+// DESTROYS: a0
+
+//     if {reg: a0}p0 <= 85 goto l2
     t1 = 85
-    t0 = a0 > t1
-    store t0 1
-    store a0 0
-    if t0 == x0 goto l2
-    load 2 t0
-    load 0 t1
-    t0 = t1 + -59
-    t1 = t0
-    store t1 0
+    if a0 <= t1 goto l2
+
+//     {reg: a0}p0 = {reg: a0}p0 - 59
+    a0 = a0 + -59
+
+//     goto l3
     goto l3
-l2:
-    load 3 t0
-    load 0 t1
-    t0 = t1 + 14
-    t1 = t0
-    store t0 3
-    store t1 0
-l3:
-    load 0 a0
+
+//     l2:
+    l2:
+
+//     {reg: a0}p0 = {reg: a0}p0 + 14
+    a0 = a0 + 14
+
+//     l3:
+    l3:
+
+//     return {reg: a0}p0
+    a0 = a0
     return
 end f_dec
-f_main [0] [8]
-    load 0 t0
-    t0 = 400
-    load 2 t1
-    t1 = t0
-    a0 = t1
+
+f_main [0] [1]
+// DESTROYS: t0 a6 t1 t2 t3 t4 t5 a1 a2 a3 a4 a7 a5 a0 t6
+
+//     {reg: a0}T0 = 400
+    a0 = 400
+
+
+//     param {reg: a0}T0 // #0
+//     {reg: a0}T1 = call f_enc
+    a0 = a0
     call f_enc
-    load 1 t0
-    t0 = a0
-    load 4 t1
-    t1 = t0
-    a0 = t1
-    store t0 1
+    a0 = a0
+
+
+//     param {reg: a0}T1 // #0
+//     {reg: a0}T1 = call f_dec
+    a0 = a0
     call f_dec
-    load 1 t0
-    t0 = a0
-    load 6 t1
-    t1 = t0
-    a0 = t1
-    store t0 1
+    a0 = a0
+
+
+//     param {reg: a0}T1 // #0
+//     call f_putint
+    a0 = a0
     call f_putint
-    load 1 t0
-    t0 = 10
-    load 7 t1
-    t1 = t0
-    a0 = t1
+
+//     {reg: a0}T1 = 10
+    a0 = 10
+
+
+//     param {reg: a0}T1 // #0
+//     call f_putch
+    a0 = a0
     call f_putch
+
+//     return 0
     a0 = 0
     return
 end f_main
+
+// END TIGGER

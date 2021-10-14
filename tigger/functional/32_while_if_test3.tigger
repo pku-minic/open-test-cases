@@ -1,67 +1,86 @@
-f_deepWhileBr [2] [12]
-    load 3 t0
-    t0 = a0 + a1
-    load 2 t1
-    t1 = t0
-    store t0 3
-    store t1 2
-l0:
-    load 4 t0
-    load 2 t1
-    t0 = t1 < 75
-    store t0 4
-    if t0 == x0 goto l3
-    load 5 t0
-    t0 = 42
-    load 6 t1
-    load 2 t2
-    t1 = t2 < 100
-    store t0 5
-    store t1 6
-    if t1 == x0 goto l2
-    load 7 t0
-    load 2 t1
-    load 5 t2
-    t0 = t1 + t2
-    t1 = t0
-    load 8 t3
-    t4 = 99
-    t3 = t1 > t4
-    store t1 2
-    store t3 8
-    if t3 == x0 goto l1
-    load 10 t0
-    load 5 t1
-    t2 = 2
-    t0 = t1 * t2
-    load 9 t3
-    t3 = t0
-    load 11 t4
-    t5 = 2
-    t4 = t3 * t5
-    load 2 t6
-    t6 = t4
-    store t4 11
-    store t6 2
-    store t6 2
-l1:
-l2:
+// BEGIN TIGGER
+//--- SCALAR DECL
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_deepWhileBr [2] [0]
+// DESTROYS: a0 a1 s4
+
+//     {reg: a0}T0 = {reg: a0}p0 + {reg: a1}p1
+    a0 = a0 + a1
+
+//     l0:
+    l0:
+
+//     if {reg: a0}T0 >= 75 goto l1
+    t1 = 75
+    if a0 >= t1 goto l1
+
+//     {reg: s4}T1 = 42
+    s4 = 42
+
+//     if {reg: a0}T0 >= 100 goto l2
+    t1 = 100
+    if a0 >= t1 goto l2
+
+//     {reg: a0}T0 = {reg: a0}T0 + {reg: s4}T1
+    a0 = a0 + s4
+
+//     if {reg: a0}T0 <= 99 goto l3
+    t1 = 99
+    if a0 <= t1 goto l3
+
+//     {reg: s4}T2 = {reg: s4}T1 * 2
+    s4 = s4 * 2 // shift left
+
+//     if 1 == 0 goto l4
+    t0 = 1
+    if t0 == x0 goto l4
+
+//     {reg: a0}T0 = {reg: s4}T2 * 2
+    a0 = s4 * 2 // shift left
+
+//     l4:
+    l4:
+
+//     l3:
+    l3:
+
+//     l2:
+    l2:
+
+//     goto l0
     goto l0
-l3:
-    load 2 a0
+
+//     l1:
+    l1:
+
+//     return {reg: a0}T0
+    a0 = a0
     return
 end f_deepWhileBr
-f_main [0] [4]
-    load 0 t0
-    t0 = 2
-    load 1 t1
-    t1 = t0
-    load 2 t2
-    t2 = t0
-    a0 = t1
-    a1 = t2
+
+f_main [0] [1]
+// DESTROYS: s4 a1 a0
+
+//     {reg: a0}T3 = 2
+    a0 = 2
+
+
+
+//     param {reg: a0}T3 // #0
+//     param {reg: a0}T3 // #1
+//     {reg: a0}t7 = call f_deepWhileBr
+    store a0 0
+    a0 = a0
+    load 0 a1
     call f_deepWhileBr
-    store a0 3
-    load 3 a0
+    a0 = a0
+
+//     return {reg: a0}t7
+    a0 = a0
     return
 end f_main
+
+// END TIGGER

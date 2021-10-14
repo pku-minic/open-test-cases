@@ -1,100 +1,158 @@
-f_main [0] [35]
-    load 0 t0
-    t0 = 5
-    load 1 t1
-    t1 = 5
-    load 2 t2
-    t2 = 1
-    load 3 t3
-    t3 = -2
-    loadaddr 4 t4
-    t5 = 1
-    t4 [0] = t5
-    t6 = 2
-    t4 [4] = t6
-    s1 = 3
-    t4 [8] = s1
-    s2 = 4
-    t4 [12] = s2
-    s3 = 5
-    t4 [16] = s3
-    load 10 s4
-    s5 = 1
-    s4 = t3 * s5
-    load 11 s6
-    s7 = 2
-    s6 = s4 / s7
-    load 12 s8
-    s8 = s6 + 4
-    load 13 s9
-    s9 = t0 - t1
-    load 14 s10
-    s10 = s8 + s9
-    load 15 s11
-    s11 = t2 + 3
-    load 16 a0
-    a0 = - s11
-    load 17 a1
-    a2 = 2
-    a1 = a0 % a2
-    load 18 a3
-    a3 = s10 - a1
-    load 19 a4
-    a5 = 5
-    a4 = a3 % a5
-    load 20 a6
-    a7 = 4
-    a6 = a4 * a7
-    load 21 t3
-    t5 = t4 + a6
-    t3 = t5 [0]
-    load 9 t5
-    t5 = t3
-    load 22 t3
-    t3 = t5
-    a0 = t3
-    store t0 0
-    store t1 1
-    store t2 2
-    store t5 9
-    call f_putint
-    load 23 t0
-    load 2 t1
-    t2 = 2
-    t0 = t1 % t2
-    load 24 t3
-    t3 = t0 + 67
-    load 25 t4
-    load 0 t5
-    t4 = t3 + t5
-    load 26 s4
-    load 1 s6
-    s4 = t4 - s6
-    load 27 s8
-    s8 = t1 + 2
-    load 28 s9
-    s10 = 2
-    s9 = s8 % s10
-    load 29 s11
-    s11 = - s9
-    load 30 a1
-    a1 = s4 - s11
-    load 31 a3
-    a4 = 5
-    a3 = a1 % a4
-    load 32 a6
+// BEGIN TIGGER
+//--- SCALAR DECL
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_main [0] [9]
+// DESTROYS: a5 t0 a6 t1 s3 a7 t2 t3 t4 t5 a4 a3 a1 s4 a2 a0 t6
+
+//     {reg: a7}T0 = 5
+    a7 = 5
+
+//     {reg: a1}T1 = 5
+    a1 = 5
+
+//     {reg: a3}T2 = 1
+    a3 = 1
+
+//     {reg: s3}T3 = -2
+    s3 = -2
+
+//     {stk #0 +5}T4 [0] = 1
+    loadaddr 0 t1
+    t0 = 1
+    t1 [0] = t0
+
+//     {stk #0 +5}T4 [4] = 2
+    loadaddr 1 t1
+    t0 = 2
+    t1 [0] = t0
+
+//     {stk #0 +5}T4 [8] = 3
+    loadaddr 2 t1
+    t0 = 3
+    t1 [0] = t0
+
+//     {stk #0 +5}T4 [12] = 4
+    loadaddr 3 t1
     t0 = 4
-    a6 = a3 * t0
-    load 33 t0
+    t1 [0] = t0
+
+//     {stk #0 +5}T4 [16] = 5
     loadaddr 4 t1
-    t2 = t1 + a6
-    t0 = t2 [0]
-    load 9 t1
-    t1 = t0
-    load 34 t0
-    t0 = t1
-    a0 = t0
+    t0 = 5
+    t1 [0] = t0
+
+//     {reg: s3}t7 = {reg: s3}T3 * 1
+    s3 = s3 // shift 0
+
+//     {reg: s3}t6 = {reg: s3}t7 / 2
+    s3 = s3 / 2 // shift right
+
+//     {reg: s3}t5 = {reg: s3}t6 + 4
+    s3 = s3 + 4
+
+//     {reg: a2}t8 = {reg: a7}T0 - {reg: a1}T1
+    a2 = a7 - a1
+
+//     {reg: s4}t4 = {reg: s3}t5 + {reg: a2}t8
+    s4 = s3 + a2
+
+//     {reg: a2}t11 = {reg: a3}T2 + 3
+    a2 = a3 + 3
+
+//     {reg: a2}t10 = - {reg: a2}t11
+    a2 = - a2
+
+//     {reg: a2}t9 = {reg: a2}t10 % 2
+    t1 = 2
+    a2 = a2 % t1
+
+//     {reg: s3}t3 = {reg: s4}t4 - {reg: a2}t9
+    s3 = s4 - a2
+
+//     {reg: s3}t2 = {reg: s3}t3 % 5
+    t1 = 5
+    s3 = s3 % t1
+
+//     {reg: a2}t1 = 4 * {reg: s3}t2
+    a2 = s3 * 4 // shift left
+
+//     {reg: a2}t12 = {stk #0 +5}T4 + {reg: a2}t1
+    loadaddr 0 t0
+    a2 = t0 + a2
+
+//     {reg: a0}t0 = {reg: a2}t12 [0]
+    a0 = a2 [0]
+
+//     {reg: a0}T5 = {reg: a0}t0
+    a0 = a0
+
+
+//     param {reg: a0}T5 // #0
+//     call f_putint
+    store a1 5
+    store a7 6
+    store a3 7
+    a0 = a0
     call f_putint
+    load 5 a1
+    load 6 a7
+    load 7 a3
+
+//     {reg: a2}t20 = {reg: a3}T2 % 2
+    t1 = 2
+    a2 = a3 % t1
+
+//     {reg: a2}t19 = {reg: a2}t20 + 67
+    a2 = a2 + 67
+
+//     {reg: a2}t18 = {reg: a2}t19 + {reg: a7}T0
+    a2 = a2 + a7
+
+//     {reg: a2}t17 = {reg: a2}t18 - {reg: a1}T1
+    a2 = a2 - a1
+
+//     {reg: s4}t23 = {reg: a3}T2 + 2
+    s4 = a3 + 2
+
+//     {reg: s4}t22 = {reg: s4}t23 % 2
+    t1 = 2
+    s4 = s4 % t1
+
+//     {reg: s4}t21 = - {reg: s4}t22
+    s4 = - s4
+
+//     {reg: s4}t16 = {reg: a2}t17 - {reg: s4}t21
+    s4 = a2 - s4
+
+//     {reg: s4}t15 = {reg: s4}t16 % 5
+    t1 = 5
+    s4 = s4 % t1
+
+//     {reg: s4}t14 = 4 * {reg: s4}t15
+    s4 = s4 * 4 // shift left
+
+//     {reg: s4}t24 = {stk #0 +5}T4 + {reg: s4}t14
+    loadaddr 0 t0
+    s4 = t0 + s4
+
+//     {reg: a0}t13 = {reg: s4}t24 [0]
+    a0 = s4 [0]
+
+//     {reg: a0}T5 = {reg: a0}t13
+    a0 = a0
+
+
+//     param {reg: a0}T5 // #0
+//     call f_putint
+    a0 = a0
+    call f_putint
+
+//     return 0
     a0 = 0
     return
 end f_main
+
+// END TIGGER

@@ -1,0 +1,369 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: M
+var T1 // global: L
+var T2 // global: N
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
+f_mul [9]
+var T3 // local: i
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var t7
+var t8
+var t9
+var t10
+var t11
+var t12
+var t13
+var t14
+var t15
+var t16
+var t17
+var t18
+var t19
+var t20
+var t21
+var t22
+var t23
+var t24
+var t25
+var t26
+var t27
+var t28
+var t29
+var t30
+var t31
+var t32
+var t33
+var t34
+var t35
+var t36
+var t37
+var t38
+var t39
+var t40
+var t41
+var t42
+var t43
+var t44
+var t45
+var t46
+var t47
+var t48
+var t49
+var t50
+var t51
+var t52
+var t53
+var t54
+var t55
+var t56
+var t57
+var t58
+var t59
+var t60
+var t61
+var t62
+var t63
+var t64
+var t65
+var t66
+var t67
+var t68
+var t69
+var t70
+var t71
+var t72
+var t73
+var t74
+var t75
+var t76
+var t77
+var t78
+var t79
+var t80
+var t81
+var t82
+var t83
+var t84
+var t85
+var t86
+var t87
+var t88
+var t89
+var t90
+var t91
+var t92
+var t93
+var t94
+var t95
+var t96
+var t97
+var t98
+    T3 = 0
+    t3 = p0 [0]
+    t4 = p3 [0]
+    t2 = t3 * t4
+    t6 = p0 [4]
+    t7 = p4 [0]
+    t5 = t6 * t7
+    t1 = t2 + t5
+    t9 = p0 [8]
+    t10 = p5 [0]
+    t8 = t9 * t10
+    t0 = t1 + t8
+    p6 [0] = t0
+    t14 = p0 [0]
+    t15 = p3 [4]
+    t13 = t14 * t15
+    t17 = p0 [4]
+    t18 = p4 [4]
+    t16 = t17 * t18
+    t12 = t13 + t16
+    t20 = p0 [8]
+    t21 = p5 [4]
+    t19 = t20 * t21
+    t11 = t12 + t19
+    p6 [4] = t11
+    t25 = p0 [0]
+    t26 = p3 [8]
+    t24 = t25 * t26
+    t28 = p0 [4]
+    t29 = p4 [8]
+    t27 = t28 * t29
+    t23 = t24 + t27
+    t31 = p0 [8]
+    t32 = p5 [8]
+    t30 = t31 * t32
+    t22 = t23 + t30
+    p6 [8] = t22
+    t36 = p1 [0]
+    t37 = p3 [0]
+    t35 = t36 * t37
+    t39 = p1 [4]
+    t40 = p4 [0]
+    t38 = t39 * t40
+    t34 = t35 + t38
+    t42 = p1 [8]
+    t43 = p5 [0]
+    t41 = t42 * t43
+    t33 = t34 + t41
+    p7 [0] = t33
+    t47 = p1 [0]
+    t48 = p3 [4]
+    t46 = t47 * t48
+    t50 = p1 [4]
+    t51 = p4 [4]
+    t49 = t50 * t51
+    t45 = t46 + t49
+    t53 = p1 [8]
+    t54 = p5 [4]
+    t52 = t53 * t54
+    t44 = t45 + t52
+    p7 [4] = t44
+    t58 = p1 [0]
+    t59 = p3 [8]
+    t57 = t58 * t59
+    t61 = p1 [4]
+    t62 = p4 [8]
+    t60 = t61 * t62
+    t56 = t57 + t60
+    t64 = p1 [8]
+    t65 = p5 [8]
+    t63 = t64 * t65
+    t55 = t56 + t63
+    p7 [8] = t55
+    t69 = p2 [0]
+    t70 = p3 [0]
+    t68 = t69 * t70
+    t72 = p2 [4]
+    t73 = p4 [0]
+    t71 = t72 * t73
+    t67 = t68 + t71
+    t75 = p2 [8]
+    t76 = p5 [0]
+    t74 = t75 * t76
+    t66 = t67 + t74
+    p8 [0] = t66
+    t80 = p2 [0]
+    t81 = p3 [4]
+    t79 = t80 * t81
+    t83 = p2 [4]
+    t84 = p4 [4]
+    t82 = t83 * t84
+    t78 = t79 + t82
+    t86 = p2 [8]
+    t87 = p5 [4]
+    t85 = t86 * t87
+    t77 = t78 + t85
+    p8 [4] = t77
+    t91 = p2 [0]
+    t92 = p3 [8]
+    t90 = t91 * t92
+    t94 = p2 [4]
+    t95 = p4 [8]
+    t93 = t94 * t95
+    t89 = t90 + t93
+    t97 = p2 [8]
+    t98 = p5 [8]
+    t96 = t97 * t98
+    t88 = t89 + t96
+    p8 [8] = t88
+    return 0
+    return 0 // stmt: func epilog
+end f_mul
+
+f_main [0]
+var 12 T4 // local: a0
+var 12 T5 // local: a1
+var 12 T6 // local: a2
+var 12 T7 // local: b0
+var 12 T8 // local: b1
+var 12 T9 // local: b2
+var 24 T10 // local: c0
+var 12 T11 // local: c1
+var 12 T12 // local: c2
+var T13 // local: i
+var t99
+var t100
+var t101
+var t102
+var t103
+var t104
+var t105
+var t106
+var t107
+var t108
+var t109
+var t110
+var t111
+var t112
+var t113
+var t114
+var t115
+var t116
+var t117
+var t118
+var t119
+var t120
+var t121
+var t122
+var T14 // local: x
+var t123
+var t124
+var t125
+var t126
+var t127
+var t128
+var t129
+var t130
+var t131
+var t132
+var t133
+var t134
+var t135
+var t136
+var t137
+    T2 = 3
+    T0 = 3
+    T1 = 3
+    T13 = 0
+    l0: // stmt: while - ltest
+    if T13 >= T0 goto l1 // stmt: while - done
+    t100 = 4 * T13
+    t101 = T4 + t100
+    t101 [0] = T13
+    t102 = 4 * T13
+    t103 = T5 + t102
+    t103 [0] = T13
+    t104 = 4 * T13
+    t105 = T6 + t104
+    t105 [0] = T13
+    t106 = 4 * T13
+    t107 = T7 + t106
+    t107 [0] = T13
+    t108 = 4 * T13
+    t109 = T8 + t108
+    t109 [0] = T13
+    t110 = 4 * T13
+    t111 = T9 + t110
+    t111 [0] = T13
+    T13 = T13 + 1
+    goto l0 // stmt: while - to test
+    l1: // stmt: while - ldone
+    t114 = T4 + 0 // stmt: param array access
+    t115 = T5 + 0 // stmt: param array access
+    t116 = T6 + 0 // stmt: param array access
+    t117 = T7 + 0 // stmt: param array access
+    t118 = T8 + 0 // stmt: param array access
+    t119 = T9 + 0 // stmt: param array access
+    t120 = T10 + 0 // stmt: param array access
+    t121 = T11 + 0 // stmt: param array access
+    t122 = T12 + 0 // stmt: param array access
+    param t114 // #0
+    param t115 // #1
+    param t116 // #2
+    param t117 // #3
+    param t118 // #4
+    param t119 // #5
+    param t120 // #6
+    param t121 // #7
+    param t122 // #8
+    T13 = call f_mul
+    l2: // stmt: while - ltest
+    if T13 >= T2 goto l3 // stmt: while - done
+    t125 = 4 * T13
+    t126 = T10 + t125
+    t124 = t126 [0]
+    T14 = t124
+    param T14 // #0
+    call f_putint
+    T13 = T13 + 1
+    goto l2 // stmt: while - to test
+    l3: // stmt: while - ldone
+    T14 = 10
+    T13 = 0
+    param T14 // #0
+    call f_putch
+    l4: // stmt: while - ltest
+    if T13 >= T2 goto l5 // stmt: while - done
+    t130 = 4 * T13
+    t131 = T11 + t130
+    t129 = t131 [0]
+    T14 = t129
+    param T14 // #0
+    call f_putint
+    T13 = T13 + 1
+    goto l4 // stmt: while - to test
+    l5: // stmt: while - ldone
+    T14 = 10
+    T13 = 0
+    param T14 // #0
+    call f_putch
+    l6: // stmt: while - ltest
+    if T13 >= T2 goto l7 // stmt: while - done
+    t135 = 4 * T13
+    t136 = T12 + t135
+    t134 = t136 [0]
+    T14 = t134
+    param T14 // #0
+    call f_putint
+    T13 = T13 + 1
+    goto l6 // stmt: while - to test
+    l7: // stmt: while - ldone
+    T14 = 10
+    param T14 // #0
+    call f_putch
+    return 0
+    return 0 // stmt: func epilog
+end f_main
+
+// END EEYORE

@@ -1,34 +1,54 @@
-v0 = 0
+// BEGIN TIGGER
+//--- SCALAR DECL
 v1 = 0
-f_main [0] [3]
-    load v1 t0
+v0 = 0
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_main [0] [0]
+// DESTROYS: a0
+
+//     {global}T1 = 0
     t0 = 0
+    loadaddr v1 t1
+    t1 [0] = t0
+
+//     {global}T0 = 3
+    t0 = 3
+    loadaddr v0 t1
+    t1 [0] = t0
+
+//     l0:
+    l0:
+
+//     if {global}T0 <= 0 goto l1
+    load v0 t0
+    if t0 <= x0 goto l1
+
+//     {global}T1 = {global}T1 + {global}T0
+    load v1 t0
     load v0 t1
-    t1 = 3
-    loadaddr v1 s0
-    s0 [0] = t0
-    loadaddr v0 s0
-    s0 [0] = t1
-l0:
-    load 0 t0
-    load v0 t1
-    t0 = t1 > x0
-    store t0 0
-    if t0 == x0 goto l1
-    load 1 t0
-    load v1 t1
-    load v0 t2
-    t0 = t1 + t2
-    t1 = t0
-    load 2 t3
-    t3 = t2 + -1
-    t2 = t3
-    loadaddr v1 s0
-    s0 [0] = t1
-    loadaddr v0 s0
-    s0 [0] = t2
+    t0 = t0 + t1
+    loadaddr v1 t1
+    t1 [0] = t0
+
+//     {global}T0 = {global}T0 - 1
+    load v0 t0
+    t0 = t0 + -1
+    loadaddr v0 t1
+    t1 [0] = t0
+
+//     goto l0
     goto l0
-l1:
-    load v1 a0
+
+//     l1:
+    l1:
+
+//     return {global}T1
+    load v1 t1
+    a0 = t1
     return
 end f_main
+
+// END TIGGER

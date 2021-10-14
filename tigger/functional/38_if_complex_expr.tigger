@@ -1,132 +1,156 @@
-f_main [0] [27]
-    load 0 t0
-    t0 = 5
-    load 1 t1
-    t1 = 5
-    load 2 t2
-    t2 = 1
-    load 3 t3
-    t3 = -2
-    load 4 t4
-    t4 = 2
-    load 5 t5
-    t6 = 1
-    t5 = t3 * t6
-    load 6 s1
-    s2 = 2
-    s1 = t5 / s2
-    load 7 s3
-    s3 = s1 < 0
-    store s3 7
-    store t0 0
-    store t1 1
-    store t2 2
-    store t3 3
-    store t4 4
-    if s3 != x0 goto l2
-    load 9 t0
-    load 0 t1
-    load 1 t2
-    t0 = t1 - t2
-    load 10 t3
-    t3 = t0 != x0
-    store t3 10
-    if t3 == x0 goto l0
-    load 12 t0
-    load 2 t1
-    t0 = t1 + 3
-    load 13 t2
-    t3 = 2
-    t2 = t0 % t3
-    load 14 t4
-    t4 = t2 != x0
-    store t4 14
-    if t4 == x0 goto l0
-    load 11 t0
-    t0 = 1
-    store t0 11
-    goto l1
-l0:
-    load 11 t0
-    t0 = 0
-    store t0 11
-l1:
-    load 11 t0
-    if t0 != x0 goto l2
-    load 8 t0
-    t0 = 0
-    store t0 8
-    goto l3
-l2:
-    load 8 t0
-    t0 = 1
-    store t0 8
-l3:
-    load 8 t0
-    if t0 == x0 goto l4
-    load 15 t0
-    load 4 t1
-    t0 = t1
-    a0 = t0
+// BEGIN TIGGER
+//--- SCALAR DECL
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_main [0] [4]
+// DESTROYS: a5 t0 a6 t1 s4 a7 t2 t3 a4 a1 a3 t4 a0 t6 t5 a2
+
+//     {reg: s4}T0 = 5
+    s4 = 5
+
+//     {reg: a2}T1 = 5
+    a2 = 5
+
+//     {reg: a1}T2 = 1
+    a1 = 1
+
+//     {reg: a0}T3 = -2
+    a0 = -2
+
+//     {reg: t6}T4 = 2
+    t6 = 2
+
+//     {reg: t5}t0 = 1
+    t5 = 1
+
+//     {reg: a3}t3 = {reg: a0}T3 * 1
+    a3 = a0 // shift 0
+
+//     {reg: a3}t2 = {reg: a3}t3 / 2
+    a3 = a3 / 2 // shift right
+
+//     if {reg: a3}t2 < 0 goto l0
+    if a3 < x0 goto l0
+
+//     {reg: a3}t4 = 0
+    a3 = 0
+
+//     {reg: t4}t6 = {reg: s4}T0 - {reg: a2}T1
+    t4 = s4 - a2
+
+//     if {reg: t4}t6 == 0 goto l1
+    if t4 == x0 goto l1
+
+//     {reg: t4}t9 = {reg: a1}T2 + 3
+    t4 = a1 + 3
+
+//     {reg: t4}t8 = {reg: t4}t9 % 2
+    t1 = 2
+    t4 = t4 % t1
+
+//     if {reg: t4}t8 == 0 goto l1
+    if t4 == x0 goto l1
+
+//     {reg: a3}t4 = 1
+    a3 = 1
+
+//     l1:
+    l1:
+
+//     if {reg: a3}t4 != 0 goto l0
+    if a3 != x0 goto l0
+
+//     {reg: t5}t0 = 0
+    t5 = 0
+
+//     l0:
+    l0:
+
+//     if {reg: t5}t0 == 0 goto l2
+    if t5 == x0 goto l2
+
+
+//     param {reg: t6}T4 // #0
+//     call f_putint
+    store a1 0
+    store a2 1
+    store a0 2
+    a0 = t6
     call f_putint
-l4:
-    load 16 t0
-    load 3 t1
-    t2 = 2
-    t0 = t1 % t2
-    load 17 t3
-    t3 = t0 + 67
-    load 18 t4
-    t4 = t3 < 0
-    store t4 18
-    if t4 != x0 goto l7
-    load 20 t0
-    load 0 t1
-    load 1 t2
-    t0 = t1 - t2
-    load 21 t3
-    t3 = t0 != x0
-    store t3 21
-    if t3 == x0 goto l5
-    load 23 t0
-    load 2 t1
-    t0 = t1 + 2
-    load 24 t2
-    t3 = 2
-    t2 = t0 % t3
-    load 25 t4
-    t4 = t2 != x0
-    store t4 25
-    if t4 == x0 goto l5
-    load 22 t0
-    t0 = 1
-    store t0 22
-    goto l6
-l5:
-    load 22 t0
-    t0 = 0
-    store t0 22
-l6:
-    load 22 t0
-    if t0 != x0 goto l7
-    load 19 t0
-    t0 = 0
-    store t0 19
-    goto l8
-l7:
-    load 19 t0
-    t0 = 1
-    store t0 19
-l8:
-    load 19 t0
-    if t0 == x0 goto l9
-    load 4 t0
-    t0 = 4
-    load 26 t1
-    t1 = t0
-    a0 = t1
+    load 0 a1
+    load 1 a2
+    load 2 a0
+
+//     l2:
+    l2:
+
+//     {reg: a3}t10 = 1
+    a3 = 1
+
+//     {reg: a0}t13 = {reg: a0}T3 % 2
+    t1 = 2
+    a0 = a0 % t1
+
+//     {reg: a0}t12 = {reg: a0}t13 + 67
+    a0 = a0 + 67
+
+//     if {reg: a0}t12 < 0 goto l3
+    if a0 < x0 goto l3
+
+//     {reg: a0}t14 = 0
+    a0 = 0
+
+//     {reg: a2}t16 = {reg: s4}T0 - {reg: a2}T1
+    a2 = s4 - a2
+
+//     if {reg: a2}t16 == 0 goto l4
+    if a2 == x0 goto l4
+
+//     {reg: a2}t19 = {reg: a1}T2 + 2
+    a2 = a1 + 2
+
+//     {reg: a2}t18 = {reg: a2}t19 % 2
+    t1 = 2
+    a2 = a2 % t1
+
+//     if {reg: a2}t18 == 0 goto l4
+    if a2 == x0 goto l4
+
+//     {reg: a0}t14 = 1
+    a0 = 1
+
+//     l4:
+    l4:
+
+//     if {reg: a0}t14 != 0 goto l3
+    if a0 != x0 goto l3
+
+//     {reg: a3}t10 = 0
+    a3 = 0
+
+//     l3:
+    l3:
+
+//     if {reg: a3}t10 == 0 goto l5
+    if a3 == x0 goto l5
+
+//     {reg: t6}T4 = 4
+    t6 = 4
+
+
+//     param {reg: t6}T4 // #0
+//     call f_putint
+    a0 = t6
     call f_putint
-l9:
+
+//     l5:
+    l5:
+
+//     return 0
     a0 = 0
     return
 end f_main
+
+// END TIGGER

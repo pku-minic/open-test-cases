@@ -1,29 +1,34 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_fact [1]
-  var t0
-  var T0
-  var t1
-  var t2
-  var t3
-  var t4
-  t0 = p0 == 0
-  if t0 == 0 goto l0
-  return 1
-l0:
-  t1 = p0 - 1
-  T0 = t1
-  t2 = T0
-  param t2
-  t3 = call f_fact
-  t4 = p0 * t3
-  return t4
+var t0
+var T0 // local: nn
+var t1
+var t2
+var t3
+    if p0 != 0 goto l0 // stmt: ifonly
+    return 1
+    l0: // stmt: ifonly - lskip
+    T0 = p0 - 1
+    param T0 // #0
+    t3 = call f_fact
+    t2 = p0 * t3
+    return t2
+    return 0 // stmt: func epilog
 end f_fact
+
 f_main [0]
-  var T1
-  var t5
-  var t6
-  T1 = 4
-  t5 = T1
-  param t5
-  t6 = call f_fact
-  return t6
+var T1 // local: n
+var t4
+    T1 = 4
+    param T1 // #0
+    t4 = call f_fact
+    return t4
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

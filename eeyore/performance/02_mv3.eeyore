@@ -1,213 +1,208 @@
-var T0
-var T1
-var 16160400 T6
-var 8040 T7
-var 8040 T8
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: x
+var T1 // global: N
+var 16160400 T6 // global: A
+var 8040 T7 // global: B
+var 8040 T8 // global: C
+
+//--- GLOBAL INIT
+T1 = 2010 // init: N
+
+//--- FUNCTIONS
 f_mv [4]
-  var T2
-  var T3
-  var T4
-  var T5
-  var t0
-  var t1
-  var t2
-  var t3
-  var t4
-  var t5
-  var t6
-  var t7
-  var t8
-  var t9
-  var t10
-  var t11
-  var t12
-  var t13
-  var t14
-  var t15
-  var t16
-  var t17
-  var t18
-  var t19
-  var t20
-  var t21
-  var t22
-  var t23
-  var t24
-  var t25
-  var t26
-  var t27
-  T3 = 0
-  T2 = 11
-  T4 = 0
-l0:
-  t0 = T4 < p0
-  if t0 == 0 goto l1
-  t1 = T4 * 4
-  p3 [ t1 ] = 0
-  t2 = T4 + 1
-  T4 = t2
-  goto l0
-l1:
-  T4 = 0
-  T5 = 0
-l2:
-  t3 = T4 < p0
-  if t3 == 0 goto l7
-  T5 = 0
-l3:
-  t4 = T5 < p0
-  if t4 == 0 goto l6
-  t5 = T4 * 2010
-  t5 = t5 + T5
-  t6 = t5 * 4
-  t7 = p1 [ t6 ]
-  t8 = t7 == 0
-  if t8 == 0 goto l4
-  t9 = T4 * 4
-  t10 = p2 [ t9 ]
-  t11 = T2 * t10
-  t12 = T5 * 4
-  t13 = p2 [ t12 ]
-  t14 = t11 + t13
-  T2 = t14
-  t15 = T3 - T2
-  T3 = t15
-  goto l5
-l4:
-  t16 = T4 * 4
-  t17 = T4 * 4
-  t18 = p3 [ t17 ]
-  t19 = T4 * 2010
-  t19 = t19 + T5
-  t20 = t19 * 4
-  t21 = p1 [ t20 ]
-  t22 = T5 * 4
-  t23 = p2 [ t22 ]
-  t24 = t21 * t23
-  t25 = t18 + t24
-  p3 [ t16 ] = t25
-l5:
-  t26 = T5 + 1
-  T5 = t26
-  goto l3
-l6:
-  t27 = T4 + 1
-  T4 = t27
-  goto l2
-l7:
-  return
+var T2 // local: x
+var T3 // local: y
+var T4 // local: i
+var T5 // local: j
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var t7
+var t8
+var t9
+var t10
+var t11
+var t12
+var t13
+var t14
+var t15
+var t16
+var t17
+var t18
+var t19
+var t20
+var t21
+var t22
+var t23
+var t24
+var t25
+var t26
+var t27
+var t28
+var t29
+var t30
+var t31
+var t32
+var t33
+var t34
+var t35
+var t36
+var t37
+    T3 = 0
+    T2 = 11
+    T4 = 0
+    l0: // stmt: while - ltest
+    if T4 >= p0 goto l1 // stmt: while - done
+    t1 = 4 * T4
+    t2 = p3 + t1
+    t2 [0] = 0
+    T4 = T4 + 1
+    goto l0 // stmt: while - to test
+    l1: // stmt: while - ldone
+    T4 = 0
+    T5 = 0
+    l2: // stmt: while - ltest
+    if T4 >= p0 goto l3 // stmt: while - done
+    T5 = 0
+    l4: // stmt: while - ltest
+    if T5 >= p0 goto l5 // stmt: while - done
+    t10 = 2010 * T4
+    t9 = t10 + T5
+    t8 = 4 * t9
+    t11 = p1 + t8
+    t7 = t11 [0]
+    if t7 != 0 goto l6 // stmt: ifelse
+    t15 = 4 * T4
+    t16 = p2 + t15
+    t14 = t16 [0]
+    t13 = T2 * t14
+    t18 = 4 * T5
+    t19 = p2 + t18
+    t17 = t19 [0]
+    T2 = t13 + t17
+    T3 = T3 - T2
+    goto l7 // stmt: ifelse - true done
+    l6: // stmt: ifelse - lfalse
+    t23 = 4 * T4
+    t24 = p3 + t23
+    t22 = t24 [0]
+    t29 = 2010 * T4
+    t28 = t29 + T5
+    t27 = 4 * t28
+    t30 = p1 + t27
+    t26 = t30 [0]
+    t32 = 4 * T5
+    t33 = p2 + t32
+    t31 = t33 [0]
+    t25 = t26 * t31
+    t21 = t22 + t25
+    t34 = 4 * T4
+    t35 = p3 + t34
+    t35 [0] = t21
+    l7: // stmt: ifelse - ldone
+    T5 = T5 + 1
+    goto l4 // stmt: while - to test
+    l5: // stmt: while - ldone
+    T4 = T4 + 1
+    goto l2 // stmt: while - to test
+    l3: // stmt: while - ldone
+    return // stmt: func epilog
 end f_mv
+
 f_main [0]
-  T1 = 2010
-  var T9
-  var t28
-  var T10
-  var T11
-  var t29
-  var t30
-  var t31
-  var t32
-  var t33
-  var t34
-  var t35
-  var t36
-  var t37
-  var t38
-  var t39
-  var t40
-  var t41
-  var t42
-  var t43
-  var t44
-  var t45
-  var t46
-  var t47
-  var t48
-  var t49
-  var t50
-  var t51
-  var t52
-  var t53
-  var t54
-  var t55
-  var t56
-  var t57
-  var t58
-  t28 = call f_getint
-  T9 = t28
-  T10 = 0
-l8:
-  t29 = T10 < T9
-  if t29 == 0 goto l11
-  T11 = 0
-l9:
-  t30 = T11 < T9
-  if t30 == 0 goto l10
-  t31 = T10 * 2010
-  t31 = t31 + T11
-  t32 = t31 * 4
-  t33 = call f_getint
-  T6 [ t32 ] = t33
-  t34 = T11 + 1
-  T11 = t34
-  goto l9
-l10:
-  t35 = T10 + 1
-  T10 = t35
-  goto l8
-l11:
-  T10 = 0
-l12:
-  t36 = T10 < T9
-  if t36 == 0 goto l13
-  t37 = T10 * 4
-  t38 = call f_getint
-  T7 [ t37 ] = t38
-  t39 = T10 + 1
-  T10 = t39
-  goto l12
-l13:
-  param 0
-  call f__sysy_starttime
-  T10 = 0
-l14:
-  t40 = T10 < 50
-  if t40 == 0 goto l15
-  t41 = T9
-  t42 = T6 + 0
-  t43 = t42
-  t44 = T7 + 0
-  t45 = t44
-  t46 = T8 + 0
-  t47 = t46
-  param t41
-  param t43
-  param t45
-  param t47
-  call f_mv
-  t48 = T9
-  t49 = T6 + 0
-  t50 = t49
-  t51 = T8 + 0
-  t52 = t51
-  t53 = T7 + 0
-  t54 = t53
-  param t48
-  param t50
-  param t52
-  param t54
-  call f_mv
-  t55 = T10 + 1
-  T10 = t55
-  goto l14
-l15:
-  param 0
-  call f__sysy_stoptime
-  t56 = T9
-  t57 = T8 + 0
-  t58 = t57
-  param t56
-  param t58
-  call f_putarray
-  return 0
+var T9 // local: n
+var t38
+var T10 // local: i
+var T11 // local: j
+var t39
+var t40
+var t41
+var t42
+var t43
+var t44
+var t45
+var t46
+var t47
+var t48
+var t49
+var t50
+var t51
+var t52
+var t53
+var t54
+var t55
+var t56
+var t57
+var t58
+var t59
+var t60
+var t61
+    T9 = call f_getint
+    T10 = 0
+    l8: // stmt: while - ltest
+    if T10 >= T9 goto l9 // stmt: while - done
+    T11 = 0
+    l10: // stmt: while - ltest
+    if T11 >= T9 goto l11 // stmt: while - done
+    t41 = call f_getint
+    t44 = 2010 * T10
+    t43 = t44 + T11
+    t42 = 4 * t43
+    t45 = T6 + t42
+    t45 [0] = t41
+    T11 = T11 + 1
+    goto l10 // stmt: while - to test
+    l11: // stmt: while - ldone
+    T10 = T10 + 1
+    goto l8 // stmt: while - to test
+    l9: // stmt: while - ldone
+    T10 = 0
+    l12: // stmt: while - ltest
+    if T10 >= T9 goto l13 // stmt: while - done
+    t49 = call f_getint
+    t50 = 4 * T10
+    t51 = T7 + t50
+    t51 [0] = t49
+    T10 = T10 + 1
+    goto l12 // stmt: while - to test
+    l13: // stmt: while - ldone
+    param 59 // #0
+    call f__sysy_starttime
+    T10 = 0
+    l14: // stmt: while - ltest
+    if T10 >= 50 goto l15 // stmt: while - done
+    t54 = T6 + 0 // stmt: param array access
+    t55 = T7 + 0 // stmt: param array access
+    t56 = T8 + 0 // stmt: param array access
+    param T9 // #0
+    param t54 // #1
+    param t55 // #2
+    param t56 // #3
+    call f_mv
+    t57 = T6 + 0 // stmt: param array access
+    t58 = T8 + 0 // stmt: param array access
+    t59 = T7 + 0 // stmt: param array access
+    param T9 // #0
+    param t57 // #1
+    param t58 // #2
+    param t59 // #3
+    call f_mv
+    T10 = T10 + 1
+    goto l14 // stmt: while - to test
+    l15: // stmt: while - ldone
+    param 67 // #0
+    call f__sysy_stoptime
+    t61 = T8 + 0 // stmt: param array access
+    param T9 // #0
+    param t61 // #1
+    call f_putarray
+    return 0
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

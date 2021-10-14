@@ -1,67 +1,67 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_FourWhile [0]
-  var T0
-  var T1
-  var T2
-  var T3
-  var t0
-  var t1
-  var t2
-  var t3
-  var t4
-  var t5
-  var t6
-  var t7
-  var t8
-  var t9
-  var t10
-  var t11
-  var t12
-  var t13
-  T0 = 5
-  T1 = 6
-  T2 = 7
-  T3 = 10
-l0:
-  t0 = T0 < 20
-  if t0 == 0 goto l7
-  t1 = T0 + 3
-  T0 = t1
-l1:
-  t2 = T1 < 10
-  if t2 == 0 goto l6
-  t3 = T1 + 1
-  T1 = t3
-l2:
-  t4 = T2 == 7
-  if t4 == 0 goto l5
-  t5 = T2 - 1
-  T2 = t5
-l3:
-  t6 = T3 < 20
-  if t6 == 0 goto l4
-  t7 = T3 + 3
-  T3 = t7
-  goto l3
-l4:
-  t8 = T3 - 1
-  T3 = t8
-  goto l2
-l5:
-  t9 = T2 + 1
-  T2 = t9
-  goto l1
-l6:
-  t10 = T1 - 2
-  T1 = t10
-  goto l0
-l7:
-  t11 = T1 + T3
-  t12 = T0 + t11
-  t13 = t12 + T2
-  return t13
+var T0 // local: a
+var T1 // local: b
+var T2 // local: c
+var T3 // local: d
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+var t7
+var t8
+var t9
+var t10
+var t11
+var t12
+var t13
+    T0 = 5
+    T1 = 6
+    T2 = 7
+    T3 = 10
+    l0: // stmt: while - ltest
+    if T0 >= 20 goto l1 // stmt: while - done
+    T0 = T0 + 3
+    l2: // stmt: while - ltest
+    if T1 >= 10 goto l3 // stmt: while - done
+    T1 = T1 + 1
+    l4: // stmt: while - ltest
+    if T2 != 7 goto l5 // stmt: while - done
+    T2 = T2 - 1
+    l6: // stmt: while - ltest
+    if T3 >= 20 goto l7 // stmt: while - done
+    T3 = T3 + 3
+    goto l6 // stmt: while - to test
+    l7: // stmt: while - ldone
+    T3 = T3 - 1
+    goto l4 // stmt: while - to test
+    l5: // stmt: while - ldone
+    T2 = T2 + 1
+    goto l2 // stmt: while - to test
+    l3: // stmt: while - ldone
+    T1 = T1 - 2
+    goto l0 // stmt: while - to test
+    l1: // stmt: while - ldone
+    t13 = T1 + T3
+    t12 = T0 + t13
+    t11 = t12 + T2
+    return t11
+    return 0 // stmt: func epilog
 end f_FourWhile
+
 f_main [0]
-  var t14
-  t14 = call f_FourWhile
-  return t14
+var t14
+    t14 = call f_FourWhile
+    return t14
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

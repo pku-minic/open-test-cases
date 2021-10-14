@@ -1,55 +1,70 @@
-f_main [0] [14]
-    load 0 t0
-    t0 = 1
-    load 1 t1
-    t1 = 4
-    load 2 t2
-    t2 = 28
-    load 4 t3
-    t3 = t2 + t0
-    load 5 t4
-    t4 = t3 != t1
-    store t0 0
-    store t1 1
-    store t2 2
-    store t4 5
-    if t4 == x0 goto l0
-    load 6 t0
-    load 1 t1
-    t0 = - t1
-    load 7 t2
-    load 2 t3
-    t2 = t3 % t0
-    load 3 t4
-    t4 = t2
-    load 8 t5
-    t5 = t4
-    a0 = t5
-    store t4 3
+// BEGIN TIGGER
+//--- SCALAR DECL
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_main [0] [3]
+// DESTROYS: a5 t0 a6 t1 t2 t3 t4 t5 a4 a1 a0 t6 a2 a3 a7 s4
+
+//     {reg: s4}T0 = 1
+    s4 = 1
+
+//     {reg: a1}T1 = 4
+    a1 = 4
+
+//     {reg: a3}T2 = 28
+    a3 = 28
+
+//     {reg: a2}t1 = {reg: a3}T2 + {reg: s4}T0
+    a2 = a3 + s4
+
+//     if {reg: a2}t1 == {reg: a1}T1 goto l0
+    if a2 == a1 goto l0
+
+//     {reg: a2}t3 = - {reg: a1}T1
+    a2 = - a1
+
+//     {reg: a0}T3 = {reg: a3}T2 % {reg: a2}t3
+    a0 = a3 % a2
+
+
+//     param {reg: a0}T3 // #0
+//     call f_putint
+    store a1 0
+    store a3 1
+    a0 = a0
     call f_putint
-l0:
-    load 9 t0
-    load 1 t1
-    load 2 t2
-    t0 = t1 - t2
-    load 10 t3
-    load 0 t4
-    t3 = t0 == t4
-    store t3 10
-    if t3 == x0 goto l1
-    load 11 t0
-    load 2 t1
-    load 1 t2
-    t0 = t1 % t2
-    load 12 t3
-    t3 = t0 + t2
-    load 3 t4
-    t4 = t3
-    load 13 t5
-    t5 = t4
-    a0 = t5
+    load 0 a1
+    load 1 a3
+
+//     l0:
+    l0:
+
+//     {reg: a2}t5 = {reg: a1}T1 - {reg: a3}T2
+    a2 = a1 - a3
+
+//     if {reg: a2}t5 != {reg: s4}T0 goto l1
+    if a2 != s4 goto l1
+
+//     {reg: s4}t7 = {reg: a3}T2 % {reg: a1}T1
+    s4 = a3 % a1
+
+//     {reg: a0}T3 = {reg: s4}t7 + {reg: a1}T1
+    a0 = s4 + a1
+
+
+//     param {reg: a0}T3 // #0
+//     call f_putint
+    a0 = a0
     call f_putint
-l1:
+
+//     l1:
+    l1:
+
+//     return 0
     a0 = 0
     return
 end f_main
+
+// END TIGGER

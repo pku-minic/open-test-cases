@@ -1,60 +1,54 @@
-var T0
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: n
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_f [1]
-  var t0
-  var t1
-  var T1
-  var T2
-  var t2
-  var t3
-  var T3
-  var t4
-  var t5
-  var t6
-  var t7
-  var t8
-  t0 = p0 == 1
-  if t0 == 0 goto l0
-  return 1
-l0:
-  t1 = p0 == 2
-  if t1 == 0 goto l1
-  return 1
-l1:
-  t2 = p0 - 1
-  T1 = t2
-  t3 = p0 - 2
-  T2 = t3
-  t4 = T1
-  param t4
-  t5 = call f_f
-  t6 = T2
-  param t6
-  t7 = call f_f
-  t8 = t5 + t7
-  T3 = t8
-  return T3
+var t0
+var t1
+var T1 // local: a
+var T2 // local: b
+var t2
+var t3
+var T3 // local: c
+var t4
+var t5
+var t6
+    if p0 != 1 goto l0 // stmt: ifonly
+    return 1
+    l0: // stmt: ifonly - lskip
+    if p0 != 2 goto l1 // stmt: ifonly
+    return 1
+    l1: // stmt: ifonly - lskip
+    T1 = p0 - 1
+    T2 = p0 - 2
+    param T1 // #0
+    t5 = call f_f
+    param T2 // #0
+    t6 = call f_f
+    T3 = t5 + t6
+    return T3
+    return 0 // stmt: func epilog
 end f_f
+
 f_main [0]
-  var t9
-  var T4
-  var T5
-  var t10
-  var t11
-  var t12
-  var T6
-  var t13
-  t9 = call f_getint
-  T0 = t9
-  t10 = T0
-  param t10
-  t11 = call f_f
-  T4 = t11
-  t12 = T4
-  param t12
-  call f_putint
-  T6 = 10
-  t13 = T6
-  param t13
-  call f_putch
-  return T4
+var t7
+var T4 // local: t
+var T5 // local: xx
+var t8
+var T6 // local: newline
+    T0 = call f_getint
+    param T0 // #0
+    T4 = call f_f
+    param T4 // #0
+    call f_putint
+    T6 = 10
+    param T6 // #0
+    call f_putch
+    return T4
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

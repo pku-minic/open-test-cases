@@ -1,25 +1,29 @@
-var T0
-var T1
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: a
+var T1 // global: b
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_main [0]
-  var t0
-  var t1
-  var t2
-  t0 = call f_getint
-  T0 = t0
-  t1 = call f_getint
-  T1 = t1
-  if T0 == 0 goto l0
-  if T1 == 0 goto l0
-  t2 = 1
-  goto l1
-l0:
-  t2 = 0
-l1:
-  if t2 == 0 goto l2
-  return 1
-  goto l3
-l2:
-  return 0
-l3:
-  return 0
+var t0
+var t1
+var t2
+    T0 = call f_getint
+    T1 = call f_getint
+    t2 = 0 // stmt: op and - default value
+    if T0 == 0 goto l0 // stmt: op and - test 1
+    if T1 == 0 goto l0 // stmt: op and - test 2
+    t2 = 1 // stmt: op and - passed test
+    l0: // stmt: op and - lskip
+    if t2 == 0 goto l1 // stmt: ifelse
+    return 1
+    goto l2 // stmt: ifelse - true done
+    l1: // stmt: ifelse - lfalse
+    return 0
+    l2: // stmt: ifelse - ldone
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

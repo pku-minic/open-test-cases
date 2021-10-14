@@ -1,22 +1,27 @@
-var T0
-var T1
-var T2
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: a
+var T1 // global: b
+var T2 // global: c
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_add [2]
-  var t0
-  t0 = p0 + p1
-  T2 = t0
-  return
-  return
+var t0
+    T2 = p0 + p1
+    return
+    return // stmt: func epilog
 end f_add
+
 f_main [0]
-  var t1
-  var t2
-  T0 = 3
-  T1 = 2
-  t1 = T0
-  t2 = T1
-  param t1
-  param t2
-  call f_add
-  return T2
+    T0 = 3
+    T1 = 2
+    param T0 // #0
+    param T1 // #1
+    call f_add
+    return T2
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

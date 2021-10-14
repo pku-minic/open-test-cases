@@ -1,114 +1,142 @@
-f_wc [2] [12]
-    load 3 t0
-    t0 = 0
-    load 2 t1
-    t1 = 0
-    load 4 t2
-    t2 = 0
-    store t0 3
-    store t1 2
-    store t2 4
-    store a0 0
-    store a1 1
-l0:
-    load 5 t0
-    load 3 t1
-    load 1 t2
-    t0 = t1 < t2
-    store t0 5
-    if t0 == x0 goto l4
-    load 6 t0
-    load 3 t1
-    t2 = 4
-    t0 = t1 * t2
-    load 7 t3
-    load 0 t4
-    t5 = t4 + t0
-    t3 = t5 [0]
-    load 8 t6
-    s1 = 32
-    t6 = t3 != s1
-    store t6 8
-    if t6 == x0 goto l2
-    load 9 t0
-    load 2 t1
-    t0 = t1 == x0
-    store t0 9
-    if t0 == x0 goto l1
-    load 10 t0
-    load 4 t1
-    t0 = t1 + 1
-    t1 = t0
-    load 2 t2
-    t2 = 1
-    store t1 4
-    store t2 2
-l1:
-    goto l3
-l2:
-    load 2 t0
-    t0 = 0
-    store t0 2
-l3:
-    load 11 t0
-    load 3 t1
-    t0 = t1 + 1
-    t1 = t0
-    store t1 3
+// BEGIN TIGGER
+//--- SCALAR DECL
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_wc [2] [0]
+// DESTROYS: s4 a2 a0 t6 a1 a3
+
+//     {reg: a2}T1 = 0
+    a2 = 0
+
+//     {reg: s4}T0 = 0
+    s4 = 0
+
+//     {reg: t6}T2 = 0
+    t6 = 0
+
+//     l0:
+    l0:
+
+//     if {reg: a2}T1 >= {reg: a1}p1 goto l1
+    if a2 >= a1 goto l1
+
+//     {reg: a3}t3 = 4 * {reg: a2}T1
+    a3 = a2 * 4 // shift left
+
+//     {reg: a3}t4 = {reg: a0}p0 + {reg: a3}t3
+    a3 = a0 + a3
+
+//     {reg: a3}t2 = {reg: a3}t4 [0]
+    a3 = a3 [0]
+
+//     if {reg: a3}t2 == 32 goto l2
+    t1 = 32
+    if a3 == t1 goto l2
+
+//     if {reg: s4}T0 != 0 goto l3
+    if s4 != x0 goto l3
+
+//     {reg: t6}T2 = {reg: t6}T2 + 1
+    t6 = t6 + 1
+
+//     {reg: s4}T0 = 1
+    s4 = 1
+
+//     l3:
+    l3:
+
+//     goto l4
+    goto l4
+
+//     l2:
+    l2:
+
+//     {reg: s4}T0 = 0
+    s4 = 0
+
+//     l4:
+    l4:
+
+//     {reg: a2}T1 = {reg: a2}T1 + 1
+    a2 = a2 + 1
+
+//     goto l0
     goto l0
-l4:
-    load 4 a0
+
+//     l1:
+    l1:
+
+//     return {reg: t6}T2
+    a0 = t6
     return
 end f_wc
-f_main [0] [511]
-    load 501 t0
-    t0 = 0
-    load 500 t1
-    t1 = 0
-    store t0 501
-    store t1 500
-l5:
-    load 502 t0
-    load 500 t1
-    t2 = 10
-    t0 = t1 != t2
-    store t0 502
-    if t0 == x0 goto l6
+
+f_main [0] [502]
+// DESTROYS: a5 t0 a6 t1 s4 t2 t3 t4 t5 a2 a4 a7 a1 a3 a0 t6
+
+//     {reg: a1}T5 = 0
+    a1 = 0
+
+//     {reg: a0}T4 = 0
+    a0 = 0
+
+//     l5:
+    l5:
+
+//     if {reg: a0}T4 == 10 goto l6
+    t1 = 10
+    if a0 == t1 goto l6
+
+//     {reg: a0}T4 = call f_getch
+    store a1 500
     call f_getch
-    load 500 t0
-    t0 = a0
-    load 504 t1
-    load 501 t3
-    t4 = 4
-    t1 = t3 * t4
-    loadaddr 0 t5
-    t6 = t5 + t1
-    t6 [0] = t0
-    load 505 s1
-    s1 = t3 + 1
-    t3 = s1
-    store t0 500
-    store t3 501
-    store a0 503
+    a0 = a0
+    load 500 a1
+
+//     {reg: s4}t10 = 4 * {reg: a1}T5
+    s4 = a1 * 4 // shift left
+
+//     {reg: a3}t11 = {stk #0 +500}T3 + {reg: s4}t10
+    loadaddr 0 t0
+    a3 = t0 + s4
+
+//     {reg: a3}t11 [0] = {reg: a0}T4
+    a3 [0] = a0
+
+//     {reg: a1}T5 = {reg: a1}T5 + 1
+    a1 = a1 + 1
+
+//     goto l5
     goto l5
-l6:
-    load 506 t0
-    loadaddr 0 t1
-    t0 = t1 + 0
-    load 507 t2
-    t2 = t0
-    load 508 t3
-    load 501 t4
-    t3 = t4
-    a0 = t2
-    a1 = t3
+
+//     l6:
+    l6:
+
+//     {reg: a0}t14 = {stk #0 +500}T3 + 0
+    loadaddr 0 t0
+    a0 = t0 + 0
+
+
+
+//     param {reg: a0}t14 // #0
+//     param {reg: a1}T5 // #1
+//     {reg: a0}T4 = call f_wc
+    a0 = a0
+    a1 = a1
     call f_wc
-    load 500 t0
-    t0 = a0
-    load 510 t1
-    t1 = t0
-    a0 = t1
+    a0 = a0
+
+
+//     param {reg: a0}T4 // #0
+//     call f_putint
+    a0 = a0
     call f_putint
+
+//     return 0
     a0 = 0
     return
 end f_main
+
+// END TIGGER

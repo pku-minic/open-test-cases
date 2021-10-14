@@ -1,38 +1,44 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_whileIf [0]
-  var T0
-  var T1
-  var t0
-  var t1
-  var t2
-  var t3
-  var t4
-  T0 = 0
-  T1 = 0
-l0:
-  t0 = T0 < 100
-  if t0 == 0 goto l5
-  t1 = T0 == 5
-  if t1 == 0 goto l1
-  T1 = 25
-  goto l4
-l1:
-  t2 = T0 == 10
-  if t2 == 0 goto l2
-  T1 = 42
-  goto l3
-l2:
-  t3 = T0 * 2
-  T1 = t3
-l3:
-l4:
-  t4 = T0 + 1
-  T0 = t4
-  goto l0
-l5:
-  return T1
+var T0 // local: a
+var T1 // local: b
+var t0
+var t1
+var t2
+var t3
+var t4
+    T0 = 0
+    T1 = 0
+    l0: // stmt: while - ltest
+    if T0 >= 100 goto l1 // stmt: while - done
+    if T0 != 5 goto l2 // stmt: ifelse
+    T1 = 25
+    goto l3 // stmt: ifelse - true done
+    l2: // stmt: ifelse - lfalse
+    if T0 != 10 goto l4 // stmt: ifelse
+    T1 = 42
+    goto l5 // stmt: ifelse - true done
+    l4: // stmt: ifelse - lfalse
+    T1 = T0 * 2
+    l5: // stmt: ifelse - ldone
+    l3: // stmt: ifelse - ldone
+    T0 = T0 + 1
+    goto l0 // stmt: while - to test
+    l1: // stmt: while - ldone
+    return T1
+    return 0 // stmt: func epilog
 end f_whileIf
+
 f_main [0]
-  var t5
-  t5 = call f_whileIf
-  return t5
+var t5
+    t5 = call f_whileIf
+    return t5
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

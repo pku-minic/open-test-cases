@@ -1,43 +1,48 @@
-var T0
-var T1
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: N
+var T1 // global: newline
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
 f_factor [1]
-  var T2
-  var T3
-  var t0
-  var t1
-  var t2
-  var t3
-  var t4
-  var t5
-  T3 = 0
-  T2 = 1
-l0:
-  t0 = p0 + 1
-  t1 = T2 < t0
-  if t1 == 0 goto l2
-  t2 = p0 % T2
-  t3 = t2 == 0
-  if t3 == 0 goto l1
-  t4 = T3 + T2
-  T3 = t4
-l1:
-  t5 = T2 + 1
-  T2 = t5
-  goto l0
-l2:
-  return T3
+var T2 // local: i
+var T3 // local: sum
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+    T3 = 0
+    T2 = 1
+    l0: // stmt: while - ltest
+    t1 = p0 + 1
+    if T2 >= t1 goto l1 // stmt: while - done
+    t3 = p0 % T2
+    if t3 != 0 goto l2 // stmt: ifonly
+    T3 = T3 + T2
+    l2: // stmt: ifonly - lskip
+    T2 = T2 + 1
+    goto l0 // stmt: while - to test
+    l1: // stmt: while - ldone
+    return T3
+    return 0 // stmt: func epilog
 end f_factor
+
 f_main [0]
-  var T4
-  var T5
-  var T6
-  var t6
-  var t7
-  T0 = 4
-  T1 = 10
-  T5 = 1478
-  t6 = T5
-  param t6
-  t7 = call f_factor
-  return t7
+var T4 // local: i
+var T5 // local: m
+var T6 // local: t
+var t6
+    T0 = 4
+    T1 = 10
+    T5 = 1478
+    param T5 // #0
+    t6 = call f_factor
+    return t6
+    return 0 // stmt: func epilog
 end f_main
+
+// END EEYORE

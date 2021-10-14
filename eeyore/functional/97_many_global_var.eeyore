@@ -1,0 +1,281 @@
+// BEGIN EEYORE
+//--- GLOBAL DECL
+var T0 // global: a0
+var T1 // global: a1
+var T2 // global: a2
+var T3 // global: a3
+var T4 // global: a4
+var T5 // global: a5
+var T6 // global: a6
+var T7 // global: a7
+var T8 // global: a8
+var T9 // global: a9
+var T10 // global: a10
+var T11 // global: a11
+var T12 // global: a12
+var T13 // global: a13
+var T14 // global: a14
+var T15 // global: a15
+var T16 // global: a16
+var T17 // global: a17
+var T18 // global: a18
+var T19 // global: a19
+var T20 // global: a20
+var T21 // global: a21
+var T22 // global: a22
+var T23 // global: a23
+var T24 // global: a24
+var T25 // global: a25
+var T26 // global: a26
+var T27 // global: a27
+var T28 // global: a28
+var T29 // global: a29
+var T30 // global: a30
+var T31 // global: a31
+var T32 // global: a32
+var T33 // global: a33
+var T34 // global: a34
+var T35 // global: a35
+var T36 // global: a36
+var T37 // global: a37
+var T38 // global: a38
+var T39 // global: a39
+
+//--- GLOBAL INIT
+
+//--- FUNCTIONS
+f_testParam8 [8]
+var t0
+var t1
+var t2
+var t3
+var t4
+var t5
+var t6
+    t6 = p0 + p1
+    t5 = t6 + p2
+    t4 = t5 + p3
+    t3 = t4 + p4
+    t2 = t3 + p5
+    t1 = t2 + p6
+    t0 = t1 + p7
+    return t0
+    return 0 // stmt: func epilog
+end f_testParam8
+
+f_testParam16 [16]
+var t7
+var t8
+var t9
+var t10
+var t11
+var t12
+var t13
+var t14
+var t15
+var t16
+var t17
+var t18
+var t19
+var t20
+var t21
+    t21 = p0 + p1
+    t20 = t21 + p2
+    t19 = t20 - p3
+    t18 = t19 - p4
+    t17 = t18 - p5
+    t16 = t17 - p6
+    t15 = t16 - p7
+    t14 = t15 + p8
+    t13 = t14 + p9
+    t12 = t13 + p10
+    t11 = t12 + p11
+    t10 = t11 + p12
+    t9 = t10 + p13
+    t8 = t9 + p14
+    t7 = t8 + p15
+    return t7
+    return 0 // stmt: func epilog
+end f_testParam16
+
+f_testParam32 [32]
+var t22
+var t23
+var t24
+var t25
+var t26
+var t27
+var t28
+var t29
+var t30
+var t31
+var t32
+var t33
+var t34
+var t35
+var t36
+var t37
+var t38
+var t39
+var t40
+var t41
+var t42
+var t43
+var t44
+var t45
+var t46
+var t47
+var t48
+var t49
+var t50
+var t51
+var t52
+    t52 = p0 + p1
+    t51 = t52 + p2
+    t50 = t51 + p3
+    t49 = t50 + p4
+    t48 = t49 + p5
+    t47 = t48 + p6
+    t46 = t47 + p7
+    t45 = t46 + p8
+    t44 = t45 + p9
+    t43 = t44 + p10
+    t42 = t43 + p11
+    t41 = t42 + p12
+    t40 = t41 + p13
+    t39 = t40 + p14
+    t38 = t39 + p15
+    t37 = t38 + p16
+    t36 = t37 + p17
+    t35 = t36 - p18
+    t34 = t35 - p19
+    t33 = t34 - p20
+    t32 = t33 - p21
+    t31 = t32 - p22
+    t30 = t31 + p23
+    t29 = t30 + p24
+    t28 = t29 + p25
+    t27 = t28 + p26
+    t26 = t27 + p27
+    t25 = t26 + p28
+    t24 = t25 + p29
+    t23 = t24 + p30
+    t22 = t23 + p31
+    return t22
+    return 0 // stmt: func epilog
+end f_testParam32
+
+f_main [0]
+var t53
+var t54
+var t55
+    T0 = 0
+    T1 = 1
+    T2 = 2
+    T3 = 3
+    T4 = 4
+    T5 = 5
+    T6 = 6
+    T7 = 7
+    T8 = 8
+    T9 = 9
+    T10 = 0
+    T11 = 1
+    T12 = 2
+    T13 = 3
+    T14 = 4
+    T15 = 5
+    T16 = 6
+    T17 = 7
+    T18 = 8
+    T19 = 9
+    T20 = 0
+    T21 = 1
+    T22 = 2
+    T23 = 3
+    T24 = 4
+    T25 = 5
+    T26 = 6
+    T27 = 7
+    T28 = 8
+    T29 = 9
+    T30 = 0
+    T31 = 1
+    T32 = 4
+    T33 = 5
+    T34 = 6
+    T35 = 7
+    T36 = 8
+    T37 = 9
+    T38 = 0
+    T39 = 1
+    param T0 // #0
+    param T1 // #1
+    param T2 // #2
+    param T3 // #3
+    param T4 // #4
+    param T5 // #5
+    param T6 // #6
+    param T7 // #7
+    T0 = call f_testParam8
+    param T0 // #0
+    call f_putint
+    param T32 // #0
+    param T33 // #1
+    param T34 // #2
+    param T35 // #3
+    param T36 // #4
+    param T37 // #5
+    param T38 // #6
+    param T39 // #7
+    param T8 // #8
+    param T9 // #9
+    param T10 // #10
+    param T11 // #11
+    param T12 // #12
+    param T13 // #13
+    param T14 // #14
+    param T15 // #15
+    T0 = call f_testParam16
+    param T0 // #0
+    call f_putint
+    param T0 // #0
+    param T1 // #1
+    param T2 // #2
+    param T3 // #3
+    param T4 // #4
+    param T5 // #5
+    param T6 // #6
+    param T7 // #7
+    param T8 // #8
+    param T9 // #9
+    param T10 // #10
+    param T11 // #11
+    param T12 // #12
+    param T13 // #13
+    param T14 // #14
+    param T15 // #15
+    param T16 // #16
+    param T17 // #17
+    param T18 // #18
+    param T19 // #19
+    param T20 // #20
+    param T21 // #21
+    param T22 // #22
+    param T23 // #23
+    param T24 // #24
+    param T25 // #25
+    param T26 // #26
+    param T27 // #27
+    param T28 // #28
+    param T29 // #29
+    param T30 // #30
+    param T31 // #31
+    T0 = call f_testParam32
+    param T0 // #0
+    call f_putint
+    return 0
+    return 0 // stmt: func epilog
+end f_main
+
+// END EEYORE

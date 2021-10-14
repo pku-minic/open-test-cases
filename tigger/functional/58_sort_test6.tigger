@@ -1,277 +1,403 @@
+// BEGIN TIGGER
+//--- SCALAR DECL
 v0 = 0
-f_counting_sort [3] [59]
-    load 15 t0
-    t0 = 0
-    load 13 t1
-    t1 = 0
-    load 14 t2
-    t2 = 0
-    store t0 15
-    store t1 13
-    store t2 14
-    store a0 0
-    store a1 1
-    store a2 2
-l0:
-    load 16 t0
-    load 15 t1
-    t0 = t1 < 10
-    store t0 16
-    if t0 == x0 goto l1
-    load 17 t0
-    load 15 t1
-    t2 = 4
-    t0 = t1 * t2
-    loadaddr 3 t3
-    t4 = t3 + t0
-    t4 [0] = x0
-    load 18 t5
-    t5 = t1 + 1
-    t1 = t5
-    store t1 15
+
+//--- ARRAY DECL
+
+//--- FUNCTIONS
+f_counting_sort [3] [10]
+// DESTROYS: a1 a2 t5 s4 t6 a0 a3
+
+//     {reg: t5}T4 = 0
+    t5 = 0
+
+//     {reg: t6}T2 = 0
+    t6 = 0
+
+//     {reg: a2}T3 = 0
+
+//     l0:
+    l0:
+
+//     if {reg: t5}T4 >= 10 goto l1
+    t1 = 10
+    if t5 >= t1 goto l1
+
+//     {reg: s4}t1 = 4 * {reg: t5}T4
+    s4 = t5 * 4 // shift left
+
+//     {reg: s4}t2 = {stk #0 +10}T1 + {reg: s4}t1
+    loadaddr 0 t0
+    s4 = t0 + s4
+
+//     {reg: s4}t2 [0] = 0
+    s4 [0] = x0
+
+//     {reg: t5}T4 = {reg: t5}T4 + 1
+    t5 = t5 + 1
+
+//     goto l0
     goto l0
-    store t1 15
-l1:
-l2:
-    load 19 t0
-    load 13 t1
-    load 2 t2
-    t0 = t1 < t2
-    store t0 19
-    if t0 == x0 goto l3
-    load 20 t0
-    load 13 t1
-    t2 = 4
-    t0 = t1 * t2
-    load 21 t3
-    load 0 t4
-    t5 = t4 + t0
-    t3 = t5 [0]
-    load 22 t6
-    s1 = 4
-    t6 = t3 * s1
-    load 23 s2
-    s3 = 4
-    s2 = t1 * s3
-    load 24 s4
-    s5 = t4 + s2
-    s4 = s5 [0]
-    load 25 s6
-    s7 = 4
-    s6 = s4 * s7
-    load 26 s8
-    loadaddr 3 s9
-    s10 = s9 + s6
-    s8 = s10 [0]
-    load 27 s11
-    s11 = s8 + 1
-    a0 = s9 + t6
-    a0 [0] = s11
-    load 28 a1
-    a1 = t1 + 1
-    t1 = a1
-    store t1 13
+
+//     l1:
+    l1:
+
+//     l2:
+    l2:
+
+//     if {reg: t6}T2 >= {reg: a2}p2 goto l3
+    if t6 >= a2 goto l3
+
+//     {reg: s4}t9 = 4 * {reg: t6}T2
+    s4 = t6 * 4 // shift left
+
+//     {reg: s4}t10 = {reg: a0}p0 + {reg: s4}t9
+    s4 = a0 + s4
+
+//     {reg: a3}t8 = {reg: s4}t10 [0]
+    a3 = s4 [0]
+
+//     {reg: a3}t7 = 4 * {reg: a3}t8
+    a3 = a3 * 4 // shift left
+
+//     {reg: a3}t11 = {stk #0 +10}T1 + {reg: a3}t7
+    loadaddr 0 t0
+    a3 = t0 + a3
+
+//     {reg: a3}t6 = {reg: a3}t11 [0]
+    a3 = a3 [0]
+
+//     {reg: a3}t5 = {reg: a3}t6 + 1
+    a3 = a3 + 1
+
+//     {reg: t5}t14 = 4 * {reg: t6}T2
+    t5 = t6 * 4 // shift left
+
+//     {reg: t5}t15 = {reg: a0}p0 + {reg: t5}t14
+    t5 = a0 + t5
+
+//     {reg: t5}t13 = {reg: t5}t15 [0]
+    t5 = t5 [0]
+
+//     {reg: t5}t12 = 4 * {reg: t5}t13
+    t5 = t5 * 4 // shift left
+
+//     {reg: t5}t16 = {stk #0 +10}T1 + {reg: t5}t12
+    loadaddr 0 t0
+    t5 = t0 + t5
+
+//     {reg: t5}t16 [0] = {reg: a3}t5
+    t5 [0] = a3
+
+//     {reg: t6}T2 = {reg: t6}T2 + 1
+    t6 = t6 + 1
+
+//     goto l2
     goto l2
-l3:
-    load 15 t0
-    t0 = 1
-    store t0 15
-l4:
-    load 29 t0
-    load 15 t1
-    t0 = t1 < 10
-    store t0 29
-    if t0 == x0 goto l5
-    load 30 t0
-    load 15 t1
-    t2 = 4
-    t0 = t1 * t2
-    load 31 t3
-    t4 = 4
-    t3 = t1 * t4
-    load 32 t5
-    loadaddr 3 t6
-    s1 = t6 + t3
-    t5 = s1 [0]
-    load 33 s2
-    s2 = t1 + -1
-    load 34 s3
-    s4 = 4
-    s3 = s2 * s4
-    load 35 s5
-    s6 = t6 + s3
-    s5 = s6 [0]
-    load 36 s7
-    s7 = t5 + s5
-    s8 = t6 + t0
-    s8 [0] = s7
-    load 37 s9
-    s9 = t1 + 1
-    t1 = s9
-    store t1 15
+
+//     l3:
+    l3:
+
+//     {reg: t5}T4 = 1
+    t5 = 1
+
+//     l4:
+    l4:
+
+//     if {reg: t5}T4 >= 10 goto l5
+    t1 = 10
+    if t5 >= t1 goto l5
+
+//     {reg: a3}t21 = 4 * {reg: t5}T4
+    a3 = t5 * 4 // shift left
+
+//     {reg: a3}t22 = {stk #0 +10}T1 + {reg: a3}t21
+    loadaddr 0 t0
+    a3 = t0 + a3
+
+//     {reg: a3}t20 = {reg: a3}t22 [0]
+    a3 = a3 [0]
+
+//     {reg: s4}t25 = {reg: t5}T4 - 1
+    s4 = t5 + -1
+
+//     {reg: s4}t24 = 4 * {reg: s4}t25
+    s4 = s4 * 4 // shift left
+
+//     {reg: t6}t26 = {stk #0 +10}T1 + {reg: s4}t24
+    loadaddr 0 t0
+    t6 = t0 + s4
+
+//     {reg: t6}t23 = {reg: t6}t26 [0]
+    t6 = t6 [0]
+
+//     {reg: a3}t19 = {reg: a3}t20 + {reg: t6}t23
+    a3 = a3 + t6
+
+//     {reg: t6}t27 = 4 * {reg: t5}T4
+    t6 = t5 * 4 // shift left
+
+//     {reg: t6}t28 = {stk #0 +10}T1 + {reg: t6}t27
+    loadaddr 0 t0
+    t6 = t0 + t6
+
+//     {reg: t6}t28 [0] = {reg: a3}t19
+    t6 [0] = a3
+
+//     {reg: t5}T4 = {reg: t5}T4 + 1
+    t5 = t5 + 1
+
+//     goto l4
     goto l4
-l5:
-    load 14 t0
-    load 2 t1
-    t0 = t1
-    store t0 14
-l6:
-    load 38 t0
-    load 14 t1
-    t0 = t1 > x0
-    store t0 38
-    if t0 == x0 goto l7
-    load 39 t0
-    load 14 t1
-    t0 = t1 + -1
-    load 40 t2
-    t3 = 4
-    t2 = t0 * t3
-    load 41 t4
-    load 0 t5
-    t6 = t5 + t2
-    t4 = t6 [0]
-    load 42 s1
-    s2 = 4
-    s1 = t4 * s2
-    load 43 s3
-    s3 = t1 + -1
-    load 44 s4
-    s5 = 4
-    s4 = s3 * s5
-    load 45 s6
-    s7 = t5 + s4
-    s6 = s7 [0]
-    load 46 s8
-    s9 = 4
-    s8 = s6 * s9
-    load 47 s10
-    loadaddr 3 s11
-    a0 = s11 + s8
-    s10 = a0 [0]
-    load 48 a1
-    a1 = s10 + -1
-    a2 = s11 + s1
-    a2 [0] = a1
-    load 49 a3
-    a3 = t1 + -1
-    load 50 a4
-    a5 = 4
-    a4 = a3 * a5
-    load 51 a6
-    a7 = t5 + a4
-    a6 = a7 [0]
-    load 52 t0
-    t2 = 4
-    t0 = a6 * t2
-    load 53 t2
-    t3 = s11 + t0
-    t2 = t3 [0]
-    load 54 t0
-    t3 = 4
-    t0 = t2 * t3
-    load 55 t2
-    t2 = t1 + -1
-    load 56 t3
-    t4 = 4
-    t3 = t2 * t4
-    load 57 t2
-    t4 = t5 + t3
-    t2 = t4 [0]
-    load 1 t3
-    t4 = t3 + t0
-    t4 [0] = t2
-    load 58 t0
-    t0 = t1 + -1
-    t1 = t0
-    store t1 14
+
+//     l5:
+    l5:
+
+//     {reg: a2}T3 = {reg: a2}p2
+    a2 = a2
+
+//     l6:
+    l6:
+
+//     if {reg: a2}T3 <= 0 goto l7
+    if a2 <= x0 goto l7
+
+//     {reg: a3}t36 = {reg: a2}T3 - 1
+    a3 = a2 + -1
+
+//     {reg: a3}t35 = 4 * {reg: a3}t36
+    a3 = a3 * 4 // shift left
+
+//     {reg: a3}t37 = {reg: a0}p0 + {reg: a3}t35
+    a3 = a0 + a3
+
+//     {reg: s4}t34 = {reg: a3}t37 [0]
+    s4 = a3 [0]
+
+//     {reg: a3}t33 = 4 * {reg: s4}t34
+    a3 = s4 * 4 // shift left
+
+//     {reg: a3}t38 = {stk #0 +10}T1 + {reg: a3}t33
+    loadaddr 0 t0
+    a3 = t0 + a3
+
+//     {reg: a3}t32 = {reg: a3}t38 [0]
+    a3 = a3 [0]
+
+//     {reg: a3}t31 = {reg: a3}t32 - 1
+    a3 = a3 + -1
+
+//     {reg: t6}t42 = {reg: a2}T3 - 1
+    t6 = a2 + -1
+
+//     {reg: t6}t41 = 4 * {reg: t6}t42
+    t6 = t6 * 4 // shift left
+
+//     {reg: t6}t43 = {reg: a0}p0 + {reg: t6}t41
+    t6 = a0 + t6
+
+//     {reg: t6}t40 = {reg: t6}t43 [0]
+    t6 = t6 [0]
+
+//     {reg: t6}t39 = 4 * {reg: t6}t40
+    t6 = t6 * 4 // shift left
+
+//     {reg: t6}t44 = {stk #0 +10}T1 + {reg: t6}t39
+    loadaddr 0 t0
+    t6 = t0 + t6
+
+//     {reg: t6}t44 [0] = {reg: a3}t31
+    t6 [0] = a3
+
+//     {reg: a3}t47 = {reg: a2}T3 - 1
+    a3 = a2 + -1
+
+//     {reg: a3}t46 = 4 * {reg: a3}t47
+    a3 = a3 * 4 // shift left
+
+//     {reg: s4}t48 = {reg: a0}p0 + {reg: a3}t46
+    s4 = a0 + a3
+
+//     {reg: t6}t45 = {reg: s4}t48 [0]
+    t6 = s4 [0]
+
+//     {reg: a3}t54 = {reg: a2}T3 - 1
+    a3 = a2 + -1
+
+//     {reg: a3}t53 = 4 * {reg: a3}t54
+    a3 = a3 * 4 // shift left
+
+//     {reg: a3}t55 = {reg: a0}p0 + {reg: a3}t53
+    a3 = a0 + a3
+
+//     {reg: a3}t52 = {reg: a3}t55 [0]
+    a3 = a3 [0]
+
+//     {reg: a3}t51 = 4 * {reg: a3}t52
+    a3 = a3 * 4 // shift left
+
+//     {reg: a3}t56 = {stk #0 +10}T1 + {reg: a3}t51
+    loadaddr 0 t0
+    a3 = t0 + a3
+
+//     {reg: s4}t50 = {reg: a3}t56 [0]
+    s4 = a3 [0]
+
+//     {reg: a3}t49 = 4 * {reg: s4}t50
+    a3 = s4 * 4 // shift left
+
+//     {reg: a3}t57 = {reg: a1}p1 + {reg: a3}t49
+    a3 = a1 + a3
+
+//     {reg: a3}t57 [0] = {reg: t6}t45
+    a3 [0] = t6
+
+//     {reg: a2}T3 = {reg: a2}T3 - 1
+    a2 = a2 + -1
+
+//     goto l6
     goto l6
-l7:
+
+//     l7:
+    l7:
+
+//     return 0
     a0 = 0
     return
 end f_counting_sort
-f_main [0] [34]
-    load v0 t0
+
+f_main [0] [22]
+// DESTROYS: a5 t0 a6 t1 t2 t3 t4 a4 a3 t5 a2 a1 a0 t6 a7 s4
+
+//     {global}T0 = 10
     t0 = 10
+    loadaddr v0 t1
+    t1 [0] = t0
+
+//     {stk #0 +10}T5 [0] = 4
     loadaddr 0 t1
-    t2 = 4
-    t1 [0] = t2
-    t3 = 3
-    t1 [4] = t3
-    t4 = 9
-    t1 [8] = t4
-    t5 = 2
-    t1 [12] = t5
-    t1 [16] = x0
-    t6 = 1
-    t1 [20] = t6
-    s1 = 6
-    t1 [24] = s1
-    s2 = 5
-    t1 [28] = s2
-    s3 = 7
-    t1 [32] = s3
-    s4 = 8
-    t1 [36] = s4
-    load 10 s5
-    s5 = 0
-    load 21 s6
-    s6 = t1 + 0
-    load 22 s7
-    s7 = s6
-    load 23 s8
-    loadaddr 11 s9
-    s8 = s9 + 0
-    load 24 s10
-    s10 = s8
-    load 25 s11
-    s11 = t0
-    a0 = s7
-    a1 = s10
-    a2 = s11
-    store s5 10
-    loadaddr v0 s0
-    s0 [0] = t0
+    t0 = 4
+    t1 [0] = t0
+
+//     {stk #0 +10}T5 [4] = 3
+    loadaddr 1 t1
+    t0 = 3
+    t1 [0] = t0
+
+//     {stk #0 +10}T5 [8] = 9
+    loadaddr 2 t1
+    t0 = 9
+    t1 [0] = t0
+
+//     {stk #0 +10}T5 [12] = 2
+    loadaddr 3 t1
+    t0 = 2
+    t1 [0] = t0
+
+//     {stk #0 +10}T5 [16] = 0
+    loadaddr 4 t1
+    t1 [0] = x0
+
+//     {stk #0 +10}T5 [20] = 1
+    loadaddr 5 t1
+    t0 = 1
+    t1 [0] = t0
+
+//     {stk #0 +10}T5 [24] = 6
+    loadaddr 6 t1
+    t0 = 6
+    t1 [0] = t0
+
+//     {stk #0 +10}T5 [28] = 5
+    loadaddr 7 t1
+    t0 = 5
+    t1 [0] = t0
+
+//     {stk #0 +10}T5 [32] = 7
+    loadaddr 8 t1
+    t0 = 7
+    t1 [0] = t0
+
+//     {stk #0 +10}T5 [36] = 8
+    loadaddr 9 t1
+    t0 = 8
+    t1 [0] = t0
+
+//     {reg: a0}T6 = 0
+
+//     {reg: a0}t60 = {stk #0 +10}T5 + 0
+    loadaddr 0 t0
+    a0 = t0 + 0
+
+//     {reg: a1}t61 = {stk #10 +10}T7 + 0
+    loadaddr 10 t0
+    a1 = t0 + 0
+
+
+
+
+//     param {reg: a0}t60 // #0
+//     param {reg: a1}t61 // #1
+//     param {global}T0 // #2
+//     {reg: a0}T6 = call f_counting_sort
+    a0 = a0
+    a1 = a1
+    load v0 t1
+    a2 = t1
     call f_counting_sort
-    load 10 t0
-    t0 = a0
-    store t0 10
-    store a0 26
-l8:
-    load 27 t0
-    load 10 t1
-    load v0 t2
-    t0 = t1 < t2
-    store t0 27
-    if t0 == x0 goto l9
-    load 29 t0
-    load 10 t1
-    t2 = 4
-    t0 = t1 * t2
-    load 30 t3
-    loadaddr 11 t4
-    t5 = t4 + t0
-    t3 = t5 [0]
-    load 28 t6
-    t6 = t3
-    load 31 s1
-    s1 = t6
-    a0 = s1
-    store t6 28
+    a0 = a0
+
+//     l8:
+    l8:
+
+//     if {reg: a0}T6 >= {global}T0 goto l9
+    load v0 t1
+    if a0 >= t1 goto l9
+
+//     {reg: s4}t64 = 4 * {reg: a0}T6
+    s4 = a0 * 4 // shift left
+
+//     {reg: s4}t65 = {stk #10 +10}T7 + {reg: s4}t64
+    loadaddr 10 t0
+    s4 = t0 + s4
+
+//     {reg: s4}t63 = {reg: s4}t65 [0]
+    s4 = s4 [0]
+
+//     {reg: s4}T8 = {reg: s4}t63
+    s4 = s4
+
+
+//     param {reg: s4}T8 // #0
+//     call f_putint
+    store a0 20
+    a0 = s4
     call f_putint
-    load 28 t0
-    t0 = 10
-    load 32 t1
-    t1 = t0
-    a0 = t1
+    load 20 a0
+
+//     {reg: s4}T8 = 10
+    s4 = 10
+
+
+//     param {reg: s4}T8 // #0
+//     call f_putch
+    store a0 20
+    a0 = s4
     call f_putch
-    load 33 t0
-    load 10 t1
-    t0 = t1 + 1
-    t1 = t0
-    store t1 10
+    load 20 a0
+
+//     {reg: a0}T6 = {reg: a0}T6 + 1
+    a0 = a0 + 1
+
+//     goto l8
     goto l8
-l9:
+
+//     l9:
+    l9:
+
+//     return 0
     a0 = 0
     return
 end f_main
+
+// END TIGGER
