@@ -21,6 +21,10 @@ RUN echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian buster main contrib non
 RUN apt-get update && apt-get install -y \
     build-essential git flex bison cmake qemu-user-static
 
+# setup GitHub proxy
+RUN git config --global url."https://hub.fastgit.org/".insteadOf "https://github.com/" && \
+    git config --global protocol.https.allow always
+
 # pull SysY runtime library
 RUN git clone --recursive --shallow-submodules --single-branch --depth 1 \
     ${SYSYRT_REPO_URL} ${SYSYRT_REPO_PATH}
