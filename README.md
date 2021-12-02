@@ -6,8 +6,8 @@
 
 你可以执行以下命令:
 
-```
-$ git clone --recursive https://github.com/pku-minic/open-test-cases.git
+```sh
+git clone --recursive https://github.com/pku-minic/open-test-cases.git
 ```
 
 ## 目录结构
@@ -16,6 +16,15 @@ $ git clone --recursive https://github.com/pku-minic/open-test-cases.git
 * `eeyore` 目录: 公开的 Eeyore 功能/性能测试, 输入/输出与 SysY 测试用例相同.
 * `tigger` 目录: 公开的 Tigger 功能/性能测试, 输入/输出与 SysY 测试用例相同.
 * `risc-v` 目录: 可构建 RISC-V 开发环境的 `Dockerfile`.
+
+## 其他测试用例
+
+你可能需要寻求更多的 SysY 测试用例, 此处提供一些非编译大赛官方的测试用例, 它们也许会对你的调试工作起到帮助:
+
+* [`minic-test-cases-2021s`](https://github.com/pku-minic/minic-test-cases-2021s): 北大编译实践课程 2021 年春季学期使用的测试用例.
+* [`segviol/indigo`](https://github.com/segviol/indigo/tree/develop/test_codes/upload): 2020 年第一届编译系统设计赛北航参赛队开发的 indigo 编译器的内部测试用例.
+* [`TrivialCompiler/TrivialCompiler`](https://github.com/TrivialCompiler/TrivialCompiler/tree/master/custom_test): 2020 年第一届编译系统设计赛清华参赛队开发的 TrivialCompiler 编译器的内部测试用例.
+* [`ustb-owl/lava-test`](https://github.com/ustb-owl/lava-test): 2021 年第二届编译系统设计赛北科参赛队开发的 Lava 编译器的内部测试用例.
 
 ## 相关工具
 
